@@ -41,16 +41,16 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/viasnake/viasnake.com/edit/master/',
+          editUrl: 'https://github.com/viasnake/viasnake.com/edit/master/',
         },
         blog: {
           routeBasePath: '/',
           showReadingTime: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/viasnake/viasnake.com/edit/master/',
+          editUrl: 'https://github.com/viasnake/viasnake.com/edit/master/',
+          blogSidebarCount: 15,
+          blogSidebarTitle: '最近の投稿',
         },
       }),
     ],
