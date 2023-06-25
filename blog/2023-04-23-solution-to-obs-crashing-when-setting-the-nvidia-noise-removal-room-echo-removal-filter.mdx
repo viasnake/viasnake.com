@@ -1,0 +1,60 @@
+---
+title: NVIDIAノイズ除去/ルームエコー除去フィルタを設定した際にOBSがクラッシュする問題の解決策
+slug: solution-to-obs-crashing-when-setting-the-nvidia-noise-removal-room-echo-removal-filter
+date_published: 2023-04-23T04:46:08.000Z
+date_updated: 2023-04-23T04:46:08.000Z
+tags: [OBS]
+excerpt: NVIDIA Broadcastのオーディオ エフェクトをインストールすることで、OBS上で様々なフィルタが有効となります。追加されたフィルタの内「NVIDIA ノイズ除去」、「NVIDIA ルームエコー除去」を適用するとOBSがクラッシュしてしまう問題に遭遇したため、解決策をまとめます。
+---
+
+NVIDIA Broadcastのオーディオ エフェクトをインストールすることで、OBS上で様々なフィルタが有効となります。追加されたフィルタの内「NVIDIA ノイズ除去」、「NVIDIA ルームエコー除去」を適用するとOBSがクラッシュしてしまう問題に遭遇したため、解決策をまとめます。
+
+## 問題について
+
+OBSのマイクフィルタ設定で、NVIDIA Broadcastで追加される「NVIDIA ノイズ除去」、「NVIDIA ルームエコー除去」フィルタを適用した場合、OBSがクラッシュしてしまう。
+
+## NVIDIA Broadcastについて
+
+NVIDIAが公開しているカメラやマイクなどをAIで処理するためのアプリケーションです。詳細は以下をご確認ください。
+
+<button
+  class="button button--primary button--lg"
+  onclick="window.open('https://www.nvidia.com/ja-jp/geforce/broadcasting/broadcast-sdk/resources/', '_blank')">
+    NVIDIA Broadcast 公式ウェブサイト
+</button>
+
+## 環境
+
+*下記の環境に限った話ではありませんが、念のため情報として記載しておきます。*
+
+```
+OS: Windows 11 Pro 64 bit 22H2(22624.1616)
+CPU: AMD Ryzen 7 5700X
+RAM: 32GB
+GPU: NVIDIA GeForce RTX 3060
+```
+
+### ソフトウェア
+
+```
+OBS Studio 29.0.2 (64 bit)
+NVIDIA Broadcast オーディオ エフェクト バージョン 1.3.0
+```
+
+## 解決策
+
+Windowsの設定が原因でクラッシュしているため、設定を変更することで問題が解決します。「ハードウェア アクセラレータによる GPU スケジューリング」を無効化してください。
+
+以下は、設定手順です。
+
+Windowsの設定を開き、ディスプレイ設定を開いてください。
+![](https://i.imgur.com/sPmmkaa.png)
+ディスプレイ設定ページを下までスクロールして、グラフィック設定を開いてください。
+![](https://i.imgur.com/qTb4E3m.png)
+規定の設定の「規定のグラフィックス設定を変更する」を開いてください。
+![](https://i.imgur.com/0JlWOgK.png)
+「ハードウェア アクセラレータによる GPU スケジューリング」をオフに切り替えてください。
+![](https://i.imgur.com/zDuhhU0.png)
+設定後、パソコンの再起動が要求されるため、再起動してください。
+
+これでOBSでフィルタを設定してもクラッシュしなくなります。
