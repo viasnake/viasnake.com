@@ -1,0 +1,50 @@
+---
+title: "GitHubからpack exceeds maximum allowed sizeと言われる時の対策方法"
+slug: how-to-fix-the-remote-fatal-pack-exceeds-maximum-allowed-size-problem-when-pushing-to-github
+date_published: 2021-01-29T09:38:23.000Z
+date_updated: 2021-02-20T12:05:34.000Z
+tags: [GitHub, Git]
+---
+
+GitHubへデータサイズの大きいリポジトリをPushする際に、下記のようなエラーが発生することがあります。
+
+```
+remote: fatal: pack exceeds maximum allowed size
+fatal: The remote end hung up unexpectedly
+```
+
+このエラーはGitHubに設定されているサイズ上限を超えた場合に発生します。
+
+GitHubでは2GB以下のリポジトリサイズが推奨されていますが、2GB以上のサイズにできない訳ではないので、分割してサイズを小さくしてpushをしてやればエラーはなくなります。
+
+分割pushするためには下記の手順を行ってください。
+
+## 1. 分割部分のコミットにタグを作成する
+
+タグを作成するコミットは好きなところでいいですが、500コミットぐらいで区分してやれば問題ないと思います。
+
+タグを作成するコマンドは下記のとおりです。
+
+```shell
+$ git tag <tag_name> <commit>
+```
+
+tag_nameにはタグ名、commitにはコミットのSHA-1ハッシュを入れてください。
+
+複数のタグを作る場合、異なるtag_nameを設定してください。
+
+tag_nameは後で使うので覚えるかメモしておいてください。
+
+## 2. 指定したタグまでpushする
+
+```shell
+$ git push origin `git show <tag_name> | grep commit | cut -d' ' -f2`:refs/heads/master
+```
+
+tag_nameは手順１で作成したタグのタグ名を入れてください。
+
+pushが終わったら次のタグ名を入れて再度実行してください。
+
+これでサイズを超過したリポジトリをGitHubにpushできます。
+
+### 参考

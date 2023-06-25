@@ -1,0 +1,103 @@
+---
+title: "Oracle Cloud Free TierのVMで外部との通信が50Mbpsしかでない"
+slug: network-bandwidth-of-oracle-cloud-is-limited-to-50-mbps
+date_published: 2021-03-04T06:27:14.000Z
+date_updated: 2021-12-14T07:24:17.000Z
+tags: [OCI]
+---
+
+Oracle Cloud Infrastructure(OCI) Free TierのAlways freeに1GBのVMがあるのですが、公式ウェブサイトやドキュメントに記載されている最大ネットワーク帯域幅のいう速度に全く達していないので、情報をまとめておきます。
+
+*Oracle Cloud InfrastructureとかFree TierとかAlways Freeとはなんぞやみたいな前提部分には特に触れないので、ググってください。Google先生は何でも知っています。*
+
+タイトルにある通り、OCIの無料VM「VM.Standard.E2.1.Micro」で期待されるネットワークスピードが出ないという問題が発生しました。
+
+この問題が全ユーザー共通する問題なのか、一部のユーザーの問題なのかについては分かりません。少なくとも私はこの問題に直面しており、国外でも同じような状況のユーザーの方がいました。
+
+まず「VM.Standard.E2.1.Micro」の最大ネットワーク帯域幅とはいくつなのかについてですが、Oracleの公式ウェブサイトを見ると0.48GbpsのVNICであるとされています。ドキュメント上でも最大ネットワーク帯域幅が480 Mbpsであるとされています。
+
+下記にスクリーンショットとドキュメントのURLを載せておくので、細かな事は自分自身でチェックしてください。
+
+## Compute Shapes
+
+![](https://i.imgur.com/Bcnudr1.png)
+
+[Compute Shapes](https://docs.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm#vmshapes__vm-standard)
+
+それで本題は、実際に無料のVMの「VM.Standard.E2.1.Micro」を作ってネットワーク速度確認するとどの程度出るのかという事です。
+
+Japan East(Tokyo)のAvailability domainがAD-1、Fault domainがFD-1、FD-2、FD-3で確認した限り、30Mbps～45Mbps程度しか出ないんですよね。インスタンスをCentOSやUbuntuで作成して、他になんの操作をしないでspeedtest.netの[speedtest cli](https://www.speedtest.net/apps/cli)でチェックしても、同じなんです。日付おいてからチェックしても同じような結果になりました。
+
+でもおかしいんですよね。2020年の3月ごろに同じくspeedtest.netのspeedtest cliで同様のネットワークスピードをチェックした時は、300Mbpsぐらいは出ていたんですよ。（記憶なので正確な値は思い出せないですけど、少なくとも３桁だったのは確実）
+
+となると、私が知らぬ間にOracle Cloudが仕様変更したと考えるのが妥当だけど、最初に確認したようにドキュメントに記載されている最大ネットワーク帯域幅は変わっていない。一応インスタンスを作り直してみたり、フォルトドメインを変更してみたり、OS変えてみたりしたけど、変わりないと。
+
+うーん！分からん！なんで！教えてGoogleセンセー！
+
+ということで適当な単語羅列してGoogle検索してみたら、Redditの投稿が出てきました。
+
+> Is it just me or is Oracle Cloud network slow..
+> Hi, is Oracle cloud free tier slow for anyone else? It says I have a 0.48Gbps VNIC but I only get speeds of 48mbps doing a speedtest (on the server). Pretty much makes that "10 TB data transfer" monthly useless... I tried creating a paid instance with my free trial and I got 500-600 mbps for a 0.7 Gbps VNIC so it seems they might be purposefully slowing down the free tier instances.
+> Homebase is phoenix, both free tier instances get 48mbps.
+> Thanks!
+
+> [Is it just me or is Oracle Cloud network slow..](https://www.reddit.com/r/pihole/comments/ioqlgi/is_it_just_me_or_is_oracle_cloud_network_slow/?ref_source=embed&amp;ref=share) from
+>       [pihole](https://www.reddit.com/r/pihole/)
+
+おやおや、ちゃんと私以外にも同じ状況の人いるじゃないか。ということで投稿内容をDeepLに突っ込んでみましょう。ただDeepLに入れるだと、日本語的に読みづらくてしょうがないので、それっぽい文章に私が修正します。
+
+> これは私だけですか、それともOracle Cloudのネットワークが遅いですか...こんにちは、Oracle CloudのFree tierは、誰にとっても遅いですか？Oracle Cloudは0.48GbpsのVNICであると言っていますが、私はスピードテストを（サーバー上で）やってたった48Mbpsの速度でした。これでは毎月の「10TBのデータ転送」が無駄になってしまいますね...無料トライアルで有料インスタンスを作成してみたところ、0.7GbpsのVNICで500～600mbpsの速度が出たので、意図的にFree tierのインスタンスを遅くしているのかもしれません。
+> ホームベースはフェニックスで、Free tierのインスタンスは両方とも48mbpsを取得します。
+> ありがとうございます。
+
+こんな感じになりました。最後に２行は置いとくと、これまでこの記事で話してきた内容とほぼ同じような内容になります。
+
+この返信にどんな物があったかと言うと、次のような感じです。
+
+> Hi, I just got around to testing the Oracle free tier and arrived at the same conclusions as you... According to [https://docs.cloud.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm](https://docs.cloud.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm) the Micro instance is supposed to be limited to 480Mbps.
+> I spent some time looking for network shapers, bandwidth limiters and the like but everything seems in order... I'm gonna contact the customer service.
+
+[Comment](https://www.reddit.com/r/pihole/comments/ioqlgi/is_it_just_me_or_is_oracle_cloud_network_slow/g6yyyza/) from discussion [puzzlingcaptcha's comment from discussion "Is it just me or is Oracle Cloud network slow.."](https://www.reddit.com/r/pihole/comments/ioqlgi/is_it_just_me_or_is_oracle_cloud_network_slow/).
+
+こちらも翻訳して、文章修正してみます。
+
+> こんにちは、私もオラクルのFree tierをテストして、あなたと同じ結論に達しました... [https://docs.cloud.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm](https://docs.cloud.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm) によると、Micro インスタンスは 480Mbps に制限されているようです。
+> ネットワークシェイパーや帯域幅リミッターなどを探して時間を費やしましたが、すべてが順当なようです...。カスタマーサービスに問い合わせてみる。
+
+この方も確認したら同じような結論にいたり、他の仕様も漁ってみたけど帯域幅に制限をかけるような他の仕様は見つからなかったよ。という感じですね。
+
+そしたらこのRedditのスレ主がOracleに問い合わせしたという返信をしてきました。こちらも同様に翻訳して文章を修正します。
+
+> I already contacted them. They said its the full 480 mbps for same region instances whereas to public domain its capped at 50 mbps. They said they found their documentation doesn't state that and they will update it.
+
+[Comment](https://www.reddit.com/r/pihole/comments/ioqlgi/is_it_just_me_or_is_oracle_cloud_network_slow/g75lbcj/) from discussion [RealRaspberryTech's comment from discussion "Is it just me or is Oracle Cloud network slow.."](https://www.reddit.com/r/pihole/comments/ioqlgi/is_it_just_me_or_is_oracle_cloud_network_slow/).
+
+> 私はすでにOracleに連絡しました。彼らは、パブリックドメインでは50 Mbpsに制限されているのに対し、同じ地域のインスタンスでは480Mbpsでフルだと言っていました。彼らはドキュメントにはそのように記載されていないことを発見し、それを更新すると言いました。
+
+サポートからの返信が書かれている内容の通りだとするなら、単にドキュメントの更新忘れ？記載忘れ？だったみたいですね。
+
+ちなみに返信した方も問い合わせを行ったようです。
+
+> I contacted them as well and have been playing ping-pong with support for the past two days. They just don't want to admit it.
+> I also tried spinning up a larger instance and predictably got the full gigabit upstream uplink, so they only cap the Micro instance. I am not holding my breath for them updating the documentation, sounds like regular misleading advertising.
+
+[Comment](https://www.reddit.com/r/pihole/comments/ioqlgi/is_it_just_me_or_is_oracle_cloud_network_slow/g75lheu/) from discussion [puzzlingcaptcha's comment from discussion "Is it just me or is Oracle Cloud network slow.."](https://www.reddit.com/r/pihole/comments/ioqlgi/is_it_just_me_or_is_oracle_cloud_network_slow/).
+
+> 私も同様に彼らに連絡を取り、この2日間サポートとピンポンをしています。彼らはそれを認めたくないだけです。
+> 私はまた、より大きなインスタンスをスピンアップしようとしましたが、予想通り、アップストリームのギガビットのアップリンクをフルに取得したので、彼らはマイクロインスタンスのキャップのみを取得しました。私は彼らがドキュメントを更新するために私の息を止めていない、通常の誤解を招くような広告のように聞こえる。
+
+要は私もサポートと連絡取り合ってるけど、都合悪いから認めたくないだけ。更に良いインスタンスを作成したら問題なかった。誤解を招くような広告をしてるんだろう。みたいな感じのこと言ってますね。
+
+この記事では取り上げませんが、インドのフォーラムでも同様の指摘がありました。
+
+[Oracle Cloud’s Lifetime free services (2 VPS + more) | Technology](https://broadbandforum.co/t/204837/page-4)
+
+## 結論
+
+Oracle Cloud Infrastructure Free Tierの「VM.Standard.E2.1.Micro」では外部との通信に50Mbpsの制限がかかっている。同じリージョン内のインスタンス間ではドキュメント通り480Mbpsの速度がでる。
+
+*此処から先は愚痴みたいな感じです。*
+
+この投稿を書いているのが2021年03月で、私がこの問題を発見したのは2020年10月下旬頃です。で投稿内のRedditは2020年9月8日の話です。発見から投稿までに大きな時間差があるのは、書くのが面倒で放置してただけです。
+
+でなんですけど、21年03月時点でドキュメント見ても特に記載らしい記載が無い。無料なので文句言えたもんじゃないですけど、ドキュメント更新してほしい。私の場合、使い始めの段階でネットワークスピードが正常に出ていたのに、途中から急に制限かけられたみたいな感覚なので、本当に意味がわからなかった。無料だからサポートも機能しないので、ヘルプ求めることもできないですし。

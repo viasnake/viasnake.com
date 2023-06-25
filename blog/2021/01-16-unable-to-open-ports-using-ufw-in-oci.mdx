@@ -1,0 +1,98 @@
+---
+title: "Oracle Cloudでポートが開放されない問題の解決策"
+slug: unable-to-open-ports-using-ufw-in-oci
+date_published: 2021-01-16T11:21:18.000Z
+date_updated: 2021-10-05T06:53:05.000Z
+tags: [OCI, Ubuntu]
+excerpt: Oracle Cloud Infrastructure（OCI）上でufwを用いてポートを開放できない場合の解決策
+---
+
+Oracle社が展開するOracle Cloud Infrastructure（OCI）上でufwを用いてポートを開放できない問題に遭遇したので解決策について書いておきます。
+
+*本記事ではCanonical Ubuntu 20.04 Minimalをインストールしたインスタンス想定で話しますが、Canonical Ubuntu 20.04でも同様の問題が発生したのを確認しています。*
+
+結論だけ先に言っておくと、Oracle Cloud上だとufwはバグっているのでiptablesをいじってポート開放すればいいです。iptablesについて理解している人は、普通にiptablesコマンドかファイル編集でポート開放してください。
+
+iptablesをわからない人は下記の手順をやってください。
+
+*本記事の内容については一切責任取らないので、自己責任でやってください。*
+
+### 1.（Ubuntu Minimalの人のみ）vimをインストール
+
+vimである必要は無いので他の使いたい人は他のインストールしてください。
+
+```shell
+$ sudo apt install vim
+```
+
+### 2. /etc/iptables に移動
+
+下記のコマンドを実行してください。
+
+```shell
+$ cd /etc/iptables
+```
+
+### 3. rules.v4 を編集
+
+下記のコマンドを実行してください。
+
+```shell
+$ sudo vim rules.v4
+```
+
+### 4. 下記の行を追記
+
+vimで開いたファイルに下記を追記してください。
+
+```
+-A INPUT -p tcp -m state --state NEW -m tcp --dport [ポート番号] -j ACCEPT
+```
+
+追記箇所はおまかせしますが、怖い場合は最初から記載されているポート22の行の下に挿入すればいいと思います。
+
+挿入後は下記のようになるかと思います。
+
+```
+# CLOUD_IMG: This file was created/modified by the Cloud Image build process
+# iptables configuration for Oracle Cloud Infrastructure
+# See the Oracle-Provided Images section in the Oracle Cloud Infrastructure
+# documentation for security impact of modifying or removing these rule
+
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [463:49013]
+:InstanceServices - [0:0]
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -p icmp -j ACCEPT
+-A INPUT -i lo -j ACCEPT
+-A INPUT -p udp --sport 123 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport [ポート番号] -j ACCEPT
+-A INPUT -j REJECT --reject-with icmp-host-prohibited
+-A FORWARD -j REJECT --reject-with icmp-host-prohibited
+~~~ 以下、省略 ~~~
+```
+
+### 5. 更新を適用
+
+下記のコマンドを実行してください。
+
+```shell
+$ sudo iptables-restore < /etc/iptables/rules.v4
+```
+
+心配な場合は、再起動してください。再起動コマンドは下記です。
+
+```shell
+$ sudo reboot
+```
+
+以上でOracle Cloud上でのポート開放です。
+
+本不具合はウェブサイト上で既知の問題として紹介されていますので、一応URLの方を載せておきます。細かいことはご自身でご確認ください。
+
+[Oracle Cloud Infrastructureに関する既知の問題のリスト](https://docs.oracle.com/ja-jp/iaas/Content/knownissues.htm#ufw)
+
+ちなみにstackoverflowとかでもいくつか解決策が提示されています。本記事のやり方はあくまで一例というのをご理解ください。

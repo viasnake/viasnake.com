@@ -1,0 +1,34 @@
+---
+title: "PythonでFizzBuzz"
+slug: python-fizzbuzz
+date_published: 2021-03-01T16:42:42.000Z
+date_updated: 2021-03-01T16:42:42.000Z
+tags: [Python]
+---
+
+## FizzBuzzとは
+
+数字が3の倍数なら`Fizz`、5の倍数なら`Buzz`、15の倍数なら`FizzBuzz`を表示し、いずれにも当てはまらなければ数字をそのまま表示するプログラム
+
+[Fizz Buzz(Wikipedia)](https://ja.wikipedia.org/wiki/Fizz_Buzz)
+
+### ソースコード
+
+```python
+for i in range(1, 101):
+    if i % 15 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
+    i += 1
+```
+
+GitHubで全てのソースコードを公開しています。
+
+ライセンスはMIT LICENCEです。
+
+[ViaSnake/FizzBuzz](https://github.com/ViaSnake/FizzBuzz)

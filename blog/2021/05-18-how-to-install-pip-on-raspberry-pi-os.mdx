@@ -1,0 +1,25 @@
+---
+title: "Raspberry Pi OSでpipのインストール方法"
+slug: how-to-install-pip-on-raspberry-pi-os
+date_published: 2021-05-18T02:19:08.000Z
+date_updated: 2021-05-18T02:19:08.000Z
+tags: [Raspberry Pi]
+---
+
+Raspberry Pi OS（Raspbian）でpipが使えない場合、インストールする必要があります。
+
+*Raspberry Pi OSといってますが、ubuntuとかでもできいるはずです。*
+
+例えばDocker-composeをpipでインストールしようとしたりすると、 `pip3: command not found`と出てきたりするので、pipのインストール方法についてまとめておきます。
+
+## インストール方法
+
+下記のコマンドをsudoできるアカウントにログインして実行してください。
+
+    $ sudo apt install -y python3 python3-pip
+
+これでインストール完了です。
+
+例としてインストール後、docker-composeをインストールする場合は、下記のコマンドを入力してください。
+
+    $ sudo pip3 install docker-compose

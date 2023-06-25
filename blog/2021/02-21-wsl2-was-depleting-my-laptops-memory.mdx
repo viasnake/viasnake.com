@@ -1,0 +1,41 @@
+---
+title: "最近ノートパソコンの動作が異常に重かった原因がWSL2だった"
+slug: wsl2-was-depleting-my-laptops-memory
+date_published: 2021-02-21T09:54:54.000Z
+date_updated: 2021-05-18T02:29:46.000Z
+tags: [Windows, WSL2, Docker]
+---
+
+最近ノートパソコンが異常に重いと思ってタスクマネージャー眺めていたら、Vmmemなるプロセスがメモリを食いつぶしていました。
+
+Vmmemってなんぞやって事で物知りのGoogle先生に聞いてみたら、どうやらWindowsでLinux動かす為のWindows Subsystem for Linux 2（WSL2）のプロセスみたいなんですよ。
+
+でもWindowsに普通に入ってるシステムがメモリを食いつぶすなんて問題、普通であれば考えにくいので、もう少し調べたら「WSL 2 consumes massive amounts of RAM and doesn't return it」というGitHub issueが出てきました。
+
+[WSL 2 consumes massive amounts of RAM and doesn’t return it · Issue #4166 · microsoft/WSL](https://github.com/microsoft/WSL/issues/4166)
+
+ほっとくとメモリ食いつぶすよっていう問題です。予想に反して、普通に問題でした。
+
+私はDocker for Desktopを使っていて、WSL2をアンインストールすれば問題解決！みたいにはならないので解決方法も探したら、下記のQiitaの記事が出てきました。
+
+[WSL2によるホストのメモリ枯渇を防ぐための暫定対処 - Qiita](https://qiita.com/yoichiwo7/items/e3e13b6fe2f32c4c6120)
+
+記事内で示されている対処法は、メモリサイズを固定して利用するメモリ量に制限かけるというものです。
+
+一応、下記にやり方を示しておきます。
+
+## %USERPROFILE%に.wslconfigを作成する。
+
+`%USERPROFILE%`は `C:\User\ユーザー名`のこと。分からなければ、WindowsキーとRキーを同時押しして `%USERPROFILE%`を実行して表示された場所がそこです。
+
+そこに.qslconfigを作ったらメモ帳か何かで開いて下記を記述してください。
+
+```
+[wsl2]
+    memory=2GB
+    swap=0
+```
+
+memoryが利用可能なメモリ量、swapがスワップメモリ量です。swapはお好みで、memoryは自分のパソコンのメモリとご相談ください。
+
+WindowsにDocker for Desktop入れたらメモリが食いつぶされて枯渇していると悩んでいる方は、以上の解決策を試してみて下さい。

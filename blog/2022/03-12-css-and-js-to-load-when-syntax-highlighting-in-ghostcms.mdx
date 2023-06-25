@@ -1,0 +1,54 @@
+---
+title: "GhostCMSでシンタックスハイライトする時に読み込むCSSとJS"
+slug: css-and-js-to-load-when-syntax-highlighting-in-ghostcms
+date_published: 2022-03-12T03:00:00.000Z
+date_updated: 2022-03-12T11:52:38.000Z
+tags: [CSS, JavaScript, Ghost]
+---
+
+GhostCMSでシンタックスハイライトする時に読み込むCSSとJSが分からなくなるので、いくつかまとめて書き記しておく。
+
+GhostCMSではPrism.jsが推奨されている為、Prism.jsを利用する。
+
+## Prism.js
+
+> Prism is a lightweight, extensible syntax highlighter, built with modern web standards in mind. It’s used in millions of websites, including some of those you visit daily.
+
+[
+
+Prism
+
+![](https://prismjs.com/assets/favicon.png)Smashing Magazine
+
+![](https://prismjs.com/assets/img/logo-smashing.png)
+](https://prismjs.com/)
+GhostCMSにPrism.jsを追加するには、Code Injectionにコードを貼り付ける。
+
+CSSはヘッダー、JSはフッター
+
+### prism.min.css
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+Themeが存在しており、必要に応じてデザインを変更可能。変更する場合は、prism.min.cssに変わってTheme cssを読み込む必要がある。
+
+okaidiaの場合は、以下のコード
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+### prism.min.js
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js" integrity="sha512-/Swpp6aCQ0smuZ+zpklJqMClcUlvxhpLf9aAcM7JjJrj2waCU4dikm3biOtMVAflOOeniW9qzaNXNrbOAOWFCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+シンタックスハイライトしたい言語に応じて、pluginも読み込む必要がある。
+
+Pythonの場合は、以下のコード
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-python.min.js" integrity="sha512-AKaNmg8COK0zEbjTdMHJAPJ0z6VeNqvRvH4/d5M4sHJbQQUToMBtodq4HaV4fa+WV2UTfoperElm66c9/8cKmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+---
+
+かなりの数のPluginが存在するため、適時cdnjs.comを参照することを推奨
+
+[prism - Libraries - cdnjs - The #1 free and open source CDN built to make life easier for developers](https://cdnjs.com/libraries/prism)
+

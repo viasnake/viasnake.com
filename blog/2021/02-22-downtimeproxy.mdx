@@ -1,0 +1,51 @@
+---
+title: "DowntimeProxy"
+slug: downtimeproxy
+date_published: 2021-02-22T03:24:42.000Z
+date_updated: 2021-02-22T03:24:42.000Z
+---
+
+DowntimeProxyはスタンドアロンのMinecraftサーバーソフトウェアです。
+
+プログラムを実行するとMinecraftサーバーが起動します。プレイヤーはサーバーに接続することが出来ず、接続した場合にはkickされメッセージを受け取ります。そのためMinecraftサーバーリストのPingにのみ応答する軽量なマルチプレイサーバーとして利用できます。
+
+### 更新履歴
+
+    2020/03/12     1.1.1 Release    exeファイルがウイルス判定されるのでexe配布終了    
+    2020/02/04     1.1   Release    icon追加
+                                    log表示対応
+                                    起動時に使えるオプションを削除
+                                    終了時のメッセージ削除
+    2020/01/24     1.0   Release
+
+### 配布先
+
+Spigotmc.org
+
+[https://www.spigotmc.org/resources/downtimeproxy.74587/](https://www.spigotmc.org/resources/downtimeproxy.74587/)
+
+GitHub.com
+
+[Releases · ViaSnake/DowntimeProxy](https://github.com/ViaSnake/DowntimeProxy/releases)
+
+### 設定
+
+プログラムの実行場所に生成される「server.ini」が設定ファイルとなります。
+
+```ini
+host = 0.0.0.0
+port = 25565
+motd = A Minecraft server\n&bDowntimeProxy
+max_players = 20
+    
+[messages]
+    kick = Disconnect by DowntimeProxy
+```
+
+ソースコードはGitHubで公開されており、ライセンスはApache License 2.0が適用されます。
+
+[ViaSnake/DowntimeProxy](https://github.com/viasnake/DowntimeProxy)
+
+このソフトウェアはPythonライブラリであるQuarryを必要とします。
+
+[barneygale/quarry](https://github.com/barneygale/quarry)

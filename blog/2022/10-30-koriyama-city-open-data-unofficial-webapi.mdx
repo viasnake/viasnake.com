@@ -1,0 +1,99 @@
+---
+title: "郡山市オープンデータ非公式WebAPI"
+slug: koriyama-city-open-data-unofficial-webapi
+date_published: 2022-10-29T21:49:30.000Z
+date_updated: 2022-11-17T15:14:32.000Z
+excerpt: 福島県郡山市が公開するオープンデータをより簡単に活用するために作成された非公式のWebAPI
+---
+
+## 概要
+
+福島県郡山市が公開するオープンデータの一部をjson形式で返すWebAPIです。
+API Endpoint[https://koriyama.api.alflag.org/](https://koriyama.api.alflag.org/)SSLSupportAvailable HTTP MethodGETResponse formatjson
+## 注意事項
+
+- API Endpointへアクセスした時点で、本ページに書かれた全ての内容を理解・同意しているものとみなします。
+- 提供されるAPIは全て非公式です。
+- 本APIは郡山市役所と関係ありません。
+- 本APIを利用した場合の損害について一切の責任を負いません。
+- 本APIから取得できたデータの完全性・正確性・有用性・安全性等について一切の保証を行いません。
+- 本APIは事前に予告なく内容等の改変や削除、サービス停止を行う可能性があります。
+- 本APIから提供される情報は、郡山市役所が公開するオープンデータを改変したものです。
+- 本APIから提供される情報は、[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.ja)が適用されます。
+- 本APIから取得した情報を利用する場合、郡山市役所が公開する[郡山市オープンデータ利用規約](https://www.city.koriyama.lg.jp/uploaded/attachment/1602.pdf)に従う必要があります。
+- 本APIへの過度なリクエストは避けてください。
+
+## 利用方法
+
+### レスポンスヘッダーのContent-Typeについて
+
+レスポンスヘッダーのContent-Typeは `application/json; charset=UTF-8` となっています。エラー発生時も同様です。
+
+### エラー
+
+本APIのエラーはエラーメッセージとサーバが受け取ったリクエスト内容で表現されています。
+
+**Bad Request**
+
+リクエストされた内容が正しくないときに発生します。レスポンスヘッダーのステータスは `200 OK` です。
+
+    {
+      "error": {
+        "message": "Bad Request",
+        "request": {
+          "method":"GET",
+          "id": "",
+          "url":""
+        }
+      }
+    }
+
+**Not Found**
+
+指定されたURLに該当するAPIが存在しないときに発生します。レスポンスヘッダーのステータスは `200 OK` です。
+
+    {
+      "error": {
+        "message": "Not Found",
+        "request": {
+          "method":"GET",
+          "url":""
+        }
+      }
+    }
+
+## API
+
+郡山市役所ウェブサイトの「[オープンデータの公共施設等情報](https://www.city.koriyama.lg.jp/soshiki/22/1154.html)」「[オープンデータのその他の情報](https://www.city.koriyama.lg.jp/soshiki/22/1142.html)」で公開されているファイルの内容をjson形式で取得できます。
+
+`v1/{id}` で全てを取得できます。 `{id}` には「[オープンデータの公共施設等情報](https://www.city.koriyama.lg.jp/soshiki/22/1154.html)」「[オープンデータのその他の情報](https://www.city.koriyama.lg.jp/soshiki/22/1142.html)」上で公開されているファイル名が入ります。以下は、idの早見表です。
+1603「市民提案制度」提案等と対応状況（平成29年度分）1604「市民提案制度」提案等と対応状況（平成28年度分）1605「ココナビこおりやま」年度別月別件数1606鯉の生産量1607鯉料理提供店舗数1705市の行政サービス1706ふれあいセンター・コミュニティセンター1707公民館1708保健所1709病院1710福祉・子育て支援施設1711働く人のための施設1712上下水道局1713衛生1714霊園1715火葬場1716消防1717郡山水防センター1718保育所（認可保育所）1719その他の私立保育園1720幼稚園（私立幼稚園）1721小学校1722中学校1723文化・教育・社会施設1724スポーツ施設1725観光・産業施設1726市営住宅1727AED設置施設1728Wi-Fi設置施設1729オストメイト対応トイレ設置施設
+APIから返される全てのjsonは、以下のフォーマットに基づいています。
+
+    {
+        "last_updated": {time},
+        "name": {name},
+        "id": {id},
+        "original_url": {url},
+        "data": []
+    }
+
+`last_updated` には内容が最後に更新された日時が入っています。
+
+`name` には「[オープンデータの公共施設等情報](https://www.city.koriyama.lg.jp/soshiki/22/1154.html)」上の分類名が入っています。
+
+`id` には「[オープンデータの公共施設等情報](https://www.city.koriyama.lg.jp/soshiki/22/1154.html)」で公開されているcsvのファイル名が入っています。
+
+`original_url` には元データの取得元URLが入っています。
+
+`data` には、取得されたcsvに基づいて生成された配列が入っています。元データが整形されている場合、`data` は返されません。
+
+## 更新履歴
+
+### 2022/07/17
+
+- `/v1/1603` を追加
+- `/v1/1604` を追加
+- `/v1/1605` を追加
+- `/v1/1606` を追加
+- `/v1/1607` を追加

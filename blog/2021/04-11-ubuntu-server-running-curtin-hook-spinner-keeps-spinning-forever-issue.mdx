@@ -1,0 +1,21 @@
+---
+title: "Ubuntu Serverインストール時running 'curtin hook'が終わらない問題"
+slug: ubuntu-server-running-curtin-hook-spinner-keeps-spinning-forever-issue
+date_published: 2021-04-11T08:49:53.000Z
+date_updated: 2021-04-11T08:49:53.000Z
+tags: [Ubuntu]
+---
+
+Ubuntu Server 20.02 LTSのインストール時に最後のインストール画面でインストール状況を表示するログ画面があるのですが、その画面のrunning 'curtin hook'の横でスピナーがずっとぐるぐる回転しています。
+
+所見でインストールした時、全然インストール終わらないなと思いながら、長時間待ってしまったので、書き残しておきます。
+
+この問題はすでにバグとして報告されており、スピナーが回り続けるのみで実際にはインストール作業が終わっています。
+
+インストール作業が完了しているかは「View full log」からログを確認することで分かります。
+
+詳細はsubiquityのBug #1912957「["running 'curtin hook'" spinner keeps spinning forever](https://bugs.launchpad.net/subiquity/+bug/1912957) 」を確認してください。
+
+[Bug #1912957 ”“running ‘curtin hook’” spinner keeps spinning for... : Bugs : subiquity](https://bugs.launchpad.net/subiquity/+bug/1912957)
+
+この問題は2021年01月24日に報告され、2021年02月21日に修正がコミットされています。

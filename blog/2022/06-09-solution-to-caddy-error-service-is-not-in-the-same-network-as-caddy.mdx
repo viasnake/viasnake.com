@@ -1,0 +1,54 @@
+---
+title: "Caddyエラー「Service is not in same network as caddy」の解決策"
+slug: solution-to-caddy-error-service-is-not-in-the-same-network-as-caddy
+date_published: 2022-06-09T10:50:34.000Z
+date_updated: 2022-06-14T02:06:49.000Z
+tags: [Caddy, Docker, Docker Swarm]
+---
+
+`lucaslorentz/caddy-docker-proxy` で発生するエラー「Service is not in same network as caddy」に対する解決策です。
+
+## 前提
+
+Docker Swarmで`lucaslorentz/caddy-docker-proxy` をデプロイし、各種コンテナへのリバースプロキシ用のラベルを適切に設定されている状態。
+
+特に他にエラーが見られず設定に問題がないのにも関わらずエラーが発生する場合。
+
+## エラー内容
+
+エラーは以下の通りです。
+
+    "msg":"Failed to get ingress networks"
+    "error":"Cannot find container id in cgroups"
+    "msg":"Service is not in same network as caddy"
+
+## 修正方法
+
+環境変数の `CADDY_INGRESS_NETWORKS` に属するネットワークを設定する。
+
+例えば、externalの `public` ネットワークに参加しており、 `public` に属するコンテナへプロキシを行う場合は、 `CADDY_INGRESS_NETWORKS=public` と環境変数を設定する必要がある。
+
+### docker-compose.yml 例
+
+    version: "3.7"
+    services:
+      caddy:
+        image: lucaslorentz/caddy-docker-proxy:ci-alpine
+        ports:
+          - 80:80
+          - 443:443
+        environment:
+          - CADDY_INGRESS_NETWORKS=public
+        networks:
+          - public
+        volumes:
+          - /var/run/docker.sock:/var/run/docker.sock
+          - caddy_data:/data
+        restart: unless-stopped
+    
+    networks:
+      public:
+        external: true
+    
+    volumes:
+      caddy_data: {}

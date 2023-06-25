@@ -1,0 +1,19 @@
+---
+title: "Zapierのエラー「Due to spam, Twitter actions are limited for non-paying accounts.」"
+slug: zapier-error-due-to-spam-twitter-actions-are-limited-for-non-paying-accounts
+date_published: 2021-06-08T00:19:08.000Z
+date_updated: 2021-12-14T18:41:42.000Z
+tags: [Zapier]
+---
+
+ZapierでAppを動かそうとした時に下記のようなエラーが発生する場合があります。
+
+> ('Due to spam, Twitter actions are limited for non-paying accounts.', None)
+
+このエラーの発生条件がパッと調べてもあまり良く分からなかったので、書き残しておきます。
+
+結論から言うと、短時間にツイートし過ぎているから制限がかかっている状態です。
+
+具体的には一時間当たり５ツイート以下であれば、問題ありませんがそれを超えると、エラーが発生します。
+
+このエラーは一時間後にもう一度試すか、有料プランに乗り換えることで解消されます。

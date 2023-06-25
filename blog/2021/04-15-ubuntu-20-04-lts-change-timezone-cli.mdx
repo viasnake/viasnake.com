@@ -1,0 +1,41 @@
+---
+title: "Ubuntu 20.04 LTSでタイムゾーンを変更する方法"
+slug: ubuntu-20-04-lts-change-timezone-cli
+date_published: 2021-04-15T02:50:21.000Z
+date_updated: 2021-04-15T02:50:21.000Z
+tags: [Ubuntu]
+---
+
+Ubuntu Server 20.04 LTSでCronが変な時間に動いておかしいと思ったら、タイムゾーンがUTCになっていたので、タイムゾーンを変更する方法について書いておきます。
+
+現在のタイムゾーンや時間を確認するには下記のコマンドを使用します。
+
+    $ timedatectl
+
+コマンドによって表示される情報は下記の通りです。
+
+                   Local time: Thu 2021-04-15 02:37:15 UTC
+               Universal time: Thu 2021-04-15 02:37:15 UTC
+                     RTC time: Thu 2021-04-15 02:37:15
+                    Time zone: Etc/UTC (UTC, +0000)
+    System clock synchronized: yes
+                  NTP service: active
+              RTC in local TZ: no
+
+この場合、タイムゾーンはEtc/UTCに設定されている為、Asia/Tokyoに直します。
+
+タイムゾーンを変更するには下記のコマンドを使用します。
+
+    sudo timedatectl set-timezone Asia/Tokyo
+
+変更後、再度確認コマンドを使用すると下記のようになります。
+
+                   Local time: Thu 2021-04-15 11:49:07 JST
+               Universal time: Thu 2021-04-15 02:49:07 UTC
+                     RTC time: Thu 2021-04-15 02:49:07
+                    Time zone: Asia/Tokyo (JST, +0900)
+    System clock synchronized: yes
+                  NTP service: active
+              RTC in local TZ: no
+
+これで変更完了です。

@@ -1,0 +1,92 @@
+---
+title: "Surface3でUbuntu Desktopを動かす"
+slug: running-ubuntu-desktop-on-surface-3
+date_published: 2021-06-28T09:00:00.000Z
+date_updated: 2021-10-28T16:41:03.000Z
+tags: [Ubuntu]
+---
+
+MicrosoftのタブレットPC「Surface 3」で、Windowsを動かすのはもう難しいです。Surface 3はWindows 8だと普通に動くのですが、Windows 10へアップグレードすると動作がもう本当に遅くてストレスだらけです。おまけにストレージ容量が多いわけでもないので、Windowsを動かすだけでもうかつかつ。‌‌というわけで、Windows君をSurface 3からクビにしてUbuntu Desktopをインストールします。
+
+※ここで指すSurface 3はnon-Proです。Surface 3 Proではありません。
+
+## Surface 3のスペック
+
+CPU: Intel® Atom™ Processor x7 Z8700（1.6GHz）‌‌メモリ: 4GB‌‌HDD: 64GB（128GBモデルも有り）‌‌ディスプレイ: 10.8インチワイド フルHD‌‌無線LAN: 802.11ac / 802.11 a/b/g/n‌‌Bluetooth: Bluetooth 4.0‌‌※モバイルデータ通信（3G/4G LTE）もありますが、SIMが手元にないので今回は使いません。海外見る限り、動くみたいです。
+
+## インストールするOS
+
+Ubuntu Desktop 20.04 LTSをインストールします。
+
+[Download Ubuntu Desktop | Download | Ubuntu](https://ubuntu.com/download/desktop)
+
+### Ubuntu 20.04.2.0 LTSの動作要件
+
+- 2GHzのデュアルコアプロセッサ以上
+- 4GBのシステムメモリ
+- 25GBのハードドライブ空き容量
+- インターネット接続が可能であること
+- インストーラメディア用のDVDドライブまたはUSBポートがあること
+
+要件自体は満たしています。モデルが64GBであり、容量が足りないのでデュアルブートにはしません。Windowsは完全に削除します。海外の方々を見る限り、デュアルブートでも問題ないです。128GBでWindowsを削除したくない場合は、デュアルブートでも良いと思います。
+
+## インストールメディアの作成
+
+インストール方法は色々あると思いますが、USBメモリでインストールメディア作るのが良いと思います。ソフトは色々ありますが、Rufusで良いと思います。
+
+### Rufus
+[
+
+Rufus - 起動可能なUSBドライブを簡単に作成できます
+
+Rufus: Create bootable USB drives the easy way
+
+RufusPete Batard
+
+![](https://rufus.ie/pics/rufus-128.png)
+](https://rufus.ie/ja/)
+USBのインストールメディアをWindows上でRufusを使用して作る方法は、Ubuntuの公式ページで紹介されています。それに従ってください。英語です。
+
+[Create a bootable USB stick on Windows | Ubuntu](https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview)
+
+ISOは下記のページからダウンロードしてください。
+
+[Download Ubuntu Desktop | Download | Ubuntu](https://ubuntu.com/download/desktop)
+
+## セキュアブートの無効化
+
+Surface 3へUbuntuをインストールする上に、セキュアブートを無効にする必要があります。セキュアブートは信頼されているファームウェアのみでパソコンを起動するというものです。つまりこれ有効だとWindows以外起動しないから、無効にしなくてはいけません。
+
+やり方はMicrosoftの公式ドキュメントに書かれています。このページは日本語があります。BIOS起動して、セキュアブートを無効に設定するだけなので簡単です。
+[
+
+セキュア ブートの無効化
+
+セキュア ブートの無効化
+
+Microsoft DocsEliotSeattle
+
+](https://docs.microsoft.com/ja-jp/windows-hardware/manufacture/desktop/disabling-secure-boot)
+## UEFIで起動順序を変更し、USBから起動
+
+最初に作成したUSBのインストールメディアをSurfaceに挿して、そのUSBから起動する必要があります。BIOSから起動順序を変更することが可能です。やり方は、Microsoftサポートの公式ページに書かれています。日本語です。
+
+[USB デバイスから Surface を起動する](https://support.microsoft.com/ja-jp/surface/usb-%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%81%8B%E3%82%89-surface-%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B-fe7a7323-8d1d-823d-be17-9aec89c4f9f5)
+
+## OSをインストール
+
+USBから起動すると、Ubuntuのインストール画面が出てきます。後は表示される手順に従ってインストールしてください。Windowsを完全に削除する場合は、パーティションを全部削除するだけで良いです。もしもデュアルブートする場合は、Windows側からパーティションを縮小した上で、Windowsのパーティション領域を削除しないでください。‌‌パーティションの縮小は、[コントロールパネル]->[システムとセキュリティ]->[管理ツール]->[コンピューターの管理]->[ストレージ]->[ディスクの管理]から行ってください。
+
+これでインストール作業は完了です。OSを利用するにはWi-Fi問題があるので、修正します。困ってない場合は、やらなくても大丈夫です。
+
+## Wi-Fiが起動後、一定時間で無効化される
+
+なんだかよくわからないですが、Wi-Fiは起動直後は使えるのですが、一定時間するとWi-Fiが使えなくなります。
+
+wifi.powersaveが問題らしいので、 `/etc/NetworkManager/conf.d/default-wifi-powersave-on.conf` を編集して `wifi.powersave` の値を2に書き換えます。
+
+ターミナル（端末）から下記のコマンドを実行してvimでファイルを編集してください。
+
+    sudo vim /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
+
+これでWi-Fiは取り敢えず直ります。

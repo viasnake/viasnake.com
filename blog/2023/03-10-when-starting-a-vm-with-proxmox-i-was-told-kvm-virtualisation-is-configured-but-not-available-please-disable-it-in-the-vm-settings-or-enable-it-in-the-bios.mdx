@@ -1,0 +1,26 @@
+---
+title: "Proxmox VM起動時エラー「KVM virtualisation configured, but not available. Either disable in VM configuration or enable in BIOS.」の解決策"
+slug: when-starting-a-vm-with-proxmox-i-was-told-kvm-virtualisation-is-configured-but-not-available-please-disable-it-in-the-vm-settings-or-enable-it-in-the-bios
+date_published: 2023-03-10T02:54:58.000Z
+date_updated: 2023-03-10T02:58:58.000Z
+tags: [proxmox]
+excerpt: ProxmoxでVM起動時に「KVM virtualisation configured, but not available. Either disable in VM configuration or enable in BIOS.」と言われる問題の解決策
+---
+
+意外と日本語情報が転がってないので、書いておきます。
+
+## エラーについて
+
+Proxmox 7.3上で正常にVMの作成が完了した後に、起動に失敗しエラーが発生する。
+
+### エラー
+
+TASK ERROR: KVM virtualisation configured, but not available. Either disable in VM configuration or enable in BIOS.
+![](https://i.imgur.com/J4JrwYw.png)
+## 解決策
+
+書いてあるとおりですが、ホストマシンのBIOS上で仮想化設定が無効になっています。
+
+ホストマシンを再起動しBIOSに入った後に、設定を有効化することでエラーを解消できます。
+
+設定項目の名前は、マザーボードによって異なりますが、Intel Virtualization TechnologyやVTxと表記されることがあります。殆どの場合、マザーボードの説明書に書かれています。

@@ -1,0 +1,194 @@
+---
+title: "WindowsでStable Diffusion web UIを動かす方法"
+slug: how-to-run-stable-diffusion-web-ui-on-windows
+date_published: 2022-11-08T10:25:59.000Z
+date_updated: 2022-11-08T10:33:35.000Z
+tags: [Stable Diffusion, Docker]
+excerpt: Stable Diffusion web UI (AUTOMATIC1111 fork)をDockerを使用してWindows上で動作させる方法についてまとめてあります。
+---
+
+Stable Diffusion web UIをDockerを使用してWindows上で動作させる方法についてまとめてあります。
+
+## 前提条件
+
+この投稿での環境についてです。必ずしも同様の環境である必要はありません。参考にしてください。
+
+- OS: Windows 11 Pro 22H2
+- CPU: Ryzen 7 5700X
+- GPU: Geforce RTX 3060
+- メモリ: 32GB
+- Docker、gitが導入可能、もしくは、すでに導入されている環境
+
+当たり前ですが、Stable Diffusionが扱えるだけのスペックが整っている事が前提です。
+
+### Stable Diffusion web UI (AUTOMATIC1111 fork)について
+
+AUTOMATIC1111さんがforkしたStable Diffusionです。webuiがついており、コマンドを使うことなくより簡単にStable Diffusionを扱えるようにします。私が知る限り、webuiから最も様々なことができるStable Diffusion forkです。
+
+[GitHub - AUTOMATIC1111/stable-diffusion-webui: Stable Diffusion web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+
+何ができるかはドキュメントにまとめられています。
+
+[Features · AUTOMATIC1111/stable-diffusion-webui Wiki](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features)
+
+### Stable Diffusion WebUI Dockerについて
+
+普通にStable Diffusionを動かそうとすると手間なので、今回はインストールの手間を減らすためにDockerを使用します。AbdBarhoが公開しているStable Diffusion WebUI Dockerを利用します。
+
+Stable Diffusion WebUI Dockerでは、AUTOMATIC1111、hlky、lsteinのStable Diffusion forkを扱うことが可能です。今回はAUTOMATIC1111 forkを使用します。
+
+[GitHub - AbdBarho/stable-diffusion-webui-docker: Easy Docker setup for Stable Diffusion with user-friendly UI](https://github.com/AbdBarho/stable-diffusion-webui-docker)
+
+## セットアップ
+
+Stable Diffusionのセットアップを始めます。人によっては、部分的にスキップ可能な箇所もあると思います。
+
+### (1) git for windowsのインストール
+
+git for windowsをインストールしてください。インストール済みの場合は、無視していいです。
+
+[Git for Windows](https://gitforwindows.org/)
+
+詳細なインストール方法については解説しません。Downloadより.exeファイルをダウンロードし、手順に従うことでインストールが可能です。
+
+### (2) Docker Desktopのインストール
+
+Docker Desktopをインストールしてください。インストール済みの場合は、無視していいです。
+
+[Docker Desktop - Docker](https://www.docker.com/products/docker-desktop/)
+
+詳細なインストール方法については解説しません。Download Docker Desktopより.exeファイルをダウンロードし、手順に従うことでインストールが可能です。
+
+### (3) インストールの確認
+
+正常にインストールが完了しており、Docker Desktopが起動状態であれば、Windows PowerShellから以下のコマンドを実行する事で、下記の結果を得ることができます。
+
+**Git for Windowsの確認**
+
+`git -v` でインストールされたバージョン情報を確認できます。インストールしたバージョンによって異なる結果が返ってきます。
+
+    > git -v
+    git version 2.38.1.windows.1
+
+**Docker for Desktopの確認**
+
+`docker version` でインストールされたバージョン情報を確認できます。インストールしたバージョンによって異なる結果が返ってきます。
+
+    > docker version
+    Client:
+     Cloud integration: v1.0.29
+     Version:           20.10.20
+     API version:       1.41
+     Go version:        go1.18.7
+     Git commit:        9fdeb9c
+     Built:             Tue Oct 18 18:28:44 2022
+     OS/Arch:           windows/amd64
+     Context:           default
+     Experimental:      true
+    
+    Server: Docker Desktop 4.13.0 (89412)
+     Engine:
+      Version:          20.10.20
+      API version:      1.41 (minimum version 1.12)
+      Go version:       go1.18.7
+      Git commit:       03df974
+      Built:            Tue Oct 18 18:18:35 2022
+      OS/Arch:          linux/amd64
+      Experimental:     false
+     containerd:
+      Version:          1.6.8
+      GitCommit:        9cd3357b7fd7218e4aec3eae239db1f68a5a6ec6
+     runc:
+      Version:          1.1.4
+      GitCommit:        v1.1.4-0-g5fd4c4d
+     docker-init:
+      Version:          0.19.0
+      GitCommit:        de40ad0
+
+もしもDockerの動作確認をしたい場合は、`docker run hello-world` コマンドでイメージからコンテナを作成してみてください。正常にコンテナを起動することができれば、以下のメッセージを得ることができます。
+
+    > docker run hello-world
+    Unable to find image 'hello-world:latest' locally
+    latest: Pulling from library/hello-world
+    2db29710123e: Pull complete
+    Digest: sha256:e18f0a777aefabe047a671ab3ec3eed05414477c951ab1a6f352a06974245fe7
+    Status: Downloaded newer image for hello-world:latest
+    
+    Hello from Docker!
+    This message shows that your installation appears to be working correctly.
+    
+    To generate this message, Docker took the following steps:
+     1. The Docker client contacted the Docker daemon.
+     2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+        (amd64)
+     3. The Docker daemon created a new container from that image which runs the
+        executable that produces the output you are currently reading.
+     4. The Docker daemon streamed that output to the Docker client, which sent it
+        to your terminal.
+    
+    To try something more ambitious, you can run an Ubuntu container with:
+     $ docker run -it ubuntu bash
+    
+    Share images, automate workflows, and more with a free Docker ID:
+     https://hub.docker.com/
+    
+    For more examples and ideas, visit:
+     https://docs.docker.com/get-started/
+
+### (4) Stable Diffusion WebUI Dockerをclone
+
+Stable Diffusion WebUI Dockerをcloneします。以下のコマンドを実行してください。
+
+    > git clone https://github.com/AbdBarho/stable-diffusion-webui-docker.git
+
+現在いるディレクトリ上に`stable-diffusion-webui-docker` というディレクトリが作成され、その中に内容がダウンロードされます。
+
+以降は、`stable-diffusion-webui-docker` で作業を行うので、ディレクトリへ移動します。移動するには、以下のコマンドを実行してください。
+
+    > cd stable-diffusion-webui-docker
+
+### (5) モデルデータをダウンロード
+
+Stable Diffusionが利用するモデルデータをダウンロードします。以下のコマンドを実行してください。
+
+    > docker compose --profile download up --build
+
+このコマンドにより、必要なモデル・ファイルがすべてダウンロードされ、整合性が検証されます。これらのデータは一度ダウンロードするのみで済みます。
+
+ダウンロードされるデータは12GB近いので、十分な容量の確保と安定したインターネット接続が必要です。
+
+かなり時間がかかりますので、待ちましょう。
+
+### (6) Stable Diffusion webUIの実行
+
+以下のコマンドを実行することで、webUIを実行できます。
+
+    > docker compose --profile auto up --build
+
+最初の起動には時間がかかります。最初の起動でダウンロードされた内容などは、 `data` ディレクトリにキャッシュされるため、次回以降の起動は早くなります。インターネット接続速度によって異なりますが、初回起動には15分から1時間程度かかる場合があります。以降は、20秒程度です。
+
+実行後は、[http://localhost:7860/](http://localhost:7860/) からアクセスが可能です。
+
+#### 他のforkを使う場合
+
+「docker compose --profile [ui] up --build」の[ui]を以下の文字列のいずれかに置き換えてください。
+
+- auto
+- hlky
+- lstein
+
+autoは[stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)、hlkyは[sygil-webui](https://github.com/Sygil-Dev/sygil-webui)、lsteinは[InvokeAI](https://github.com/invoke-ai/InvokeAI)
+
+#### GPUなしで動作させたい場合
+
+「docker compose --profile auto-cpu up --build」を使って実行してください。
+
+### (7) 日本語化
+
+Stable Diffusion webUIは有志によって日本語化が行われており、組み込まれています。
+
+アクセスした先のSettingsより日本語化を行うことが可能です。
+![](https://i.imgur.com/MEPEezZ.jpg)
+Settingsに移動した後に、下へスクロールすると「Localization (requires restart)」という項目があります。その中からja_JPを選択してください。
+![](https://i.imgur.com/aW0X3in.jpg)
+その後、Stable Diffusion webUIを再起動することで日本語化されます。再起動する場合、PowerShellからCtrl + Cで終了させてください。起動は(6)に従ってください。

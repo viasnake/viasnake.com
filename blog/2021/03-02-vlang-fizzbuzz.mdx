@@ -1,0 +1,36 @@
+---
+title: "V言語でFizzBuzz"
+slug: vlang-fizzbuzz
+date_published: 2021-03-01T16:37:09.000Z
+date_updated: 2021-03-01T16:37:09.000Z
+tags: [V]
+---
+
+## FizzBuzzとは
+
+数字が3の倍数なら`Fizz`、5の倍数なら`Buzz`、15の倍数なら`FizzBuzz`を表示し、いずれにも当てはまらなければ数字をそのまま表示するプログラム 
+
+[Fizz Buzz(Wikipedia)](https://ja.wikipedia.org/wiki/Fizz_Buzz)
+
+### ソースコード
+
+```v
+for i in 1..101 {
+    if i % 15 == 0 {
+        print("FizzBuzz")
+    } else if i % 3 == 0 {
+        print("Fizz")
+    } else if i % 5 == 0 {
+        print("Buzz")
+    } else {
+        print("$i")
+    }
+    print("\n")
+}
+```
+
+GitHubで全てのソースコードを公開しています。
+
+ライセンスはMIT LICENCEです。
+
+[ViaSnake/FizzBuzz](https://github.com/ViaSnake/FizzBuzz)

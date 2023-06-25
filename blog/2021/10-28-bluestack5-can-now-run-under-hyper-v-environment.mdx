@@ -1,0 +1,36 @@
+---
+title: "BlueStacks 5がHyper-V環境下で動作するようになってた件"
+slug: bluestack5-can-now-run-under-hyper-v-environment
+date_published: 2021-10-28T10:03:32.000Z
+date_updated: 2022-05-02T13:39:18.000Z
+tags: [BlueStacks, Hyper-V, Android, Windows]
+---
+
+Androidエミュレータとしてよく知られているものに、NoxPlayerやBlueStacks、LDPlayerなどがありますが、その全てがHyper-V環境下では動作しないものとされており、その状況を見てかBlueStacksがBlueStacks for Hyper-Vなるものをリリースしていました。ただバージョンが少し古くアップデートが来ない状態で放置されていた為、あまり積極的に使おうとは思えなかったのですが、最近のアップデートでひっそりとBlueStacks 5がHyper-V環境下で動作するようになっていました。
+
+### 追記 2022/05/02
+
+NoxPlayerもHyper-Vとの共存が可能になりました。
+
+[NoxPlayerがHyper-Vと共存可能になった](/noxplayer-can-now-coexist-with-hyper-v/)
+
+## BlueStacks for Hyper-Vとは
+
+Hyper-Vが有効になっているWindows 10上でBlueStacks 4を動作させられるようにしたベータバージョンのBlueStacksです。執筆時点でバージョンは4.260で止まっており、4.260のリリースノートが公開されたのが2021年01月18日である事を踏まえると相当古いバージョンです。[日本語ヘルプページ](https://support.bluestacks.com/hc/ja/articles/360041390952-BlueStacks-Hyper-V%E7%89%88%E3%82%92%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95)の最終更新日が2021年1月14日である点からも、更新が無いソフトウェアであることが分かります。
+
+## BlueStacks 5のHyper-V対応
+
+Hyper-V環境下で動作することを望んできたユーザーは数知れないので、もっと大きな広告を打ってくれても良いと思うんですが、サラッといつもの不具合修正のアップデートと同じようなノリで公式Twitterアカウントでツイートされていました。
+
+> 【重要】BlueStacks 5を[5.3.100.1064]にアップデートいたしました。Hyper-Vを有効にしたPCでもBlueStacks 5 Android 7 64bit版をご利用いただけるようになりました！その他、『逆転オセロニア』などの修復が反映されています。[https://t.co/wpXOfIDeUy](https://t.co/wpXOfIDeUy)
+> 
+> ぜひ最新版をお試しください！
+> &mdash; BlueStacks日本公式アカウント (@bluestacksjp) [October 7, 2021](https://twitter.com/bluestacksjp/status/1446013669301633024?ref_src=twsrc%5Etfw)
+
+BlueStacks 5.3.100.1064以降のバージョンは、Hyper-Vが有効になったWindows 10もしくはWindows 11で動作するようになっています。実際に動作を確認しましたが、問題なく動作していました。
+
+## BlueStacks 5をHyper-V環境下で動作させる
+
+既にBlueStacksをインストール済みの方は、Hyper-Vを有効化した上で一度アンインストールする必要があります。そのままでは起動することができません。
+
+アンインストール後、通常通りインストーラーからインストールを行うことで、自動的にHyper-V環境下でも動作するBlueStacksがインストールされます。
