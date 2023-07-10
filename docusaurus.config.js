@@ -71,11 +71,10 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'programSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'プログラム置き場',
           },
-          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/viasnake/viasnake.com',
             label: 'GitHub',
