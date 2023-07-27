@@ -135,7 +135,11 @@ const config = {
       {
         redirects: [
           {
-            to: ['/python-function-to-determine-if-a-number-is-even', '/python-function-to-determine-if-a-number-is-odd-or-not'],
+            to: '/python-function-to-determine-if-a-number-is-even',
+            from: '/docs/programs/python/even-or-odd-number',
+          },
+          {
+            to: '/python-function-to-determine-if-a-number-is-odd-or-not',
             from: '/docs/programs/python/even-or-odd-number',
           },
           {
