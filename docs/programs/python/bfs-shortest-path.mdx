@@ -1,0 +1,98 @@
+---
+sidebar_position: 1
+---
+
+# BFSでグリッドの２点間の最短距離を求める
+
+N*Mのグリッドが与えられた際に、障害物を除いた道のみを通り、スタート地点からゴール地点までの最短経路を見つけるPythonプログラムを作成します。
+
+## 条件
+
+* グリッドは二次元配列の行列で与えられる。
+* グリッドのサイズはN*Mで変化する。
+* 上下左右のみ移動可能、斜め移動はできない。
+* 障害物は # で表現され、そのセルを通過することはできない。
+* 道は . で表現され、そのセルは通過することができる。
+* スタート地点は S で表現され、必ず１つである。
+* ゴール地点は G で表現され、必ず１つである。
+* ゴール地点を発見した場合、スタート地点からゴール地点までの最短距離を出力する。
+* ゴール地点を発見できなかった場合、 -1 を出力する。
+
+## アルゴリズム
+
+重み付けがされていない為、BFS(幅優先探索)を使用して、最短経路を探します。
+
+以下は、Wikipediaの幅優先探索ページから引用します。
+
+> 幅優先探索（はばゆうせんたんさく、英: breadth first search）はグラフ理論(Graph theory)において木構造(tree structure)やグラフ(graph)の探索に用いられるアルゴリズム。アルゴリズムは根ノードで始まり隣接した全てのノードを探索する。それからこれらの最も近いノードのそれぞれに対して同様のことを繰り返して探索対象ノードをみつける。「横型探索」とも言われる。
+> 幅優先探索は解を探すために、グラフの全てのノードを網羅的に展開・検査する。最良優先探索とは異なり、ノード探索にヒューリスティクスを使わずに、グラフ全体を目的のノードがみつかるまで、目的のノードに接近しているかどうかなどは考慮せず探索する。
+
+[幅優先探索 - Wikipedia](https://ja.wikipedia.org/wiki/%E5%B9%85%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2)
+
+## プログラム
+
+```python
+class Location:
+    def __init__(self, row, col, dist):
+        self.row = row
+        self.col = col
+        self.dist = dist
+
+def find_min_distance(tiles):
+    loc = Location(0, 0, 0)
+    explored = [[False for _ in range(len(tiles[0]))] for _ in range(len(tiles))]
+
+    for row in range(len(tiles)):
+        for col in range(len(tiles[row])):
+            if tiles[row][col] == "S":
+                loc.row = row
+                loc.col = col
+                explored[row][col] = True
+                break
+    
+    queue = [loc]
+    while len(queue) != 0:
+        loc = queue.pop(0)
+        row, col, dist = loc.row, loc.col, loc.dist
+
+        if tiles[row][col] == "G":
+            return dist
+
+        if is_valid(row - 1, col, tiles, explored):
+            queue.append(Location(row - 1, col, dist + 1))
+            explored[row - 1][col] = True
+
+        if is_valid(row + 1, col, tiles, explored):
+            queue.append(Location(row + 1, col, dist + 1))
+            explored[row + 1][col] = True
+
+        if is_valid(row, col - 1, tiles, explored):
+            queue.append(Location(row, col - 1, dist + 1))
+            explored[row][col - 1] = True
+
+        if is_valid(row, col + 1, tiles, explored):
+            queue.append(Location(row, col + 1, dist + 1))
+            explored[row][col + 1] = True
+
+    return -1
+
+def is_valid(row, col, tiles, explored):
+    if ((row >= 0 and col >= 0) and
+        (row < len(tiles) and col < len(tiles[0])) and
+        tiles[row][col] != "#" and
+        not explored[row][col]):
+        return True
+    return False
+
+if __name__ == '__main__':
+    tiles = [
+        ["#", "S", ".", "#", "G", ".", "."],
+        [".", "#", ".", "#", ".", ".", "#"],
+        ["#", ".", ".", "#", "#", ".", "."],
+        [".", ".", "#", "#", ".", ".", "."],
+        [".", ".", ".", ".", ".", "#", "."],
+        ["#", ".", "#", ".", ".", ".", "."]
+    ]
+
+    print(find_min_distance(tiles))
+```

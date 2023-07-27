@@ -1,0 +1,23 @@
+---
+sidebar_position: 1
+---
+
+# 床関数
+
+別にmath.floor()使えばいいじゃんというご指摘は横に置いといて、床関数を自分で書くとしたらどんな感じになるのかPythonで実際に書いたものです。
+
+> 床関数（ゆかかんすう、英: floor function）と天井関数（てんじょうかんすう、英: ceiling function）は、実数に対しそれぞれそれ以下の最大あるいはそれ以上の最小の整数を対応付ける関数である。
+
+[床関数と天井関数 - Wikipedia](https://ja.wikipedia.org/wiki/%E5%BA%8A%E9%96%A2%E6%95%B0%E3%81%A8%E5%A4%A9%E4%BA%95%E9%96%A2%E6%95%B0)
+
+```python
+def floor(x):
+    y = x - int(x)
+    if x >= 0:
+        result = int(x)
+    elif y == 0:
+        result = int(x)
+    else:
+        result = int(x)-1
+    return (result)
+```
