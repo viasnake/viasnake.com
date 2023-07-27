@@ -128,6 +128,48 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: ['/python-function-to-determine-if-a-number-is-even', '/python-function-to-determine-if-a-number-is-odd-or-not'],
+            from: '/docs/programs/python/even-or-odd-number',
+          },
+          {
+            to: '/python-function-to-determine-if-it-is-a-leap-year',
+            from: '/docs/programs/python/leap-year',
+          },
+          {
+            to: '/python-function-to-return-the-square-root',
+            from: '/docs/programs/python/square-root',
+          },
+          {
+            to: '/python-program-to-find-the-shortest-distance-between-two-points-of-a-grid-in-bfs',
+            from: '/docs/programs/python/bfs-shortest-path',
+          },
+          {
+            to: '/python-program-to-convert-n-decimal-numbers-to-decimal-numbers',
+            from: '/docs/programs/python/convert-decimal-numbers',
+          },
+          {
+            to: '/floor-functions-written-in-python',
+            from: '/docs/programs/python/floor-function',
+          },
+          {
+            to: '/python-program-to-extract-a-specified-number-of-digits-from-a-specified-number-of-digits',
+            from: '/docs/programs/python/extraction-from-specified-digits',
+          },
+          {
+            to: '/delivers-100-bulk-likes-to-other-people-tweets',
+            from: '/docs/programs/python/bulk-twitter-likes',
+          },
+        ],
+      },
+    ],
+  ],
 };
 
 module.exports = config;
