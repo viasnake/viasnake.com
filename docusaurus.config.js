@@ -70,6 +70,11 @@ const config = {
         },
         items: [
           {
+            to: '/',
+            position: 'left',
+            label: 'ブログ',
+          },
+          {
             type: 'docSidebar',
             sidebarId: 'programSidebar',
             position: 'left',
