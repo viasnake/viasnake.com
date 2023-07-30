@@ -1,0 +1,28 @@
+---
+sidebar_position: 1
+---
+
+# FizzBuzz
+
+数字が3の倍数ならFizz、5の倍数ならBuzz、15の倍数ならFizzBuzzを表示し、いずれにも当てはまらなければ数字をそのまま表示するプログラム
+
+[Fizz Buzz](https://ja.wikipedia.org/wiki/Fizz_Buzz)
+
+```v
+for i in 1..101 {
+    if i % 15 == 0 {
+        print("FizzBuzz")
+    } else if i % 3 == 0 {
+        print("Fizz")
+    } else if i % 5 == 0 {
+        print("Buzz")
+    } else {
+        print("$i")
+    }
+    print("\n")
+}
+```
+
+ライセンスはMIT LICENCEです。
+
+[GitHubで全てのソースコードを公開しています。](https://github.com/ViaSnake/FizzBuzz)
