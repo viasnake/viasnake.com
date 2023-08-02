@@ -1,7 +1,5 @@
-/tag/steam /tags/game/ 301
-/tag/minecraft /tags/game/ 301
-/tag/blueprotocol /tags/game/ 301
-/tag/software /tags/program/ 301
+/tag/steam /tags/game 301
+/tag/software /tags/program 301
 /tag/* /tags/:splat 301
 
 /anker-soundcore-life-u2mai-tuta /i-bought-the-anker-soundcore-life-u2/ 301
