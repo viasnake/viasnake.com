@@ -107,7 +107,7 @@ const config = {
             title: 'Social',
             items: [
               {
-                label: 'Twitter',
+                label: 'X (Twitter)',
                 href: 'https://twitter.com/viasnake',
               },
               {
