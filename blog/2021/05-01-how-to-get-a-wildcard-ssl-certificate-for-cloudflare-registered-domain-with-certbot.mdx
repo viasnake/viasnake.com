@@ -18,7 +18,9 @@ Certbotの公式ウェブサイトで丁寧に説明されているので、公�
 
 下記のコマンドでCertbotをインストールしてください。
 
+```
     sudo apt update && sudo apt install -y certbot
+```
 
 ## certbot-dns-cloudflareのインストール及び設定
 
@@ -26,7 +28,9 @@ Cloudflareで登録されており、プロキシを有効にしているドメ�
 
 下記のコマンドでcertbot-dns-cloudflareをインストールしてください。
 
+```
     sudo apt install python3-certbot-dns-cloudflare
+```
 
 インストール後、Cloudflare APIの設定が必要です。
 
@@ -34,12 +38,16 @@ Cloudflareで登録されており、プロキシを有効にしているドメ�
 
 *このファイルは非常に重要なファイルとなりますので、パーミッション設定に注意してください。*
 
+```
     mkdir -p ~/.secrets && vi ~/.secrets/cloudflare.ini
+```
 
 ファイルを開いたら、下記を記述してください。
 
+```
     dns_cloudflare_email = {Cloudflareアカウントのメールアドレス}
     dns_cloudflare_api_key = {Cloudflare APIのGlobal API Key}
+```
 
 dns_cloudflare_emailには自分のCloudflareアカウントに紐付けられているメールアドレスを記述してください。
 
@@ -57,7 +65,9 @@ Global API Keyは下記のURLから取得可能です。
 
 もしもAPIトークンを使用する場合は、下記のように記述してください。
 
+```
     dns_cloudflare_api_token = {Cloudflare APIのAPI token}
+```
 
 APIトークンについての説明は割愛します。
 
@@ -65,17 +75,21 @@ APIトークンについての説明は割愛します。
 
 下記のコマンドでSSL証明書の取得をしてください。
 
+```
     sudo certbot certonly --dns-cloudflare \
     --dns-cloudflare-credentials \
     ~/.secrets/cloudflare.ini \
     -d "{ドメイン名}" -d "*.{ドメイン名}"
+```
 
 ドメイン名がexample.comである場合、以下のようになります。
 
+```
     sudo certbot certonly --dns-cloudflare \
     --dns-cloudflare-credentials \
     ~/.secrets/cloudflare.ini \
     -d "example.com" -d "*.example.com"
+```
 
 `-d example.com` でexample.comのSSL証明書も取得している理由は、 `*.example.com` だけだとexample.comのSSL証明書が発行されないからです。もしもexample.comのSSL証明証が必要ではない場合、 `-d example.com` に当たる箇所を削除してください。
 
@@ -83,8 +97,10 @@ APIトークンについての説明は割愛します。
 
 SSL証明書を取得後、下記のディレクトリに保存されます。
 
+```
     /etc/letsencrypt/live/{ドメイン名}/fullchain.pem
     /etc/letsencrypt/live/{ドメイン名}/privkey.pem
+```
 
 `fullchain.pem` はチェーンファイルです。
 
