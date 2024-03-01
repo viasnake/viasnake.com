@@ -1,58 +1,52 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+// `@type` JSDoc annotations allow editor autocompletion and type checking
+// (when paired with `@ts-check`).
+// There are various equivalent ways to declare your Docusaurus config.
+// See: https://docusaurus.io/docs/api/docusaurus-config
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "蛇による人間のためのブログ",
-  tagline:
-    "ITに関する知識だったり、ゲームに関する話題だったりを自由気ままに述べている個人ブログです。",
-  favicon: "img/favicon.ico",
+  title: '蛇による人間のためのブログ',
+  tagline: 'ITに関する知識だったり、ゲームに関する話題だったりを自由気ままに述べている個人ブログです。',
+  favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
-  url: "https://viasnake.com/",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  url: 'https://viasnake.com/',
+  baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "viasnake", // Usually your GitHub org/user name.
-  projectName: "viasnake.com", // Usually your repo name.
+  organizationName: 'viasnake',
+  projectName: 'viasnake.com',
 
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "ja",
-    locales: ["ja"],
+    defaultLocale: 'ja',
+    locales: ['ja'],
   },
 
   presets: [
     [
-      "classic",
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/viasnake/viasnake.com/edit/master/",
+          sidebarPath: './sidebars.js',
+          editUrl:
+            'https://github.com/viasnake/viasnake.com/edit/master/',
         },
         blog: {
           routeBasePath: "/",
           showReadingTime: false,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/viasnake/viasnake.com/edit/master/",
+          editUrl:
+            'https://github.com/viasnake/viasnake.com/edit/master/',
           blogSidebarCount: 15,
           blogSidebarTitle: "最近の投稿",
         },
+        // theme: {
+        //   customCss: './src/css/custom.css',
+        // },
       }),
     ],
   ],
@@ -68,14 +62,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: "img/social-card.jpg",
+      image: 'img/social-card.jpg',
       navbar: {
-        title: "viasnake.com",
+        title: 'viasnake.com',
         logo: {
-          alt: "viasnake.com",
-          src: "img/logo.svg",
-          srcDark: "img/logo-dark.svg",
+          alt: 'viasnake.com',
+          src: 'img/logo.svg',
+          srcDark: 'img/logo-dark.svg',
         },
         items: [
           {
@@ -102,7 +95,7 @@ const config = {
         ],
       },
       footer: {
-        style: "dark",
+        style: 'dark',
         links: [
           {
             title: "Social",
@@ -175,10 +168,10 @@ const config = {
         copyright: `© ${new Date().getFullYear()} viasnake. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
       },
     }),
 };
 
-module.exports = config;
+export default config;

@@ -14,49 +14,51 @@ MySQL(MariaDB)への接続時にconnect ECONNREFUSEDというエラーが発生�
 
 ****.***.***.***はIPです。*
 
-    [2021-04-11 08:09:51] INFO Ghost is running in production...
-    [2021-04-11 08:09:51] INFO Your site is now available on https://viasnake.com/
-    [2021-04-11 08:09:51] INFO Ctrl+C to shut down
-    [2021-04-11 08:09:51] INFO Ghost server started in 0.666s
-    [2021-04-11 08:09:51] ERROR connect ECONNREFUSED ***.***.***.***:3306
-    
-    connect ECONNREFUSED ***.***.***.***:3306
-    
-    "Unknown database error"
-    
-    Error ID:
-        500
-    
-    Error Code:
-        ECONNREFUSED
-    
-    ----------------------------------------
-    
-    DatabaseError: connect ECONNREFUSED ***.***.***.***:3306
-        at DatabaseError.KnexMigrateError (/var/lib/ghost/versions/4.2.0/node_modules/knex-migrator/lib/errors.js:7:26)
-        at new DatabaseError (/var/lib/ghost/versions/4.2.0/node_modules/knex-migrator/lib/errors.js:55:26)
-        at /var/lib/ghost/versions/4.2.0/node_modules/knex-migrator/lib/database.js:48:19
-        at processTicksAndRejections (internal/process/task_queues.js:97:5)
-        at async DatabaseStateManager.getState (/var/lib/ghost/versions/4.2.0/core/server/data/db/state-manager.js:39:13)
-        at async DatabaseStateManager.makeReady (/var/lib/ghost/versions/4.2.0/core/server/data/db/state-manager.js:72:25)
-        at async initDatabase (/var/lib/ghost/versions/4.2.0/core/boot.js:49:5)
-        at async bootGhost (/var/lib/ghost/versions/4.2.0/core/boot.js:277:9)
-    
-    Error: connect ECONNREFUSED ***.***.***.***:3306
-        at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16)
-        --------------------
-        at Protocol._enqueue (/var/lib/ghost/versions/4.2.0/node_modules/mysql/lib/protocol/Protocol.js:144:48)
-        at Protocol.handshake (/var/lib/ghost/versions/4.2.0/node_modules/mysql/lib/protocol/Protocol.js:51:23)
-        at Connection.connect (/var/lib/ghost/versions/4.2.0/node_modules/mysql/lib/Connection.js:116:18)
-        at /var/lib/ghost/versions/4.2.0/node_modules/knex/lib/dialects/mysql/index.js:68:18
-        at new Promise (<anonymous>)
-        at Client_MySQL.acquireRawConnection (/var/lib/ghost/versions/4.2.0/node_modules/knex/lib/dialects/mysql/index.js:63:12)
-        at create (/var/lib/ghost/versions/4.2.0/node_modules/knex/lib/client.js:290:39)
-    
-    [2021-04-11 08:09:51] WARN Ghost is shutting down
-    [2021-04-11 08:09:51] WARN Ghost has shut down
-    [2021-04-11 08:09:51] WARN Your site is now offline
-    [2021-04-11 08:09:51] WARN Ghost was running for a few seconds
+```
+[2021-04-11 08:09:51] INFO Ghost is running in production...
+[2021-04-11 08:09:51] INFO Your site is now available on https://viasnake.com/
+[2021-04-11 08:09:51] INFO Ctrl+C to shut down
+[2021-04-11 08:09:51] INFO Ghost server started in 0.666s
+[2021-04-11 08:09:51] ERROR connect ECONNREFUSED ***.***.***.***:3306
+
+connect ECONNREFUSED ***.***.***.***:3306
+
+"Unknown database error"
+
+Error ID:
+    500
+
+Error Code:
+    ECONNREFUSED
+
+----------------------------------------
+
+DatabaseError: connect ECONNREFUSED ***.***.***.***:3306
+    at DatabaseError.KnexMigrateError (/var/lib/ghost/versions/4.2.0/node_modules/knex-migrator/lib/errors.js:7:26)
+    at new DatabaseError (/var/lib/ghost/versions/4.2.0/node_modules/knex-migrator/lib/errors.js:55:26)
+    at /var/lib/ghost/versions/4.2.0/node_modules/knex-migrator/lib/database.js:48:19
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async DatabaseStateManager.getState (/var/lib/ghost/versions/4.2.0/core/server/data/db/state-manager.js:39:13)
+    at async DatabaseStateManager.makeReady (/var/lib/ghost/versions/4.2.0/core/server/data/db/state-manager.js:72:25)
+    at async initDatabase (/var/lib/ghost/versions/4.2.0/core/boot.js:49:5)
+    at async bootGhost (/var/lib/ghost/versions/4.2.0/core/boot.js:277:9)
+
+Error: connect ECONNREFUSED ***.***.***.***:3306
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16)
+    --------------------
+    at Protocol._enqueue (/var/lib/ghost/versions/4.2.0/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/var/lib/ghost/versions/4.2.0/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at Connection.connect (/var/lib/ghost/versions/4.2.0/node_modules/mysql/lib/Connection.js:116:18)
+    at /var/lib/ghost/versions/4.2.0/node_modules/knex/lib/dialects/mysql/index.js:68:18
+    at new Promise (<anonymous>)
+    at Client_MySQL.acquireRawConnection (/var/lib/ghost/versions/4.2.0/node_modules/knex/lib/dialects/mysql/index.js:63:12)
+    at create (/var/lib/ghost/versions/4.2.0/node_modules/knex/lib/client.js:290:39)
+
+[2021-04-11 08:09:51] WARN Ghost is shutting down
+[2021-04-11 08:09:51] WARN Ghost has shut down
+[2021-04-11 08:09:51] WARN Your site is now offline
+[2021-04-11 08:09:51] WARN Ghost was running for a few seconds
+```
 
 connect ECONNREFUSEDのエラーはサーバー側からの明示的な接続拒否です。
 
@@ -64,13 +66,17 @@ connect ECONNREFUSEDのエラーはサーバー側からの明示的な接続拒
 
 MySQL（MariaDB）が動いていない場合は、下記のコマンドで起動させてあげてください。
 
-    systemctl start mysql
-    systemctl start mariadb
+v
+systemctl start mysql
+systemctl start mariadb
+```
 
 IPリッスンしていない場合（ソケットのみをリッスンしている場合）は、*/etc/my.cnf*に下記を追記してください。
 
-    [mysqld]
-    skip-networking=0
-    skip-bind-address
+```
+[mysqld]
+skip-networking=0
+skip-bind-address
+```
 
 これで動くはずです。
