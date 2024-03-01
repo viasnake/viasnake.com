@@ -14,50 +14,49 @@ CMSのGhostをDockerで利用する場合のdocker-compose.yml例
 
 データベースは、外部のものを利用することを想定
 
-    version: '3.1'
-    
-    services:
-    
-      ghost:
-        image: ghost:alpine
-        container_name: ghost
-        restart: always
-        ports:
-          - 80:2368
-        environment:
-          database__client: mysql
-          database__connection__host: [DB_HOST]
-          database__connection__user: [DB_USER]
-          database__connection__password: [DB_PASSWORD]
-          database__connection__database: [DB_DATABASE]
-          url: https://example.com
-          mail__transport: SMTP
-          mail__options__host: [MAIL_HOST]
-          mail__options__port: [MAIL_PORT]
-          mail__options__auth__user: [MAIL_USER]
-          mail__options__auth__pass: [MAIL_PASSWORD]
-          mail__from: [MAIL_FROM]
-        volumes:
-          - ./content:/var/lib/ghost/content
+```yaml
+version: '3.1'
+
+services:
+
+  ghost:
+    image: ghost:alpine
+    container_name: ghost
+    restart: always
+    ports:
+      - 80:2368
+    environment:
+      database__client: mysql
+      database__connection__host: [DB_HOST]
+      database__connection__user: [DB_USER]
+      database__connection__password: [DB_PASSWORD]
+      database__connection__database: [DB_DATABASE]
+      url: https://example.com
+      mail__transport: SMTP
+      mail__options__host: [MAIL_HOST]
+      mail__options__port: [MAIL_PORT]
+      mail__options__auth__user: [MAIL_USER]
+      mail__options__auth__pass: [MAIL_PASSWORD]
+      mail__from: [MAIL_FROM]
+    volumes:
+      - ./content:/var/lib/ghost/content
+```
 
 ## データベース
 
+```
 DB_HOST: データベースのホスト名
-
 DB_USER: データベースのユーザー名
-
 DB_PASSWORD: データベースのパスワード
-
 DB_DATABASE: データベース名
+```
 
 ## メール
 
+```
 MAIL_HOST: メールサーバーのホスト名
-
 MAIL_PORT: メールサーバーのポート番号
-
 MAIL_USER: メールサーバーのユーザー名
-
 MAIL_PASSWORD: メールサーバーのパスワード
-
 MAIL_FROM: 送信用のメールアドレス
+```
