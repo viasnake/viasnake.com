@@ -83,6 +83,12 @@ const config = {
             label: "プログラム置き場",
           },
           {
+            type: "docSidebar",
+            sidebarId: "projectSidebar",
+            position: "left",
+            label: "プロジェクト一覧",
+          },
+          {
             href: "https://github.com/viasnake/viasnake.com",
             label: "GitHub",
             position: "right",
@@ -111,22 +117,6 @@ const config = {
               {
                 label: "Facebook",
                 href: "https://www.facebook.com/viasnake",
-              },
-              {
-                html: `
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8017032553209403"
-                     crossorigin="anonymous"></script>
-                <!-- viasnake.com-footer -->
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-8017032553209403"
-                     data-ad-slot="4731444434"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                `,
               },
             ],
           },
