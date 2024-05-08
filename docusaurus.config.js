@@ -83,6 +83,12 @@ const config = {
             label: "プログラム置き場",
           },
           {
+            type: "docSidebar",
+            sidebarId: "projectSidebar",
+            position: "left",
+            label: "プロジェクト一覧",
+          },
+          {
             href: "https://github.com/viasnake/viasnake.com",
             label: "GitHub",
             position: "right",
