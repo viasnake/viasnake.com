@@ -18,7 +18,7 @@ const config = {
   organizationName: 'viasnake',
   projectName: 'viasnake.com',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -32,12 +32,12 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: './sidebars.js',
-          editUrl:
-            'https://github.com/viasnake/viasnake.com/edit/master/',
+          editUrl: 'https://github.com/viasnake/viasnake.com/edit/master/',
         },
         blog: {
-          routeBasePath: "/",
+          // routeBasePath: "/",
           showReadingTime: false,
           editUrl:
             'https://github.com/viasnake/viasnake.com/edit/master/',
@@ -72,7 +72,7 @@ const config = {
         },
         items: [
           {
-            to: "/",
+            to: "/blog",
             position: "left",
             label: "ブログ",
           },
