@@ -72,7 +72,7 @@ const config = {
         },
         items: [
           {
-            to: "/",
+            to: "/blog",
             position: "left",
             label: "ブログ",
           },
