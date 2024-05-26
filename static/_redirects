@@ -2,11 +2,11 @@
 /tag/software /tags/program 301
 /tag/* /tags/:splat 301
 
-/anker-soundcore-life-u2mai-tuta /i-bought-the-anker-soundcore-life-u2/ 301
-/pr-free-partition-management-software-minitool-partition-wizard /free-partition-management-software-minitool-partition-wizard/ 301
-/sabagazhi-rimasita /home-server-had-kernel-panic-and-blew-up-the-entire-hardware/ 301
-/uebusaitonohua-xiang-woimagur /change-host-of-image-data-to-imgur/ 301
-/python-uruunian-ka /python-function-to-determine-if-it-is-a-leap-year/ 301
+/anker-soundcore-life-u2mai-tuta /blog/i-bought-the-anker-soundcore-life-u2/ 301
+/pr-free-partition-management-software-minitool-partition-wizard /blog/free-partition-management-software-minitool-partition-wizard/ 301
+/sabagazhi-rimasita /blog/home-server-had-kernel-panic-and-blew-up-the-entire-hardware/ 301
+/uebusaitonohua-xiang-woimagur /blog/change-host-of-image-data-to-imgur/ 301
+/python-uruunian-ka /blog/python-function-to-determine-if-it-is-a-leap-year/ 301
 
 /python-function-to-determine-if-a-number-is-even/ /docs/programs/python/even-or-odd-number/ 301
 /python-function-to-determine-if-a-number-is-odd-or-not/ /docs/programs/python/even-or-odd-number/ 301
