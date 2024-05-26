@@ -1,0 +1,43 @@
+---
+id: update
+sidebar_label: アップデート
+sidebar_position: 10
+---
+
+# アップデートについて
+
+[Docusaurus](https://docusaurus.io/) は、新しいバージョンがリリースされると、アップデートが必要になることがあります。このページでは、アップデートの方法について説明します。
+
+## アップデートの手順
+
+Docusaurus のアップデートにはいくつかの方法があります。ここでは `package.json` ファイルを直接編集する方法を紹介します。
+
+1. `package.json` ファイルを開きます。
+
+2. `docusaurus` パッケージのバージョンを最新に更新します。
+
+    ```json
+    {
+      "dependencies": {
+        "@docusaurus/core": "3.3.2",
+        "@docusaurus/preset-classic": "3.3.2",
+        // ...
+      }
+    }
+    ```
+
+3. ターミナルで以下のコマンドを実行します。
+
+    ```bash
+    yarn install
+    ```
+
+4. ローカル開発サーバーを再起動します。
+
+    ```bash
+    yarn start
+    ```
+
+## 参考
+
+- [Updating your Docusaurus version](https://docusaurus.io/docs/installation#updating-your-docusaurus-version)
