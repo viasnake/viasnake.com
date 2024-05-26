@@ -22,22 +22,37 @@
 /docs/* /:splat 301
 
 
+# Redirects for the projects
+
+/2022/10/30/koriyama-city-open-data-unofficial-webapi /projects/koriyama-webapi/intro 301
+/blog/2022/10/30/koriyama-city-open-data-unofficial-webapi /projects/koriyama-webapi/intro 301
+/koriyama-city-open-data-unofficial-webapi/ /projects/koriyama-webapi/intro 301
+
 # Redirects for the blog
 
 /2021/01/16/unable-to-open-ports-using-ufw-in-oci /tips/oracle-cloud/firewall-ports-cannot-be-opened 301
+/blog/2021/01/16/unable-to-open-ports-using-ufw-in-oci /tips/oracle-cloud/firewall-ports-cannot-be-opened 301
 /unable-to-open-ports-using-ufw-in-oci/ /tips/oracle-cloud/firewall-ports-cannot-be-opened 301
 
+/2021/04/29/fixing-issue-of-garbled-arrow-keys-in-ubuntu-console /tips/ubuntu/terminal-arrow-key-garbled 301
 /blog/2021/04/29/fixing-issue-of-garbled-arrow-keys-in-ubuntu-console /tips/ubuntu/terminal-arrow-key-garbled 301
 /fixing-issue-of-garbled-arrow-keys-in-ubuntu-console/ /tips/ubuntu/terminal-arrow-key-garbled 301
 
+/2021/04/11/ubuntu-server-running-curtin-hook-spinner-keeps-spinning-forever-issue /tips/ubuntu/curtin-hook-spinning-forever 301
 /blog/2021/04/11/ubuntu-server-running-curtin-hook-spinner-keeps-spinning-forever-issue /tips/ubuntu/curtin-hook-spinning-forever 301
 /ubuntu-server-running-curtin-hook-spinner-keeps-spinning-forever-issue/ /tips/ubuntu/curtin-hook-spinning-forever 301
 
+/2021/03/04/network-bandwidth-of-oracle-cloud-is-limited-to-50-mbps /tips/oracle-cloud/free-tier-vm-50mbps 301
 /blog/2021/03/04/network-bandwidth-of-oracle-cloud-is-limited-to-50-mbps /tips/oracle-cloud/free-tier-vm-50mbps 301
 /network-bandwidth-of-oracle-cloud-is-limited-to-50-mbps/ /tips/oracle-cloud/free-tier-vm-50mbps 301
 
+/2021/04/15/ubuntu-20-04-lts-change-timezone-cli /tips/ubuntu/change-timezone 301
 /blog/2021/04/15/ubuntu-20-04-lts-change-timezone-cli /tips/ubuntu/change-timezone 301
 /ubuntu-20-04-lts-change-timezone-cli/ /tips/ubuntu/change-timezone 301
 
+/2023/05/21/when-ubuntu-is-installed-not-all-disk-space-is-allocated /tips/ubuntu/allocate-all-disk-space-after-installation 301
 /blog/2023/05/21/when-ubuntu-is-installed-not-all-disk-space-is-allocated /tips/ubuntu/allocate-all-disk-space-after-installation 301
 /when-ubuntu-is-installed-not-all-disk-space-is-allocated/ /tips/ubuntu/allocate-all-disk-space-after-installation 301
+
+/2020/12/29/contact/ /contact 301
+/blog/2020/12/29/contact/ /contact 301

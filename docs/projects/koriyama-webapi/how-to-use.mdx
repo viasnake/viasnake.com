@@ -1,0 +1,49 @@
+---
+id: how-to-use
+sidebar_label: 利用方法
+sidebar_position: 10
+---
+
+# 利用方法
+
+## レスポンスヘッダーのContent-Typeについて
+
+レスポンスヘッダーの `Content-Type` は `application/json; charset=UTF-8` となっています。  
+エラー発生時も同様です。
+
+## エラー
+
+本 API のエラーはエラーメッセージとサーバが受け取ったリクエスト内容で表現されています。
+
+**Bad Request**
+
+リクエストされた内容が正しくないときに発生します。レスポンスヘッダーのステータスは `200 OK` です。
+
+```json
+{
+  "error": {
+    "message": "Bad Request",
+    "request": {
+      "method":"GET",
+      "id": "",
+      "url":""
+    }
+  }
+}
+```
+
+**Not Found**
+
+指定された URL に該当する API が存在しないときに発生します。レスポンスヘッダーのステータスは `200 OK` です。
+
+```json
+{
+  "error": {
+    "message": "Not Found",
+    "request": {
+      "method":"GET",
+      "url":""
+    }
+  }
+}
+```
