@@ -1,0 +1,33 @@
+---
+id: change-timezone
+sidebar_label: タイムゾーンを変更
+sidebar_position: 10
+---
+
+# タイムゾーンを変更
+
+Ubuntu でタイムゾーンを変更する方法です。
+
+## タイムゾーンを確認
+
+```bash
+timedatectl
+```
+
+以下のように表示されます。
+
+```bash
+               Local time: Thu 2021-04-15 02:37:15 UTC
+           Universal time: Thu 2021-04-15 02:37:15 UTC
+                 RTC time: Thu 2021-04-15 02:37:15
+                Time zone: Etc/UTC (UTC, +0000)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+```
+
+## タイムゾーンを変更
+
+```bash
+sudo timedatectl set-timezone Asia/Tokyo
+```
