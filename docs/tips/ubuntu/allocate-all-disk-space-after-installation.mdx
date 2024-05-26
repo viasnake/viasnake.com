@@ -1,0 +1,24 @@
+---
+id: allocate-all-disk-space-after-installation
+sidebar_label: インストール後に、全てのディスク領域を割り当て
+sidebar_position: 10
+---
+
+# インストール後に、全てのディスク領域を割り当て
+
+`Ubuntu Server 22.04 LTS` をインストーラに従って通常通りインストールした場合、ディスク領域を全て使わないことがあります。
+ここではインストール後にディスク容量を増やす手順を説明しています。
+
+:::note
+
+VM を作成して、Ubuntuをインストールして、大量のデータを転送しているときにたまたま気が付きました。
+そもそもインストール時に適切にディスクサイズを設定していれば、この問題は発生しないはずです。
+
+:::
+
+## ディスク容量を増やす手順
+
+```bash
+sudo lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+```

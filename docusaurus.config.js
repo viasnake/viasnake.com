@@ -89,6 +89,12 @@ const config = {
             label: "プロジェクト一覧",
           },
           {
+            type: "docSidebar",
+            sidebarId: "tipSidebar",
+            position: "left",
+            label: "Tips",
+          },
+          {
             href: "https://github.com/viasnake/viasnake.com",
             label: "GitHub",
             position: "right",

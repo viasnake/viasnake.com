@@ -1,0 +1,20 @@
+---
+id: curtin-hook-spinning-forever
+sidebar_label: Ubuntu Server インストール時 running 'curtin hook' が終わらない問題
+sidebar_position: 10
+---
+
+# Ubuntu Server インストール時 running 'curtin hook' が終わらない問題
+
+Ubuntu Server をインストールする際、最後の画面の `running 'curtin hook'` で横のスピナーがずっと回転し続ける問題があります。
+
+## この問題について
+
+この問題はすでにバグとして報告されています。  
+Ubuntu Server のインストールが完了したとしても、スピナーが回り続けるというバグです。
+
+インストールが完了しているかどうかは、画面下部の `View full log` から確認できます。
+
+## 参考
+
+- [subiquity #1912957 - "running 'curtin hook'" spinner keeps spinning forever](https://bugs.launchpad.net/subiquity/+bug/1912957)
