@@ -1,0 +1,57 @@
+---
+id: free-tier-vm-50mbps
+sidebar_label: Free Tier の VM から外部への通信速度が 50 Mbps までしかでない
+sidebar_position: 10
+---
+
+# Free Tier の VM から外部への通信速度が 50 Mbps までしかでない
+
+Oracle Cloud Infrastructure (以降、OCI) の Free Tier で作成した VM から外部への通信速度が 50 Mbps までしかでない問題があります。
+
+## この問題について
+
+OCI のドキュメントを確認すると `VM.Standard.E2.1.Micro` の `Max Network Bandwidth` は 480 Mbps となっています。  
+これを信用するなら 480 Mbps まで出るはずです。
+
+しかし、 Japan East (Tokyo) AD-1 の Fault domain FD-1, FD-2, FD-3 で確認したところ、どこでも 30 Mbps ~ 45 Mbps ほどしか出ませんでした。  
+いずれも同じ時間帯に speedtest.net で計測した結果です。 
+
+:::note
+
+2020年3月頃に speedtest.net で計測した際には 300 Mbps ほど出ていました。
+しかし、2020年10月下旬頃に再度計測したところ 30 Mbps ~ 45 Mbps ほどしか出なくなっていました。
+
+そのためこの期間内に何らかの変更があったと考えられます。
+
+:::
+
+## 原因
+
+Free Tier の VM は、ネットワークの帯域制限がかかっているため、通信速度が制限されていると考えられます。これは Japan East に限った話ではないと思われます。
+
+同様の問題を抱えた人の reddit への投稿がありました。
+
+> Hi, I just got around to testing the Oracle free tier and arrived at the same conclusions as you... According to https://docs.cloud.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm the Micro instance is supposed to be limited to 480Mbps. I spent some time looking for network shapers, bandwidth limiters and the like but everything seems in order... I'm gonna contact the customer service.
+
+*翻訳: こんにちは、私もオラクルの Free tier をテストして、あなたと同じ結論に達しました... https://docs.cloud.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm によると、Micro インスタンスは 480Mbps に制限されているようです。 ネットワークシェイパーや帯域幅リミッターなどを探して時間を費やしましたが、すべてが順当なようです...。カスタマーサービスに問い合わせてみる。*
+
+> I already contacted them. They said its the full 480 mbps for same region instances whereas to public domain its capped at 50 mbps. They said they found their documentation doesn't state that and they will update it.
+
+*翻訳: 私はすでに Oracle に連絡しました。彼らは、パブリックドメインでは 50 Mbps に制限されているのに対し、同じ地域のインスタンスでは 480Mbps でフルだと言っていました。彼らはドキュメントにはそのように記載されていないことを発見し、それを更新すると言いました。*
+
+> I contacted them as well and have been playing ping-pong with support for the past two days. They just don't want to admit it. I also tried spinning up a larger instance and predictably got the full gigabit upstream uplink, so they only cap the Micro instance. I am not holding my breath for them updating the documentation, sounds like regular misleading advertising.
+
+*翻訳: 私も同様に彼らに連絡を取り、この2日間サポートとピンポンをしています。彼らはそれを認めたくないだけです。 私はまた、より大きなインスタンスをスピンアップしようとしましたが、予想通り、アップストリームのギガビットのアップリンクをフルに取得したので、彼らはマイクロインスタンスのキャップのみを取得しました。私は彼らがドキュメントを更新するために私の息を止めていない、通常の誤解を招くような広告のように聞こえる。*
+
+## メモ
+
+この投稿を書いているのが2021年03月、この問題を発見したのは2020年10月下旬頃、Reddit への投稿は2020年9月8日です。  
+しかし、2021年03月時点でドキュメント見ても特に記載らしい記載がありません。制限かけているのならば、ドキュメントを更新してほしい。  
+私の場合、使い始めの段階でネットワークスピードが正常に出ていたのに、途中から急に制限かけられたみたいな感覚なので、本当に意味がわからなかった。
+
+## 参考
+
+- [Virtual Machine (VM) Shapes - Oracle Cloud Infrastructure Documentation](https://docs.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm#vmshapes)
+- [Is it just me or is Oracle Cloud network slow.. - reddit](https://www.reddit.com/r/pihole/comments/ioqlgi/is_it_just_me_or_is_oracle_cloud_network_slow/)
+- [Oracle Cloud Free Tier Network Speed - reddit](https://www.reddit.com/r/oracle/comments/jj1z1v/oracle_cloud_free_tier_network_speed/)
+- [Oracle Cloud’s Lifetime free services (2 VPS + more)](https://broadbandforum.co/t/204837/page-4)
