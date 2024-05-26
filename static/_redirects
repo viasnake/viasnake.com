@@ -1,26 +1,7 @@
 /tag/steam /tags/game 301
 /tag/software /tags/program 301
 /tag/* /tags/:splat 301
-
-/anker-soundcore-life-u2mai-tuta /blog/i-bought-the-anker-soundcore-life-u2/ 301
-/pr-free-partition-management-software-minitool-partition-wizard /blog/free-partition-management-software-minitool-partition-wizard/ 301
-/sabagazhi-rimasita /blog/home-server-had-kernel-panic-and-blew-up-the-entire-hardware/ 301
-/uebusaitonohua-xiang-woimagur /blog/change-host-of-image-data-to-imgur/ 301
-/python-uruunian-ka /blog/python-function-to-determine-if-it-is-a-leap-year/ 301
-
-/python-function-to-determine-if-a-number-is-even/ /docs/programs/python/even-or-odd-number/ 301
-/python-function-to-determine-if-a-number-is-odd-or-not/ /docs/programs/python/even-or-odd-number/ 301
-/python-function-to-determine-if-it-is-a-leap-year/ /docs/programs/python/leap-year/ 301
-/python-function-to-return-the-square-root/ /docs/programs/python/square-root/ 301
-/python-program-to-find-the-shortest-distance-between-two-points-of-a-grid-in-bfs/ /docs/programs/python/bfs-shortest-path/ 301
-/python-program-to-convert-n-decimal-numbers-to-decimal-numbers/ /docs/programs/python/convert-decimal-numbers/ 301
-/floor-functions-written-in-python/ /docs/programs/python/floor-function/ 301
-/python-program-to-extract-a-specified-number-of-digits-from-a-specified-number-of-digits/ /docs/programs/python/extraction-from-specified-digits/ 301
-/delivers-100-bulk-likes-to-other-people-tweets/ /docs/programs/python/bulk-twitter-likes/ 301
-/pyxel-tilemap-viewer/ /docs/programs/python/pyxel-tilemap-viewer 301
-
 /docs/* /:splat 301
-
 
 # Redirects for the projects
 
