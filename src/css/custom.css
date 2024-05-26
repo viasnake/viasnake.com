@@ -37,3 +37,23 @@ html {
   font-style: normal;
   transform: rotate(0.05deg);
 }
+
+.post-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.post-item {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.post-link {
+  text-decoration: none;
+}
+
+.post-date {
+  margin-left: 1em;
+  font-size: 0.8em;
+  color: gray;
+}
