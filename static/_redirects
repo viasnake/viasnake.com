@@ -37,3 +37,15 @@
 
 /2020/12/29/contact/ /contact 301
 /blog/2020/12/29/contact/ /contact 301
+
+/2023/03-10-when-starting-a-vm-with-proxmox-i-was-told-kvm-virtualisation-is-configured-but-not-available-please-disable-it-in-the-vm-settings-or-enable-it-in-the-bios /tips/proxmox/vm-startup-error 301
+/blog/2023/03-10-when-starting-a-vm-with-proxmox-i-was-told-kvm-virtualisation-is-configured-but-not-available-please-disable-it-in-the-vm-settings-or-enable-it-in-the-bios /tips/proxmox/vm-startup-error 301
+/when-starting-a-vm-with-proxmox-i-was-told-kvm-virtualisation-is-configured-but-not-available-please-disable-it-in-the-vm-settings-or-enable-it-in-the-bios/ /tips/proxmox/vm-startup-error 301
+
+/2021/08-13-building-a-2pc-distribution-environment-using-ndi /tips/obs/2pc-ndi 301
+/blog/2021/08-13-building-a-2pc-distribution-environment-using-ndi /tips/obs/2pc-ndi 301
+/building-a-2pc-distribution-environment-using-ndi/ /tips/obs/2pc-ndi 301
+
+/2021/09-23-what-to-do-if-you-get-unmet-dependencies-when-installing-obs-ndi /tips/obs/obs-ndi-install-error-unmet-dependencies 301
+/blog/2021/09-23-what-to-do-if-you-get-unmet-dependencies-when-installing-obs-ndi /tips/obs/obs-ndi-install-error-unmet-dependencies 301
+/what-to-do-if-you-get-unmet-dependencies-when-installing-obs-ndi/ /tips/obs/obs-ndi-install-error-unmet-dependencies 301
