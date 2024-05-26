@@ -20,3 +20,6 @@
 /pyxel-tilemap-viewer/ /docs/programs/python/pyxel-tilemap-viewer 301
 
 /docs/* /:splat 301
+
+/2021/01/16/unable-to-open-ports-using-ufw-in-oci /tips/oracle-cloud/firewall-ports-cannot-be-opened 301
+/unable-to-open-ports-using-ufw-in-oci/ /tips/oracle-cloud/firewall-ports-cannot-be-opened 301

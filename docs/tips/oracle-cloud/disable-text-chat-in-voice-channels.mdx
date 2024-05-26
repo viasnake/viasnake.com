@@ -1,0 +1,66 @@
+---
+id: firewall-ports-cannot-be-opened
+sidebar_label: ポートを開放できない場合の対処法
+sidebar_position: 10
+---
+
+# ポートを開放できない場合の対処法
+
+Oracle Cloud Infrastructure (以降、OCI) 上で ufw を用いてポートを開放できない場合の対処法についてです。
+
+OCI のプラットフォーム・イメージでは、ブート・ボリュームとブロック・ボリュームに接続できるよう、iptables のファイアウォールが事前設定されています。  
+そのため ufw を使ったポート開放ができません。代わりに iptables を使ってポート開放する必要があります。
+
+## ポート開放の手順
+
+1. `/etc/iptables` に移動
+
+  ```bash
+  cd /etc/iptables
+  ```
+
+2. `rules.v4` を編集
+
+  ```bash
+  sudo vim rules.v4
+  ```
+
+3. ポートを開放するルールを追加
+
+  ```bash
+  -A INPUT -p tcp -m state --state NEW -m tcp --dport [ポート番号] -j ACCEPT
+  ```
+
+  例: ポート番号 `80` を開放する場合
+
+  ```bash
+  # CLOUD_IMG: This file was created/modified by the Cloud Image build process
+  # iptables configuration for Oracle Cloud Infrastructure
+  # See the Oracle-Provided Images section in the Oracle Cloud Infrastructure
+  # documentation for security impact of modifying or removing these rule
+
+  *filter
+  :INPUT ACCEPT [0:0]
+  :FORWARD ACCEPT [0:0]
+  :OUTPUT ACCEPT [463:49013]
+  :InstanceServices - [0:0]
+  -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+  -A INPUT -p icmp -j ACCEPT
+  -A INPUT -i lo -j ACCEPT
+  -A INPUT -p udp --sport 123 -j ACCEPT
+  -A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
+  -A INPUT -p tcp -m state --state NEW -m tcp --dport [ポート番号] -j ACCEPT
+  -A INPUT -j REJECT --reject-with icmp-host-prohibited
+  -A FORWARD -j REJECT --reject-with icmp-host-prohibited
+  ~~~ 以下、省略 ~~~
+  ```
+
+4. ルールを反映
+
+  ```bash
+  sudo iptables-restore < /etc/iptables/rules.v4
+  ```
+
+## 参考
+
+- [Ubuntuインスタンスが、Uncomplicated Firewall (UFW)を有効にした後で再起動に失敗します](https://docs.oracle.com/ja-jp/iaas/Content/Compute/known-issues.htm#ufw)
