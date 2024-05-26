@@ -32,12 +32,12 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: './sidebars.js',
-          editUrl:
-            'https://github.com/viasnake/viasnake.com/edit/master/',
+          editUrl: 'https://github.com/viasnake/viasnake.com/edit/master/',
         },
         blog: {
-          routeBasePath: "/",
+          // routeBasePath: "/",
           showReadingTime: false,
           editUrl:
             'https://github.com/viasnake/viasnake.com/edit/master/',
