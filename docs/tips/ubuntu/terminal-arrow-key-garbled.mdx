@@ -1,0 +1,47 @@
+---
+id: terminal-arrow-key-garbled
+sidebar_label: ターミナルで矢印キーが文字化けする場合の対処法
+sidebar_position: 10
+---
+
+# ターミナルで矢印キーが文字化けする場合の対処法
+
+`Ubuntu Server 20.04 LTS` 環境下のターミナルで矢印キーを押すと文字化けして、コマンド履歴を遡ることができない場合の対処法です。
+
+この問題は shell が `sh` に設定されている場合に発生します。
+そのため shell を `bash` に変更することで解決できます。
+
+## 対処法
+
+1. 利用可能な shell を確認
+
+  ```bash
+  cat /etc/shells
+  ```
+
+  以下のように表示されます。
+
+  ```bash
+  # /etc/shells: valid login shells
+  /bin/sh
+  /bin/bash
+  /usr/bin/bash
+  /bin/rbash
+  /usr/bin/rbash
+  /bin/dash
+  /usr/bin/dash
+  /usr/bin/tmux
+  /usr/bin/screen
+  ```
+
+2. shell を変更
+
+  ```bash
+  chsh -s /bin/bash <ユーザー名>
+  ```
+
+  例えば、ユーザー名が `snake` の場合は以下のようになります。
+
+  ```bash
+  chsh -s /bin/bash snake
+  ```

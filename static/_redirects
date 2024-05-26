@@ -21,5 +21,11 @@
 
 /docs/* /:splat 301
 
+
+# Redirects for the blog
+
 /2021/01/16/unable-to-open-ports-using-ufw-in-oci /tips/oracle-cloud/firewall-ports-cannot-be-opened 301
 /unable-to-open-ports-using-ufw-in-oci/ /tips/oracle-cloud/firewall-ports-cannot-be-opened 301
+
+/blog/2021/04/29/fixing-issue-of-garbled-arrow-keys-in-ubuntu-console /tips/ubuntu/terminal-arrow-key-garbled 301
+/fixing-issue-of-garbled-arrow-keys-in-ubuntu-console/ /tips/ubuntu/terminal-arrow-key-garbled 301
