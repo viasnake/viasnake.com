@@ -126,40 +126,6 @@ const config = {
               },
             ],
           },
-          {
-            title: "Ads",
-            items: [
-              {
-                html: `
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8017032553209403"
-                     crossorigin="anonymous"></script>
-                <!-- viasnake.com-footer -->
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-8017032553209403"
-                     data-ad-slot="4731444434"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                `,
-              },
-            ],
-          },
-          // {
-          //   title: 'Blog',
-          //   items: [
-          //     {
-          //       label: 'blog',
-          //       to: '/blog',
-          //     },
-          //     {
-          //       label: 'docs',
-          //       to: '/docs',
-          //     },
-          //   ],
-          // },
         ],
         copyright: `© ${new Date().getFullYear()} viasnake. Built with Docusaurus.`,
       },
