@@ -1,0 +1,20 @@
+---
+id: vm-startup-error
+sidebar_label: VM 起動エラーの解決策
+sidebar_position: 10
+---
+
+# VM 起動エラーの解決策
+
+## エラー "KVM virtualisation configured, but not available. Either disable in VM configuration or enable in BIOS."
+
+> TASK ERROR: KVM virtualisation configured, but not available. Either disable in VM configuration or enable in BIOS.
+
+![](https://i.imgur.com/J4JrwYw.png)
+
+### 解決策
+
+ホストマシンの BIOS 上の仮想化設定が無効になっています。  
+ホストマシンを再起動しBIOSに入った後に、該当する設定を有効化することでエラーを解消できます。  
+
+設定項目の名前は、マザーボードによって異なりますが、`Intel Virtualization Technology` や `VTx` と表記されることがあります。ほとんどの場合、マザーボードの説明書に書かれています。

@@ -44,9 +44,9 @@ const config = {
           blogSidebarCount: 15,
           blogSidebarTitle: "最近の投稿",
         },
-        // theme: {
-        //   customCss: './src/css/custom.css',
-        // },
+        theme: {
+          customCss: './src/css/custom.css',
+        },
       }),
     ],
   ],
@@ -56,6 +56,30 @@ const config = {
       src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8017032553209403",
       async: true,
       crossorigin: "anonymous",
+    },
+  ],
+
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap',
+      },
     },
   ],
 

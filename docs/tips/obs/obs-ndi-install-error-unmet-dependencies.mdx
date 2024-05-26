@@ -1,0 +1,44 @@
+---
+id: obs-ndi-install-error-unmet-dependencies
+sidebar_label: obs-ndi インストール時に "unmet dependencies" が出る場合の対処法
+sidebar_position: 10
+---
+
+# obs-ndi インストール時に "unmet dependencies" が出る場合の対処法
+
+obs-ndi の deb パッケージをインストール時に、下記のようなエラーが発生する場合があります。
+
+```
+Unable to install obs-ndi:
+The following packages have unmet dependencies:
+Package created with checkinstall 1.6.2
+```
+
+この問題は、obs-ndi と obs-studio を削除し、PPA バージョンの obs-studio をインストールすることで解消可能です。
+
+PPA バージョンのインストール方法は、 OBSProject.com の wiki で解説されています。
+
+[Wiki - Install Instructions | OBS](https://obsproject.com/wiki/install-instructions#linux)
+
+以下は Ubuntu/Mint へのインストール手順の適当な翻訳です。責任は負いません。
+
+**OBS Studio は Chrome OS 上では完全には動作せず、スクリーンキャプチャやウィンドウキャプチャなどの機能は動作しませんのでご注意ください。**
+
+- フルスクリーンプロジェクターなど、OBS の特定機能で潜在的なパフォーマンス問題を回避するために、xserver-xorg バージョン 1.18.4 以降が推奨されます。
+
+- FFmpeg が必要です。FFmpeg がインストールされていない場合（確信が持てない場合は、おそらく持っていないでしょう）、以下のコマンドで取得できます:
+  ```bash
+  sudo apt install ffmpeg
+  ```
+
+- 仮想カメラをサポートするには v4l2loopback-dkms をインストールする必要があります。以下のコマンドでインストールできます:
+  ```bash
+  sudo apt install v4l2loopback-dkms
+  ```
+
+- Ubuntu ソフトウェアセンターで multiverse のリポジトリを有効にしたことを確認してください(注意: Ubuntu の新バージョンでは、リポジトリを追加すると自動的に apt アップデートが行われます)。その後、以下のコマンドで OBS をインストールします。
+  ```bash
+  sudo add-apt-repository ppa:obsproject/obs-studio
+  sudo apt update
+  sudo apt install obs-studio
+  ```    
