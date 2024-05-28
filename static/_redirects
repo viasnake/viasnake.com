@@ -560,7 +560,5 @@
 
 # Dynamic rules
 
-/tag/steam* /tags/game 301
-/tag/software* /tags/program 301
-/tag/* /tags/:splat 301
+/tags/* /blog/tags/:splat 301
 /docs/* /:splat 301
