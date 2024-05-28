@@ -509,6 +509,13 @@
 /git-for-windows-update /tips/git/git-for-windows-update-cli 301
 /git-for-windows-update/ /tips/git/git-for-windows-update-cli 301
 
+/2021/02/18/how-to-convert-database-from-mysql-to-sqlite /tips/mysql/mysql-to-sqlite 301
+/2021/02/18/how-to-convert-database-from-mysql-to-sqlite/ /tips/mysql/mysql-to-sqlite 301
+/blog/2021/02/18/how-to-convert-database-from-mysql-to-sqlite /tips/mysql/mysql-to-sqlite 301
+/blog/2021/02/18/how-to-convert-database-from-mysql-to-sqlite/ /tips/mysql/mysql-to-sqlite 301
+/how-to-convert-database-from-mysql-to-sqlite /tips/mysql/mysql-to-sqlite 301
+/how-to-convert-database-from-mysql-to-sqlite/ /tips/mysql/mysql-to-sqlite 301
+
 # Dynamic rules
 
 /tag/steam* /tags/game 301
