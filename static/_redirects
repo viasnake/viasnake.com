@@ -167,6 +167,27 @@
 /blog/2021/03/01/pyxel-tilemap-viewer-release-1-0/ /projects/pyxel-tilemap-viewer/intro 301
 /pyxel-tilemap-viewer-release-1-0/ /projects/pyxel-tilemap-viewer/intro 301
 
+# 旧紹介記事系のリダイレクト
+# FIXME: 紹介記事系のリンク切れは困るので一旦リダイレクトしておく。
+
+/2022/08/26/review-of-wondershare-filmora-an-easy-and-high-quality-video-editing-software /blog/2022/08/26/review-of-wondershare-filmora-an-easy-and-high-quality-video-editing-software 301
+/review-of-wondershare-filmora-an-easy-and-high-quality-video-editing-software/ /blog/2022/08/26/review-of-wondershare-filmora-an-easy-and-high-quality-video-editing-software 301
+
+/2021/11/30/review-of-flexclip-an-online-video-editing-web-service /blog/2021/11/30/review-of-flexclip-an-online-video-editing-web-service 301
+/review-of-flexclip-an-online-video-editing-web-service/ /blog/2021/11/30/review-of-flexclip-an-online-video-editing-web-service 301
+
+/2021/11/09/multifunctional-software-hd-video-converter-factory-pro-review /blog/2021/11/09/multifunctional-software-hd-video-converter-factory-pro-review 301
+/multifunctional-software-hd-video-converter-factory-pro-review/ /blog/2021/11/09/multifunctional-software-hd-video-converter-factory-pro-review 301
+
+/2021/09/13/free-partition-management-software-minitool-partition-wizard /blog/2021/09/13/free-partition-management-software-minitool-partition-wizard 301
+/free-partition-management-software-minitool-partition-wizard/ /blog/2021/09/13/free-partition-management-software-minitool-partition-wizard 301
+
+/2022/05/02/noxplayer-can-now-coexist-with-hyper-v /blog/2022/05/02/noxplayer-can-now-coexist-with-hyper-v 301
+/noxplayer-can-now-coexist-with-hyper-v/ /blog/2022/05/02/noxplayer-can-now-coexist-with-hyper-v 301
+
+/2021/10/28/bluestack5-can-now-run-under-hyper-v-environment /blog/2021/10/28/bluestack5-can-now-run-under-hyper-v-environment 301
+/bluestack5-can-now-run-under-hyper-v-environment/ /blog/2021/10/28/bluestack5-can-now-run-under-hyper-v-environment 301
+
 # Redirects for the blog
 
 /2021/01/16/unable-to-open-ports-using-ufw-in-oci /tips/oracle-cloud/firewall-ports-cannot-be-opened 301
