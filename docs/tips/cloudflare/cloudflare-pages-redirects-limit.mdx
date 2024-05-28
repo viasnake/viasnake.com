@@ -1,0 +1,48 @@
+---
+id: cloudflare-pages-redirects-limit
+sidebar_label: "Cloudflare Pages の Redirects が上限に達してしまう問題"
+sidebar_position: 10
+---
+
+# Cloudflare Pages の Redirects が上限に達してしまう問題
+
+Cloudflare Pages の Redirects 機能を利用するために `_redirects` ファイルを設定した。  
+しかし、Redirects 機能の上限（後述）に達していないのにリダイレクトが機能しない場合がある。
+
+## 機能の上限について
+
+Cloudflare Pages の Redirects には以下のような制限が存在している。
+
+- 静的リダイレクト数の上限は 2,000 件
+- 動的リダイレクト数の上限は 100 件
+- 合計リダイレクト数の条件は合わせて 2,100 件
+
+これらの制限に達してしまうと、新たなリダイレクトを追加することができなくなる。  
+（正確には書いたとしても機能しなくなる。）
+
+## 原因
+
+動的リダイレクトが静的リダイレクトよりも先に評価されている可能性がある。
+
+静的リダイレクトよりも先に動的リダイレクトを書いてしまうと、以降のリダイレクトはすべて動的リダイレクトとして扱われるため、上限に達してしまう。
+
+Cloudflare Pages のドキュメントでは、以下のように触れられている。
+
+> Static redirects should appear before dynamic redirects.
+
+[Redirects - Per file](https://developers.cloudflare.com/pages/configuration/redirects/#per-file)
+
+## 解決策
+
+`_redirects` ファイルの中で、静的リダイレクトを先に書くようにする。
+
+```plaintext
+# 静的リダイレクト
+/home301 / 301
+/home302 / 302
+/querystrings /?query=string 301
+
+# 動的リダイレクト
+/blog/* /:splat
+/products/:code/:name /products?code=:code&name=:name
+```
