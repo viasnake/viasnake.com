@@ -537,6 +537,13 @@
 /how-to-change-the-character-size-of-the-console /tips/linux/debian-console-font-size 301
 /how-to-change-the-character-size-of-the-console/ /tips/linux/debian-console-font-size 301
 
+/2021/05/18/how-to-install-pip-on-raspberry-pi-os /tips/linux/raspberry-pi-os-pip-install 301
+/2021/05/18/how-to-install-pip-on-raspberry-pi-os/ /tips/linux/raspberry-pi-os-pip-install 301
+/blog/2021/05/18/how-to-install-pip-on-raspberry-pi-os /tips/linux/raspberry-pi-os-pip-install 301
+/blog/2021/05/18/how-to-install-pip-on-raspberry-pi-os/ /tips/linux/raspberry-pi-os-pip-install 301
+/how-to-install-pip-on-raspberry-pi-os /tips/linux/raspberry-pi-os-pip-install 301
+/how-to-install-pip-on-raspberry-pi-os/ /tips/linux/raspberry-pi-os-pip-install 301
+
 # Dynamic rules
 
 /tag/steam* /tags/game 301
