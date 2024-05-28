@@ -516,6 +516,13 @@
 /how-to-convert-database-from-mysql-to-sqlite /tips/mysql/mysql-to-sqlite 301
 /how-to-convert-database-from-mysql-to-sqlite/ /tips/mysql/mysql-to-sqlite 301
 
+/2021/04/29/how-tofix-windows-update-error-0x80080005 /tips/windows/windows-update-0x80080005 301
+/2021/04/29/how-tofix-windows-update-error-0x80080005/ /tips/windows/windows-update-0x80080005 301
+/blog/2021/04/29/how-tofix-windows-update-error-0x80080005 /tips/windows/windows-update-0x80080005 301
+/blog/2021/04/29/how-tofix-windows-update-error-0x80080005/ /tips/windows/windows-update-0x80080005 301
+/how-tofix-windows-update-error-0x80080005 /tips/windows/windows-update-0x80080005 301
+/how-tofix-windows-update-error-0x80080005/ /tips/windows/windows-update-0x80080005 301
+
 # Dynamic rules
 
 /tag/steam* /tags/game 301
