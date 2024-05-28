@@ -1,0 +1,53 @@
+---
+id: surface-arch-linux-wifi-bluetooth
+sidebar_label: "Surface に入れた Arch Linux で Wi-Fi と Bluetooth が有効にならない問題の解決策"
+sidebar_position: 10
+---
+
+# Surface に入れた Arch Linux で Wi-Fi と Bluetooth が有効にならない問題
+
+Microsoft Surface 3 に Arch Linux 系の AlterLinux をインストールした際に、Wi-Fi と Bluetooth が動作しない問題に遭遇したので解決策をまとめておきます。
+
+## 問題
+
+Arch Linux 系 OS を Microsoft Surface へインストールした際に Wi-Fi と Bluetooth が有効にならなず、インターネット接続が不可能になる。
+
+Wi-Fi、Bluetooth が有効にならず、そもそもアイコンが現れない。Wi-Fi や Bluetooth が存在していないパソコンであるかのような動作となる。
+
+## 解決策
+
+Arch Linux は [archlinux/svntogit-packages@a12e069](https://github.com/archlinux/svntogit-packages/commit/a12e069) で、linux-firmware パッケージを分離しました。これによって必要に応じてパッケージを自分自身でインストールすることが必要になりました。その為、対応する `linux-firmware` パッケージをインストールし、再起動することで解決されます。
+
+Surface の場合、`linux-firmware-marvell` をインストールすることで問題が解消されました。
+
+### 解決策1
+
+CLIより以下のコマンドを実行し、インストールする。
+
+```bash
+pacman -S linux-firmware-marvell
+```
+
+### 解決策2
+
+インターネット接続がない環境の場合、パッケージを別 PC でダウンロードしインストールする。
+
+以下より、`linux-firmware-marvell` をダウンロードし、USB メモリなどで Arch Linux パソコンへコピーする。
+
+- [Arch Linux - linux-firmware-marvell 20220509.b19cbdc-1 (any)](https://archlinux.org/packages/core/any/linux-firmware-marvell/)
+
+![](https://i.imgur.com/tWwb2M3.png)
+
+右上の Package Actions 内、Download From Mirror よりダウンロード可能。
+CLI より以下のコマンドを実行し、インストールする。
+
+```bash
+pacman -U <ファイル名.pkg.tar.zst>
+```
+
+## 参考
+
+- [upgpkg: linux-firmware 20220119.0c6a7b3-2: split package to reduce do… · archlinux/svntogit-packages@a12e069](https://github.com/archlinux/svntogit-packages/commit/a12e069)
+- [linux-firmware package 20220119 update breaks WiFi support on Surfaces with Marvell network devices · Issue #759 · linux-surface/linux-surface](https://github.com/linux-surface/linux-surface/issues/759)
+- [Wifi and Bluetooth down (latest kernel 5.16.9) · Issue #742 · linux-surface/linux-surface](https://github.com/linux-surface/linux-surface/issues/742)
+- [Wifi and Bluetooth not working on latest kernel · Issue #723 · linux-surface/linux-surface](https://github.com/linux-surface/linux-surface/issues/723)
