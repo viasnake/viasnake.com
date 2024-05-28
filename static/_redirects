@@ -502,6 +502,13 @@
 /how-to-fix-the-remote-fatal-pack-exceeds-maximum-allowed-size-problem-when-pushing-to-github /tips/git/github-pack-exceeds-maximum-allowed-size 301
 /how-to-fix-the-remote-fatal-pack-exceeds-maximum-allowed-size-problem-when-pushing-to-github/ /tips/git/github-pack-exceeds-maximum-allowed-size 301
 
+/2021/06/04/git-for-windows-update /tips/git/git-for-windows-update-cli 301
+/2021/06/04/git-for-windows-update/ /tips/git/git-for-windows-update-cli 301
+/blog/2021/06/04/git-for-windows-update /tips/git/git-for-windows-update-cli 301
+/blog/2021/06/04/git-for-windows-update/ /tips/git/git-for-windows-update-cli 301
+/git-for-windows-update /tips/git/git-for-windows-update-cli 301
+/git-for-windows-update/ /tips/git/git-for-windows-update-cli 301
+
 # Dynamic rules
 
 /tag/steam* /tags/game 301
