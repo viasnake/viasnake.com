@@ -1,17 +1,16 @@
 ---
-title: "[1.17] Minecraftサーバー最適化ガイド"
-authors:
-  - snake
-date_published: 2021-10-26T09:59:52.000Z
-date_updated: 2021-10-26T10:03:31.000Z
-tags: [Minecraft]
+id: optimization-guide
+sidebar_label: "[1.17] Minecraftサーバー最適化ガイド"
+sidebar_position: 10
 ---
+
+:::warning
 
 このガイドは[YouHaveTrouble/minecraft-optimization](https://github.com/YouHaveTrouble/minecraft-optimization)の日本語訳です。日本語訳は適当であるため、適時原文を確認することを推奨します。
 
 本ガイドによって生じたあらゆる問題について責任を負いません。
 
----
+:::
 
 Vanilla、Fabric、Spigot（またはPaperより下流のバージョン）をお使いの方は、`server.properties`を開き、`sync-chunk-writes`を`false`に変更してください。このオプションはPaperとそのforkでは強制的に無効化されますが、それ以前のサーバー実装では、手動でこのオプションをオフにする必要があります。これにより、サーバーはメインスレッドからチャンクを保存し、メインtickの負荷を軽減することができます。
 
