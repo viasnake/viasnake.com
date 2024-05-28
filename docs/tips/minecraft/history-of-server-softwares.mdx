@@ -1,0 +1,206 @@
+---
+id: history-of-server-softwares
+sidebar_label: サーバソフトウェアの歴史
+sidebar_position: 10
+---
+
+:::warning
+
+10割メモであり、あまり事細かに説明する目的で書いていません。
+
+:::
+
+:::info
+
+1.6.x 頃からのものしか記述していません。また記述されていないものもあります。
+
+:::
+
+### Vanilla
+
+Mojang が提供する公式のサーバーソフトウェア
+
+- [ダウンロード](https://www.minecraft.net/ja-jp/download/server/)
+
+### CraftBukkit
+
+2014年まで最も主流だったサーバーソフトウェア
+
+現在は SpigotMC チームによって維持されているが、新しい機能の追加などは行われていない。バニラの重大なバグや脆弱性の修正が中心になっている。
+
+- [公式ウェブサイト](https://bukkit.org/)
+- [ソースコード](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/craftbukkit/browse)
+- [**Browse Spigot / CraftBukkit - SpigotMC Stash***hub.spigotmc.org*](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/craftbukkit/browse)
+
+### Spigot
+
+現時点で最も大きいコミュニティであり、一番使われているサーバーソフトウェア
+
+CraftBukkit に基づいて修正、追加の設定などを提供している。CraftBukkit のパフォーマンスを改善し、カスタマイズ性を追加したサーバーソフトウェア
+バニラの動作を完全に再現し、安定してマルチプレイでできるようにする事及び完全に全ての設定をできるようにすることを目的としている。
+
+- [公式ウェブサイト](https://www.spigotmc.org/)
+- [ソースコード](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/spigot/browse)
+
+### Paper
+
+Spigot に更に追加パッチを適用したサーバーソフトウェア
+
+バニラや Spigot のサーバーパフォーマンスを改善することを目的としている。
+
+過去に PaperSpigot、PaperClip という名称でしたが、名称が変わり現在は Paper です。間違えないであげて下さい。
+
+- [公式ウェブサイト](https://papermc.io/)
+- [ソースコード](https://github.com/PaperMC/Paper)
+
+### TacoSpigot
+
+PaperSpigot の fork で更なるパッチを適用したサーバーソフトウェア
+
+PaperSpigot でパフォーマンスが改善されているが、それよりも更なるパフォーマンスを追い求めている。
+
+- [公式ページ](https://tacospigot.github.io/)
+- [ソースコード](https://github.com/TacoSpigot/TacoSpigot)
+
+### Akarin
+
+かつて Torch として知られていたサーバーソフトウェア
+
+Paper の fork であり、可能な限り多くのゲームメカニズムを設定可能にする/サーバーの安全性と安定性を高める/マルチスレッドに対応させることを目標としている。
+
+- [公式ウェブサイト](https://akarin.app/)
+- [ソースコード](https://github.com/Akarin-project/Akarin)
+
+### Torch
+
+現在は Akarin になった。TorchSpigot なんて呼ばれ方もしていた気がする。
+
+基本的な目標は Akarin と同じだったと記憶している。
+
+- [ソースコード](https://github.com/TorchSpigot/Torch)
+
+### HOSE
+
+Spigot をベースに作られたマルチスレッド対応サーバーソフトウェア
+
+- [ソースコード](https://github.com/softpak/HOSE)
+
+### Sponge Vanilla
+
+権利関係の問題が発生しないように完全にオープンな開発をすることを目的としているサーバーソフトウェア
+
+過去に DMCA で Bukkit が使えなくなるとか色々問題発生したときに作られたプロジェクト。
+
+- [公式ウェブサイト](https://www.spongepowered.org/)
+- [ソースコード](https://github.com/SpongePowered/SpongeVanilla)
+
+### Sponge Forge
+
+Minecraft Forge にクロスバージョン API が存在しないことを解消するために作られたサーバーソフトウェア
+
+SpongeAPI で作られたサーバープラグインと Minecraft Forge の MOD をサーバーで共存させることができる。
+
+- [公式ウェブサイト](https://www.spongepowered.org/)
+- [ソースコード](https://github.com/SpongePowered/SpongeForge)
+
+### Cleanstone
+
+Minecraft で作成されたコードを利用することなく一から完全に適切に作ることを目標としたサーバーソフトウェア
+
+１つのワールドに対して複数のサーバーを利用することで負荷をそれらに分散することができる。また、組み込みでマルチバージョンをサポートしている。
+
+- [ソースコード](https://github.com/CleanstoneMC/Cleanstone)
+
+### Glowstone
+
+Mojang コードに依存せず、完全にオープンソースで独自に開発されたサーバーソフトウェア
+
+CraftBukkit やその他のサーバーよりもパフォーマンスが良い（らしい）
+
+Bukkit/Spigot/Paper API との互換性が保証されているため、Bukkit/Spigot/Paper プラグインが使用でき、Sponge プラグインも Bukkit2Sponge を使用しロードさせることが可能。
+
+- [公式ウェブサイト](https://glowstone.net/)
+- [ソースコード](https://github.com/GlowstoneMC/Glowstone)
+
+### Cuberite
+
+C++ で記述された高速なサーバーソフトウェア
+
+MCServer という名前で2010年に開発が開始され、その後オープンソースになり名称が変更されている。
+
+Minecraft の機能の全てを再現することを目的として開発されており、Lua を利用してプラグインを作ることが可能
+
+- [公式ウェブサイト](https://cuberite.org/)
+- [ソースコード](https://github.com/cuberite/cuberite)
+
+### Kettle
+
+Contigo、Thermos、Cauldron、MCPC+ から派生したサーバーソフトウェア
+
+Forge と Paper のビルドに基づいて依存しているため、CraftBukkit/Spigot ベースのプラグイン及び Forge ベースの mod を共存させることができる。
+
+- [ソースコード](https://github.com/KettleFoundation/Kettle)
+
+### Atom
+
+Minecraft 1.12.2 バージョンの Minecraft Forge 及び CraftBukkit に基づいて作られているサーバーソフトウェア
+
+Bukkit プラグイン及び Minecraft Forge Mod の安定したサポート及び、可能な限りの高パフォーマンスを目標としている。
+
+- [ソースコード](https://gitlab.com/divinecode/atom/Atom)
+
+### CatServer
+
+オープンソース無料で Forge/Bukkit/Spigot との互換性を意識したサーバーソフトウェア
+
+- [ソースコード](https://github.com/Luohuayu/CatServer)
+
+### Lava
+
+最適化と多くの mod との互換性を目標とするサーバーソフトウェア
+
+- [ソースコード](https://github.com/LavaPowered/Lava)
+
+### Magma
+
+Cauldron の派生であり、Minecraft Forge 及び Paper をベースとしたサーバーソフトウェア
+
+Minecraft Forge Mod 及び Craftbukkit/Spigot/Paper プラグインとの互換性を目標としている。
+
+- [公式ウェブサイト](https://magmafoundation.org/)
+- [ソースコード](https://github.com/magmafoundation/Magma)
+
+### Uranium
+
+KCauldron の fork であり、KCauldron の不具合の修正と新機能の追加を目的としたサーバーソフトウェア
+
+本とペンの問題の修正、PING/MOTD パッチの適用、新しい API バージョンの適用、Title/Actionbar の対応などが含まれている。
+
+- [公式ウェブサイト](https://www.uraniummc.cc/)
+- [ソースコード](https://github.com/UraniumMC/Uranium)
+
+### Mohist
+
+Thermos/Cauldron/MCPC+ からの派生、Paper/Spigot/Bukkit API の実装を行っているサーバーソフトウェア
+
+全ての mod、Paper/Spigot/Bukkit プラグインとの互換性及び複数バージョンとの互換性を目標としている。
+
+- [公式ウェブサイト](https://mohist.red/)
+- [ソースコード](https://github.com/Mohist-Community/Mohist)
+
+### Thermos
+
+Cauldron/MCPC の派生、Minecraft Forge に Spigot/Bukkit API を実装することを目標としたサーバーソフトウェア
+
+KCauldron から fork し、最適化/Spigot パッチの適用/グリッチの修正を反映している。
+
+- [公式ウェブサイト](https://cyberdynecc.github.io/Thermos/)
+- [ソースコード](https://github.com/CyberdyneCC/Thermos)
+
+### MCPC/MCPC+/Cauldron
+
+サイトなどが消失していて情報追うのが面倒くさかったので記憶の範疇で書きます。
+
+MCPC が作られてから開発が止まり、派生の MCPC+ が生まれ、そこから更に派生して Cauldron ができた。
+
+記憶が正しければ Cauldron は BukkitAPI のサポートをしていた気がします。そのため Mod とプラグインの共存が可能です。

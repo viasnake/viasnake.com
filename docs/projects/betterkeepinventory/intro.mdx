@@ -1,0 +1,51 @@
+---
+id: intro
+sidebar_label: 概要
+sidebar_position: 1
+---
+
+# BetterKeepinventory とは
+
+エンチャントの消滅の呪いは死亡時に失われる効果を持ってますが、keepinventoryがtrueの場合にはその効果を発揮しません。  
+サバイバルサーバーにとっては少し不便なので、keepinventoryの動作を設定可能にするちょっとしたプラグインを作成しました。  
+非常にシンプルなので、コマンドやパーミッションは存在しません。  
+
+## パーミッション
+
+- **betterkeepinventory.reload**: /bkireload コマンドを実行する権限。
+
+## コマンド
+
+- **/bkireload**: 設定を再読み込みします。
+
+## 設定
+
+```yaml
+keep-inventory:
+  # If true, the inventory is kept.
+  enabled: true
+  # If true, the enchanted item is kept.
+  enchantments:
+    CURSE_OF_VANISHING: false
+    CURSE_OF_BINDING: false
+  durability:
+   # Randomly reduces the durability of an item upon death.
+    # min: Minimum durability reduction
+    # max: Maximum durability reduction
+    min: 0.1
+    max: 0.3
+keep-level:
+  # If true, the level is kept.
+  enabled: true
+  # Randomly reduces the level upon death.
+  # min: Minimum level reduction
+  # max: Maximum level reduction
+  multiplier:
+    min: 0.1
+    max: 0.5
+```
+
+## 参考
+
+- [マインクラフト非公式フォーラム](https://forums.minecraft.day/resources/17/)
+- [Spigot.org](https://www.spigotmc.org/resources/105275/)
