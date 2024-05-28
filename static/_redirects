@@ -495,6 +495,13 @@
 /issue-with-docker-swarm-cannot-getting-users-ip-address /tips/docker/cannot-get-user-ip-address 301
 /issue-with-docker-swarm-cannot-getting-users-ip-address/ /tips/docker/cannot-get-user-ip-address 301
 
+/2021/01/29/how-to-fix-the-remote-fatal-pack-exceeds-maximum-allowed-size-problem-when-pushing-to-github /tips/git/github-pack-exceeds-maximum-allowed-size 301
+/2021/01/29/how-to-fix-the-remote-fatal-pack-exceeds-maximum-allowed-size-problem-when-pushing-to-github/ /tips/git/github-pack-exceeds-maximum-allowed-size 301
+/blog/2021/01/29/how-to-fix-the-remote-fatal-pack-exceeds-maximum-allowed-size-problem-when-pushing-to-github /tips/git/github-pack-exceeds-maximum-allowed-size 301
+/blog/2021/01/29/how-to-fix-the-remote-fatal-pack-exceeds-maximum-allowed-size-problem-when-pushing-to-github/ /tips/git/github-pack-exceeds-maximum-allowed-size 301
+/how-to-fix-the-remote-fatal-pack-exceeds-maximum-allowed-size-problem-when-pushing-to-github /tips/git/github-pack-exceeds-maximum-allowed-size 301
+/how-to-fix-the-remote-fatal-pack-exceeds-maximum-allowed-size-problem-when-pushing-to-github/ /tips/git/github-pack-exceeds-maximum-allowed-size 301
+
 # Dynamic rules
 
 /tag/steam* /tags/game 301
