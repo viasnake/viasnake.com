@@ -551,6 +551,12 @@
 /websocket-proxy-with-nginx /tips/nginx/websocket-proxy 301
 /websocket-proxy-with-nginx/ /tips/nginx/websocket-proxy 301
 
+/2022/11/08/how-to-run-stable-diffusion-web-ui-on-windows /tips/stable-diffusion/stable-diffusion-webui-windows 301
+/2022/11/08/how-to-run-stable-diffusion-web-ui-on-windows/ /tips/stable-diffusion/stable-diffusion-webui-windows 301
+/blog/2022/11/08/how-to-run-stable-diffusion-web-ui-on-windows /tips/stable-diffusion/stable-diffusion-webui-windows 301
+/blog/2022/11/08/how-to-run-stable-diffusion-web-ui-on-windows/ /tips/stable-diffusion/stable-diffusion-webui-windows 301
+/how-to-run-stable-diffusion-web-ui-on-windows /tips/stable-diffusion/stable-diffusion-webui-windows 301
+/how-to-run-stable-diffusion-web-ui-on-windows/ /tips/stable-diffusion/stable-diffusion-webui-windows 301
 
 # Dynamic rules
 
