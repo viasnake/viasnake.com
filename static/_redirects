@@ -3,8 +3,6 @@
 /tag/* /tags/:splat 301
 /docs/* /:splat 301
 
-/projects/* /projects/:splat/intro 301
-
 # Redirects for the projects
 
 /blog/2022/10/30/services/ /projects/ 301
