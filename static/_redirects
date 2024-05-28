@@ -1,298 +1,503 @@
-/tag/steam /tags/game 301
-/tag/software /tags/program 301
-/tag/* /tags/:splat 301
-/docs/* /:splat 301
-
 # AIPress
 
 /blog/2023/04/01/what-i-thought-when-i-let-ai-write-all-my-blog-posts /aipress/ 301
+/blog/2023/04/01/what-i-thought-when-i-let-ai-write-all-my-blog-posts/ /aipress/ 301
 
+/2023/03/29/explanation-of-commonly-used-commands-in-git /aipress/explanation-of-commonly-used-commands-in-git 301
 /2023/03/29/explanation-of-commonly-used-commands-in-git/ /aipress/explanation-of-commonly-used-commands-in-git 301
+/blog/2023/03/29/explanation-of-commonly-used-commands-in-git /aipress/explanation-of-commonly-used-commands-in-git 301
 /blog/2023/03/29/explanation-of-commonly-used-commands-in-git/ /aipress/explanation-of-commonly-used-commands-in-git 301
+/explanation-of-commonly-used-commands-in-git /aipress/explanation-of-commonly-used-commands-in-git 301
 /explanation-of-commonly-used-commands-in-git/ /aipress/explanation-of-commonly-used-commands-in-git 301
 
+/2023/03/29/what-is-git-and-what-is-github-what-is-github /aipress/what-is-git-and-what-is-github-what-is-github 301
 /2023/03/29/what-is-git-and-what-is-github-what-is-github/ /aipress/what-is-git-and-what-is-github-what-is-github 301
+/blog/2023/03/29/what-is-git-and-what-is-github-what-is-github /aipress/what-is-git-and-what-is-github-what-is-github 301
 /blog/2023/03/29/what-is-git-and-what-is-github-what-is-github/ /aipress/what-is-git-and-what-is-github-what-is-github 301
+/what-is-git-and-what-is-github-what-is-github /aipress/what-is-git-and-what-is-github-what-is-github 301
 /what-is-git-and-what-is-github-what-is-github/ /aipress/what-is-git-and-what-is-github-what-is-github 301
 
+/2023/03/29/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand /aipress/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand 301
 /2023/03/29/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand/ /aipress/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand 301
+/blog/2023/03/29/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand /aipress/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand 301
 /blog/2023/03/29/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand/ /aipress/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand 301
+/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand /aipress/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand 301
 /what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand/ /aipress/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand 301
 
+/2023/03/29/what-is-the-python-programming-language-why-you-should-study-it /aipress/what-is-the-python-programming-language-why-you-should-study-it 301
 /2023/03/29/what-is-the-python-programming-language-why-you-should-study-it/ /aipress/what-is-the-python-programming-language-why-you-should-study-it 301
+/blog/2023/03/29/what-is-the-python-programming-language-why-you-should-study-it /aipress/what-is-the-python-programming-language-why-you-should-study-it 301
 /blog/2023/03/29/what-is-the-python-programming-language-why-you-should-study-it/ /aipress/what-is-the-python-programming-language-why-you-should-study-it 301
+/what-is-the-python-programming-language-why-you-should-study-it /aipress/what-is-the-python-programming-language-why-you-should-study-it 301
 /what-is-the-python-programming-language-why-you-should-study-it/ /aipress/what-is-the-python-programming-language-why-you-should-study-it 301
 
+/2023/03/29/why-you-should-read-the-developer-documentation /aipress/why-you-should-read-the-developer-documentation 301
 /2023/03/29/why-you-should-read-the-developer-documentation/ /aipress/why-you-should-read-the-developer-documentation 301
+/blog/2023/03/29/why-you-should-read-the-developer-documentation /aipress/why-you-should-read-the-developer-documentation 301
 /blog/2023/03/29/why-you-should-read-the-developer-documentation/ /aipress/why-you-should-read-the-developer-documentation 301
+/why-you-should-read-the-developer-documentation /aipress/why-you-should-read-the-develop-documentation 301
 /why-you-should-read-the-developer-documentation/ /aipress/why-you-should-read-the-develop-documentation 301
 
+/2023/03/25/what-is-the-best-programming-language-to-learn-programming /aipress/what-is-the-best-programming-language-to-learn-programming 301
 /2023/03/25/what-is-the-best-programming-language-to-learn-programming/ /aipress/what-is-the-best-programming-language-to-learn-programming 301
+/blog/2023/03/25/what-is-the-best-programming-language-to-learn-programming /aipress/what-is-the-best-programming-language-to-learn-programming 301
 /blog/2023/03/25/what-is-the-best-programming-language-to-learn-programming/ /aipress/what-is-the-best-programming-language-to-learn-programming 301
+/what-is-the-best-programming-language-to-learn-programming /aipress/what-is-the-best-programming-language-to-learn-programming 301
 /what-is-the-best-programming-language-to-learn-programming/ /aipress/what-is-the-best-programming-language-to-learn-programming 301
 
+/2023/03/25/what-is-udp-getting-to-know-the-network /aipress/what-is-udp-getting-to-know-the-network 301
 /2023/03/25/what-is-udp-getting-to-know-the-network/ /aipress/what-is-udp-getting-to-know-the-network 301
+/blog/2023/03/25/what-is-udp-getting-to-know-the-network /aipress/what-is-udp-getting-to-know-the-network 301
 /blog/2023/03/25/what-is-udp-getting-to-know-the-network/ /aipress/what-is-udp-getting-to-know-the-network 301
+/what-is-udp-getting-to-know-the-network /aipress/what-is-udp-getting-to-know-the-network 301
 /what-is-udp-getting-to-know-the-network/ /aipress/what-is-udp-getting-to-know-the-network 301
 
+/2023/03/25/what-role-do-routers-have /aipress/what-role-do-routers-have 301
 /2023/03/25/what-role-do-routers-have/ /aipress/what-role-do-routers-have 301
+/blog/2023/03/25/what-role-do-routers-have /aipress/what-role-do-routers-have 301
 /blog/2023/03/25/what-role-do-routers-have/ /aipress/what-role-do-routers-have 301
+/what-role-do-routers-have /aipress/what-role-do-routers-have 301
 /what-role-do-routers-have/ /aipress/what-role-do-routers-have 301
 
+/2023/03/23/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet /aipress/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet 301
 /2023/03/23/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet/ /aipress/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet 301
+/blog/2023/03/23/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet /aipress/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet 301
 /blog/2023/03/23/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet/ /aipress/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet 301
+/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet /aipress/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet 301
 /from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet/ /aipress/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet 301
 
+/2023/03/23/what-is-tcp-ip-find-out-about-networks /aipress/what-is-tcp-ip-find-out-about-networks 301
 /2023/03/23/what-is-tcp-ip-find-out-about-networks/ /aipress/what-is-tcp-ip-find-out-about-networks 301
+/blog/2023/03/23/what-is-tcp-ip-find-out-about-networks /aipress/what-is-tcp-ip-find-out-about-networks 301
 /blog/2023/03/23/what-is-tcp-ip-find-out-about-networks/ /aipress/what-is-tcp-ip-find-out-about-networks 301
+/what-is-tcp-ip-find-out-about-networks /aipress/what-is-tcp-ip-find-out-about-networks 301
 /what-is-tcp-ip-find-out-about-networks/ /aipress/what-is-tcp-ip-find-out-about-networks 301
 
+/2023/03/22/what-is-ai-a-quick-explanation-for-beginners /aipress/what-is-ai-a-quick-explanation-for-beginners 301
 /2023/03/22/what-is-ai-a-quick-explanation-for-beginners/ /aipress/what-is-ai-a-quick-explanation-for-beginners 301
+/blog/2023/03/22/what-is-ai-a-quick-explanation-for-beginners /aipress/what-is-ai-a-quick-explanation-for-beginners 301
 /blog/2023/03/22/what-is-ai-a-quick-explanation-for-beginners/ /aipress/what-is-ai-a-quick-explanation-for-beginners 301
+/what-is-ai-a-quick-explanation-for-beginners /aipress/what-is-ai-a-quick-explanation-for-beginners 301
 /what-is-ai-a-quick-explanation-for-beginners/ /aipress/what-is-ai-a-quick-explanation-for-beginners 301
 
+/2023/03/11/i-bought-the-keychron-k8-pro-jis /aipress/i-bought-the-keychron-k8-pro-jis 301
 /2023/03/11/i-bought-the-keychron-k8-pro-jis/ /aipress/i-bought-the-keychron-k8-pro-jis 301
+/blog/2023/03/11/i-bought-the-keychron-k8-pro-jis /aipress/i-bought-the-keychron-k8-pro-jis 301
 /blog/2023/03/11/i-bought-the-keychron-k8-pro-jis/ /aipress/i-bought-the-keychron-k8-pro-jis 301
+/i-bought-the-keychron-k8-pro-jis /aipress/i-bought-the-keychron-k8-pro-jis 301
 /i-bought-the-keychron-k8-pro-jis/ /aipress/i-bought-the-keychron-k8-pro-jis 301
 
 # Redirects for the Steam reviews
 
+/2022/01/02/dominion-reviews /games/review/dominion 301
 /2022/01/02/dominion-reviews/ /games/review/dominion 301
+/blog/2022/01/02/dominion-reviews /games/review/dominion 301
 /blog/2022/01/02/dominion-reviews/ /games/review/dominion 301
+/dominion-reviews /games/review/dominion 301
 /dominion-reviews/ /games/review/dominion 301
 
+/2020/11/17/animaze-by-facerig-review /games/review/animaze-by-facerig 301
 /2020/11/17/animaze-by-facerig-review/ /games/review/animaze-by-facerig 301
+/blog/2020/11/17/animaze-by-facerig-review /games/review/animaze-by-facerig 301
 /blog/2020/11/17/animaze-by-facerig-review/ /games/review/animaze-by-facerig 301
+/animaze-by-facerig-review /games/review/animaze-by-facerig 301
 /animaze-by-facerig-review/ /games/review/animaze-by-facerig 301
 
+/2019/12/04/kitsune-no-tabiji-review /games/review/kitsune-no-tabiji 301
 /2019/12/04/kitsune-no-tabiji-review/ /games/review/kitsune-no-tabiji 301
+/blog/2019/12/04/kitsune-no-tabiji-review /games/review/kitsune-no-tabiji 301
 /blog/2019/12/04/kitsune-no-tabiji-review/ /games/review/kitsune-no-tabiji 301
+/kitsune-no-tabiji-review /games/review/kitsune-no-tabiji 301
 /kitsune-no-tabiji-review/ /games/review/kitsune-no-tabiji 301
 
+/2019/12/01/how-to-raise-a-wolf-girl-review /games/review/how-to-raise-a-wolf-girl 301
 /2019/12/01/how-to-raise-a-wolf-girl-review/ /games/review/how-to-raise-a-wolf-girl 301
+/blog/2019/12/01/how-to-raise-a-wolf-girl-review /games/review/how-to-raise-a-wolf-girl 301
 /blog/2019/12/01/how-to-raise-a-wolf-girl-review/ /games/review/how-to-raise-a-wolf-girl 301
+/how-to-raise-a-wolf-girl-review /games/review/how-to-raise-a-wolf-girl 301
 /how-to-raise-a-wolf-girl-review/ /games/review/how-to-raise-a-wolf-girl 301
 
+/2019/08/30/hime-mahjong-review /games/review/hime-mahjong 301
 /2019/08/30/hime-mahjong-review/ /games/review/hime-mahjong 301
+/blog/2019/08/30/hime-mahjong-review /games/review/hime-mahjong 301
 /blog/2019/08/30/hime-mahjong-review/ /games/review/hime-mahjong 301
+/hime-mahjong-review /games/review/hime-mahjong 301
 /hime-mahjong-review/ /games/review/hime-mahjong 301
 
+/2019/06/30/grass-simulator-review /games/review/grass-simulator 301
 /2019/06/30/grass-simulator-review/ /games/review/grass-simulator 301
+/blog/2019/06/30/grass-simulator-review /games/review/grass-simulator 301
 /blog/2019/06/30/grass-simulator-review/ /games/review/grass-simulator 301
+/grass-simulator-review /games/review/grass-simulator 301
 /grass-simulator-review/ /games/review/grass-simulator 301
 
+/2019/01/16/wallpaper-engine-review /games/review/wallpaper-engine 301
 /2019/01/16/wallpaper-engine-review/ /games/review/wallpaper-engine 301
+/blog/2019/01/16/wallpaper-engine-review /games/review/wallpaper-engine 301
 /blog/2019/01/16/wallpaper-engine-review/ /games/review/wallpaper-engine 301
+/wallpaper-engine-review /games/review/wallpaper-engine 301
 /wallpaper-engine-review/ /games/review/wallpaper-engine 301
 
+/2019/01/06/flashing-lights-review /games/review/flashing-lights 301
 /2019/01/06/flashing-lights-review/ /games/review/flashing-lights 301
+/blog/2019/01/06/flashing-lights-review /games/review/flashing-lights 301
 /blog/2019/01/06/flashing-lights-review/ /games/review/flashing-lights 301
+/flashing-lights-review /games/review/flashing-lights 301
 /flashing-lights-review/ /games/review/flashing-lights 301
 
+/2019/01/06/nokbak-review /games/review/nokbak 301
 /2019/01/06/nokbak-review/ /games/review/nokbak 301
+/blog/2019/01/06/nokbak-review /games/review/nokbak 301
 /blog/2019/01/06/nokbak-review/ /games/review/nokbak 301
+/nokbak-review /games/review/nokbak 301
 /nokbak-review/ /games/review/nokbak 301
 
+/2019/01/05/cpucores-maximize-your-fps-review /games/review/cpucores-maximize-your-fps 301
 /2019/01/05/cpucores-maximize-your-fps-review/ /games/review/cpucores-maximize-your-fps 301
+/blog/2019/01/05/cpucores-maximize-your-fps-review /games/review/cpucores-maximize-your-fps 301
 /blog/2019/01/05/cpucores-maximize-your-fps-review/ /games/review/cpucores-maximize-your-fps 301
+/cpucores-maximize-your-fps-review /games/review/cpucores-maximize-your-fps 301
 /cpucores-maximize-your-fps-review/ /games/review/cpucores-maximize-your-fps 301
 
+/2019/01/04/3tene-review /games/review/3tene 301
 /2019/01/04/3tene-review/ /games/review/3tene 301
+/blog/2019/01/04/3tene-review /games/review/3tene 301
 /blog/2019/01/04/3tene-review/ /games/review/3tene 301
+/3tene-review /games/review/3tene 301
 /3tene-review/ /games/review/3tene 301
 
+/2019/01/04/dead-by-daylight-review /games/review/dead-by-daylight 301
 /2019/01/04/dead-by-daylight-review/ /games/review/dead-by-daylight 301
+/blog/2019/01/04/dead-by-daylight-review /games/review/dead-by-daylight 301
 /blog/2019/01/04/dead-by-daylight-review/ /games/review/dead-by-daylight 301
+/dead-by-daylight-review /games/review/dead-by-daylight 301
 /dead-by-daylight-review/ /games/review/dead-by-daylight 301
 
+/2019/01/04/russian-roulette-one-life-review /games/review/russian-roulette-one-life 301
 /2019/01/04/russian-roulette-one-life-review/ /games/review/russian-roulette-one-life 301
+/blog/2019/01/04/russian-roulette-one-life-review /games/review/russian-roulette-one-life 301
 /blog/2019/01/04/russian-roulette-one-life-review/ /games/review/russian-roulette-one-life 301
+/russian-roulette-one-life-review /games/review/russian-roulette-one-life 301
 /russian-roulette-one-life-review/ /games/review/russian-roulette-one-life 301
 
+/2019/01/01/islands-of-nyne-battle-royale-review /games/review/islands-of-nyne-battle-royale 301
 /2019/01/01/islands-of-nyne-battle-royale-review/ /games/review/islands-of-nyne-battle-royale 301
+/blog/2019/01/01/islands-of-nyne-battle-royale-review /games/review/islands-of-nyne-battle-royale 301
 /blog/2019/01/01/islands-of-nyne-battle-royale-review/ /games/review/islands-of-nyne-battle-royale 301
+/islands-of-nyne-battle-royale-review /games/review/islands-of-nyne-battle-royale 301
 /islands-of-nyne-battle-royale-review/ /games/review/islands-of-nyne-battle-royale 301
 
+/2018/12/30/ring-of-elysium-review /games/review/ring-of-elysium 301
 /2018/12/30/ring-of-elysium-review/ /games/review/ring-of-elysium 301
+/blog/2018/12/30/ring-of-elysium-review /games/review/ring-of-elysium 301
 /blog/2018/12/30/ring-of-elysium-review/ /games/review/ring-of-elysium 301
+/ring-of-elysium-review /games/review/ring-of-elysium 301
 /ring-of-elysium-review/ /games/review/ring-of-elysium 301
 
+/2018/11/07/tom-clancys-rainbow-six-siege-review /games/review/tom-clancys-rainbow-six-siege 301
 /2018/11/07/tom-clancys-rainbow-six-siege-review/ /games/review/tom-clancys-rainbow-six-siege 301
+/blog/2018/11/07/tom-clancys-rainbow-six-siege-review /games/review/tom-clancys-rainbow-six-siege 301
 /blog/2018/11/07/tom-clancys-rainbow-six-siege-review/ /games/review/tom-clancys-rainbow-six-siege 301
+/tom-clancys-rainbow-six-siege-review /games/review/tom-clancys-rainbow-six-siege 301
 /tom-clancys-rainbow-six-siege-review/ /games/review/tom-clancys-rainbow-six-siege 301
 
+/2018/05/11/vrchat-review /games/review/vrchat 301
 /2018/05/11/vrchat-review/ /games/review/vrchat 301
+/blog/2018/05/11/vrchat-review /games/review/vrchat 301
 /blog/2018/05/11/vrchat-review/ /games/review/vrchat 301
+/vrchat-review /games/review/vrchat 301
 /vrchat-review/ /games/review/vrchat 301
 
+/2018/02/17/metal-gear-survive-beta-review /games/review/metal-gear-survive-beta 301
 /2018/02/17/metal-gear-survive-beta-review/ /games/review/metal-gear-survive-beta 301
+/blog/2018/02/17/metal-gear-survive-beta-review /games/review/metal-gear-survive-beta 301
 /blog/2018/02/17/metal-gear-survive-beta-review/ /games/review/metal-gear-survive-beta 301
+/metal-gear-survive-beta-review /games/review/metal-gear-survive-beta 301
 /metal-gear-survive-beta-review/ /games/review/metal-gear-survive-beta 301
 
+/2016/12/23/steep-review /games/review/steep 301
 /2016/12/23/steep-review/ /games/review/steep 301
+/blog/2016/12/23/steep-review /games/review/steep 301
 /blog/2016/12/23/steep-review/ /games/review/steep 301
+/steep-review /games/review/steep 301
 /steep-review/ /games/review/steep 301
 
 # Redirects for the projects
 
-/blog/2022/10/30/services/ /projects/ 301
-/2022/10/30/services/ /projects/ 301
-/services/ /projects/ 301
-
 /2022/10/30/koriyama-city-open-data-unofficial-webapi /projects/koriyama-webapi/intro 301
+/2022/10/30/koriyama-city-open-data-unofficial-webapi/ /projects/koriyama-webapi/intro 301
 /blog/2022/10/30/koriyama-city-open-data-unofficial-webapi /projects/koriyama-webapi/intro 301
+/blog/2022/10/30/koriyama-city-open-data-unofficial-webapi/ /projects/koriyama-webapi/intro 301
+/koriyama-city-open-data-unofficial-webapi /projects/koriyama-webapi/intro 301
 /koriyama-city-open-data-unofficial-webapi/ /projects/koriyama-webapi/intro 301
 
+/blog/2022/10/30/services /projects/ 301
+/blog/2022/10/30/services/ /projects/ 301
+/2022/10/30/services /projects/ 301
+/2022/10/30/services/ /projects/ 301
+/services /projects/ 301
+/services/ /projects/ 301
+
+/2022/11/17/betterkeepinventory /projects/betterkeepinventory/intro 301
 /2022/11/17/betterkeepinventory/ /projects/betterkeepinventory/intro 301
+/blog/2022/11/17/betterkeepinventory /projects/betterkeepinventory/intro 301
 /blog/2022/11/17/betterkeepinventory/ /projects/betterkeepinventory/intro 301
+/betterkeepinventory /projects/betterkeepinventory/intro 301
 /betterkeepinventory/ /projects/betterkeepinventory/intro 301
 
+/2020/02/04/downtimeproxy-2 /projects/downtimeproxy/intro 301
 /2020/02/04/downtimeproxy-2/ /projects/downtimeproxy/intro 301
+/blog/2020/02/04/downtimeproxy-2 /projects/downtimeproxy/intro 301
 /blog/2020/02/04/downtimeproxy-2/ /projects/downtimeproxy/intro 301
+/downtimeproxy-2 /projects/downtimeproxy/intro 301
 /downtimeproxy-2/ /projects/downtimeproxy/intro 301
 
+/2020/03/12/downtimeproxy-1-1-1-1 /projects/downtimeproxy/intro 301
 /2020/03/12/downtimeproxy-1-1-1-1/ /projects/downtimeproxy/intro 301
+/blog/2020/03/12/downtimeproxy-1-1-1-1 /projects/downtimeproxy/intro 301
 /blog/2020/03/12/downtimeproxy-1-1-1-1/ /projects/downtimeproxy/intro 301
+/downtimeproxy-1-1-1-1 /projects/downtimeproxy/intro 301
 /downtimeproxy-1-1-1-1/ /projects/downtimeproxy/intro 301
 
+/2021/02/22/downtimeproxy /projects/downtimeproxy/intro 301
 /2021/02/22/downtimeproxy/ /projects/downtimeproxy/intro 301
+/blog/2021/02/22/downtimeproxy /projects/downtimeproxy/intro 301
 /blog/2021/02/22/downtimeproxy/ /projects/downtimeproxy/intro 301
+/downtimeproxy /projects/downtimeproxy/intro 301
 /downtimeproxy/ /projects/downtimeproxy/intro 301
 
+/2021/03/01/pyxel-tilemap-viewer /projects/pyxel-tilemap-viewer/intro 301
 /2021/03/01/pyxel-tilemap-viewer/ /projects/pyxel-tilemap-viewer/intro 301
+/blog/2021/03/01/pyxel-tilemap-viewer /projects/pyxel-tilemap-viewer/intro 301
 /blog/2021/03/01/pyxel-tilemap-viewer/ /projects/pyxel-tilemap-viewer/intro 301
+/pyxel-tilemap-viewer /projects/pyxel-tilemap-viewer/intro 301
 /pyxel-tilemap-viewer/ /projects/pyxel-tilemap-viewer/intro 301
 
+/2021/03/01/pyxel-tilemap-viewer-release-1-0 /projects/pyxel-tilemap-viewer/intro 301
 /2021/03/01/pyxel-tilemap-viewer-release-1-0/ /projects/pyxel-tilemap-viewer/intro 301
+/blog/2021/03/01/pyxel-tilemap-viewer-release-1-0 /projects/pyxel-tilemap-viewer/intro 301
 /blog/2021/03/01/pyxel-tilemap-viewer-release-1-0/ /projects/pyxel-tilemap-viewer/intro 301
+/pyxel-tilemap-viewer-release-1-0 /projects/pyxel-tilemap-viewer/intro 301
 /pyxel-tilemap-viewer-release-1-0/ /projects/pyxel-tilemap-viewer/intro 301
 
 # 旧紹介記事系のリダイレクト
 # FIXME: 紹介記事系のリンク切れは困るので一旦リダイレクトしておく。
 
 /2022/08/26/review-of-wondershare-filmora-an-easy-and-high-quality-video-editing-software /blog/2022/08/26/review-of-wondershare-filmora-an-easy-and-high-quality-video-editing-software 301
+/2022/08/26/review-of-wondershare-filmora-an-easy-and-high-quality-video-editing-software/ /blog/2022/08/26/review-of-wondershare-filmora-an-easy-and-high-quality-video-editing-software 301
+/review-of-wondershare-filmora-an-easy-and-high-quality-video-editing-software /blog/2022/08/26/review-of-wondershare-filmora-an-easy-and-high-quality-video-editing-software 301
 /review-of-wondershare-filmora-an-easy-and-high-quality-video-editing-software/ /blog/2022/08/26/review-of-wondershare-filmora-an-easy-and-high-quality-video-editing-software 301
 
 /2021/11/30/review-of-flexclip-an-online-video-editing-web-service /blog/2021/11/30/review-of-flexclip-an-online-video-editing-web-service 301
+/2021/11/30/review-of-flexclip-an-online-video-editing-web-service/ /blog/2021/11/30/review-of-flexclip-an-online-video-editing-web-service 301
+/review-of-flexclip-an-online-video-editing-web-service /blog/2021/11/30/review-of-flexclip-an-online-video-editing-web-service 301
 /review-of-flexclip-an-online-video-editing-web-service/ /blog/2021/11/30/review-of-flexclip-an-online-video-editing-web-service 301
 
 /2021/11/09/multifunctional-software-hd-video-converter-factory-pro-review /blog/2021/11/09/multifunctional-software-hd-video-converter-factory-pro-review 301
+/2021/11/09/multifunctional-software-hd-video-converter-factory-pro-review/ /blog/2021/11/09/multifunctional-software-hd-video-converter-factory-pro-review 301
+/multifunctional-software-hd-video-converter-factory-pro-review /blog/2021/11/09/multifunctional-software-hd-video-converter-factory-pro-review 301
 /multifunctional-software-hd-video-converter-factory-pro-review/ /blog/2021/11/09/multifunctional-software-hd-video-converter-factory-pro-review 301
 
 /2021/09/13/free-partition-management-software-minitool-partition-wizard /blog/2021/09/13/free-partition-management-software-minitool-partition-wizard 301
+/2021/09/13/free-partition-management-software-minitool-partition-wizard/ /blog/2021/09/13/free-partition-management-software-minitool-partition-wizard 301
+/free-partition-management-software-minitool-partition-wizard /blog/2021/09/13/free-partition-management-software-minitool-partition-wizard 301
 /free-partition-management-software-minitool-partition-wizard/ /blog/2021/09/13/free-partition-management-software-minitool-partition-wizard 301
 
 /2022/05/02/noxplayer-can-now-coexist-with-hyper-v /blog/2022/05/02/noxplayer-can-now-coexist-with-hyper-v 301
+/2022/05/02/noxplayer-can-now-coexist-with-hyper-v/ /blog/2022/05/02/noxplayer-can-now-coexist-with-hyper-v 301
+/noxplayer-can-now-coexist-with-hyper-v /blog/2022/05/02/noxplayer-can-now-coexist-with-hyper-v 301
 /noxplayer-can-now-coexist-with-hyper-v/ /blog/2022/05/02/noxplayer-can-now-coexist-with-hyper-v 301
 
 /2021/10/28/bluestack5-can-now-run-under-hyper-v-environment /blog/2021/10/28/bluestack5-can-now-run-under-hyper-v-environment 301
+/2021/10/28/bluestack5-can-now-run-under-hyper-v-environment/ /blog/2021/10/28/bluestack5-can-now-run-under-hyper-v-environment 301
+/bluestack5-can-now-run-under-hyper-v-environment /blog/2021/10/28/bluestack5-can-now-run-under-hyper-v-environment 301
 /bluestack5-can-now-run-under-hyper-v-environment/ /blog/2021/10/28/bluestack5-can-now-run-under-hyper-v-environment 301
 
 # Redirects for the blog
 
 /2021/01/16/unable-to-open-ports-using-ufw-in-oci /tips/oracle-cloud/firewall-ports-cannot-be-opened 301
+/2021/01/16/unable-to-open-ports-using-ufw-in-oci/ /tips/oracle-cloud/firewall-ports-cannot-be-opened 301
 /blog/2021/01/16/unable-to-open-ports-using-ufw-in-oci /tips/oracle-cloud/firewall-ports-cannot-be-opened 301
+/blog/2021/01/16/unable-to-open-ports-using-ufw-in-oci/ /tips/oracle-cloud/firewall-ports-cannot-be-opened 301
+/unable-to-open-ports-using-ufw-in-oci /tips/oracle-cloud/firewall-ports-cannot-be-opened 301
 /unable-to-open-ports-using-ufw-in-oci/ /tips/oracle-cloud/firewall-ports-cannot-be-opened 301
 
 /2021/04/29/fixing-issue-of-garbled-arrow-keys-in-ubuntu-console /tips/ubuntu/terminal-arrow-key-garbled 301
+/2021/04/29/fixing-issue-of-garbled-arrow-keys-in-ubuntu-console/ /tips/ubuntu/terminal-arrow-key-garbled 301
 /blog/2021/04/29/fixing-issue-of-garbled-arrow-keys-in-ubuntu-console /tips/ubuntu/terminal-arrow-key-garbled 301
+/blog/2021/04/29/fixing-issue-of-garbled-arrow-keys-in-ubuntu-console/ /tips/ubuntu/terminal-arrow-key-garbled 301
+/fixing-issue-of-garbled-arrow-keys-in-ubuntu-console /tips/ubuntu/terminal-arrow-key-garbled 301
 /fixing-issue-of-garbled-arrow-keys-in-ubuntu-console/ /tips/ubuntu/terminal-arrow-key-garbled 301
 
 /2021/04/11/ubuntu-server-running-curtin-hook-spinner-keeps-spinning-forever-issue /tips/ubuntu/curtin-hook-spinning-forever 301
+/2021/04/11/ubuntu-server-running-curtin-hook-spinner-keeps-spinning-forever-issue/ /tips/ubuntu/curtin-hook-spinning-forever 301
 /blog/2021/04/11/ubuntu-server-running-curtin-hook-spinner-keeps-spinning-forever-issue /tips/ubuntu/curtin-hook-spinning-forever 301
+/blog/2021/04/11/ubuntu-server-running-curtin-hook-spinner-keeps-spinning-forever-issue/ /tips/ubuntu/curtin-hook-spinning-forever 301
+/ubuntu-server-running-curtin-hook-spinner-keeps-spinning-forever-issue /tips/ubuntu/curtin-hook-spinning-forever 301
 /ubuntu-server-running-curtin-hook-spinner-keeps-spinning-forever-issue/ /tips/ubuntu/curtin-hook-spinning-forever 301
 
 /2021/03/04/network-bandwidth-of-oracle-cloud-is-limited-to-50-mbps /tips/oracle-cloud/free-tier-vm-50mbps 301
+/2021/03/04/network-bandwidth-of-oracle-cloud-is-limited-to-50-mbps/ /tips/oracle-cloud/free-tier-vm-50mbps 301
 /blog/2021/03/04/network-bandwidth-of-oracle-cloud-is-limited-to-50-mbps /tips/oracle-cloud/free-tier-vm-50mbps 301
+/blog/2021/03/04/network-bandwidth-of-oracle-cloud-is-limited-to-50-mbps/ /tips/oracle-cloud/free-tier-vm-50mbps 301
+/network-bandwidth-of-oracle-cloud-is-limited-to-50-mbps /tips/oracle-cloud/free-tier-vm-50mbps 301
 /network-bandwidth-of-oracle-cloud-is-limited-to-50-mbps/ /tips/oracle-cloud/free-tier-vm-50mbps 301
 
 /2021/04/15/ubuntu-20-04-lts-change-timezone-cli /tips/ubuntu/change-timezone 301
+/2021/04/15/ubuntu-20-04-lts-change-timezone-cli/ /tips/ubuntu/change-timezone 301
 /blog/2021/04/15/ubuntu-20-04-lts-change-timezone-cli /tips/ubuntu/change-timezone 301
+/blog/2021/04/15/ubuntu-20-04-lts-change-timezone-cli/ /tips/ubuntu/change-timezone 301
+/ubuntu-20-04-lts-change-timezone-cli /tips/ubuntu/change-timezone 301
 /ubuntu-20-04-lts-change-timezone-cli/ /tips/ubuntu/change-timezone 301
 
 /2023/05/21/when-ubuntu-is-installed-not-all-disk-space-is-allocated /tips/ubuntu/allocate-all-disk-space-after-installation 301
+/2023/05/21/when-ubuntu-is-installed-not-all-disk-space-is-allocated/ /tips/ubuntu/allocate-all-disk-space-after-installation 301
 /blog/2023/05/21/when-ubuntu-is-installed-not-all-disk-space-is-allocated /tips/ubuntu/allocate-all-disk-space-after-installation 301
+/blog/2023/05/21/when-ubuntu-is-installed-not-all-disk-space-is-allocated/ /tips/ubuntu/allocate-all-disk-space-after-installation 301
+/when-ubuntu-is-installed-not-all-disk-space-is-allocated /tips/ubuntu/allocate-all-disk-space-after-installation 301
 /when-ubuntu-is-installed-not-all-disk-space-is-allocated/ /tips/ubuntu/allocate-all-disk-space-after-installation 301
 
+/2020/12/29/contact /contact 301
 /2020/12/29/contact/ /contact 301
+/blog/2020/12/29/contact /contact 301
 /blog/2020/12/29/contact/ /contact 301
 
 /2023/03-10-when-starting-a-vm-with-proxmox-i-was-told-kvm-virtualisation-is-configured-but-not-available-please-disable-it-in-the-vm-settings-or-enable-it-in-the-bios /tips/proxmox/vm-startup-error 301
+/2023/03-10-when-starting-a-vm-with-proxmox-i-was-told-kvm-virtualisation-is-configured-but-not-available-please-disable-it-in-the-vm-settings-or-enable-it-in-the-bios/ /tips/proxmox/vm-startup-error 301
 /blog/2023/03-10-when-starting-a-vm-with-proxmox-i-was-told-kvm-virtualisation-is-configured-but-not-available-please-disable-it-in-the-vm-settings-or-enable-it-in-the-bios /tips/proxmox/vm-startup-error 301
+/blog/2023/03-10-when-starting-a-vm-with-proxmox-i-was-told-kvm-virtualisation-is-configured-but-not-available-please-disable-it-in-the-vm-settings-or-enable-it-in-the-bios/ /tips/proxmox/vm-startup-error 301
+/when-starting-a-vm-with-proxmox-i-was-told-kvm-virtualisation-is-configured-but-not-available-please-disable-it-in-the-vm-settings-or-enable-it-in-the-bios /tips/proxmox/vm-startup-error 301
 /when-starting-a-vm-with-proxmox-i-was-told-kvm-virtualisation-is-configured-but-not-available-please-disable-it-in-the-vm-settings-or-enable-it-in-the-bios/ /tips/proxmox/vm-startup-error 301
 
 /2021/08-13-building-a-2pc-distribution-environment-using-ndi /tips/obs/2pc-ndi 301
+/2021/08-13-building-a-2pc-distribution-environment-using-ndi/ /tips/obs/2pc-ndi 301
 /blog/2021/08-13-building-a-2pc-distribution-environment-using-ndi /tips/obs/2pc-ndi 301
+/blog/2021/08-13-building-a-2pc-distribution-environment-using-ndi/ /tips/obs/2pc-ndi 301
+/building-a-2pc-distribution-environment-using-ndi /tips/obs/2pc-ndi 301
 /building-a-2pc-distribution-environment-using-ndi/ /tips/obs/2pc-ndi 301
 
 /2021/09-23-what-to-do-if-you-get-unmet-dependencies-when-installing-obs-ndi /tips/obs/obs-ndi-install-error-unmet-dependencies 301
+/2021/09-23-what-to-do-if-you-get-unmet-dependencies-when-installing-obs-ndi/ /tips/obs/obs-ndi-install-error-unmet-dependencies 301
 /blog/2021/09-23-what-to-do-if-you-get-unmet-dependencies-when-installing-obs-ndi /tips/obs/obs-ndi-install-error-unmet-dependencies 301
+/blog/2021/09-23-what-to-do-if-you-get-unmet-dependencies-when-installing-obs-ndi/ /tips/obs/obs-ndi-install-error-unmet-dependencies 301
+/what-to-do-if-you-get-unmet-dependencies-when-installing-obs-ndi /tips/obs/obs-ndi-install-error-unmet-dependencies 301
 /what-to-do-if-you-get-unmet-dependencies-when-installing-obs-ndi/ /tips/obs/obs-ndi-install-error-unmet-dependencies 301
 
 /2023/04/23/solution-to-obs-crashing-when-setting-the-nvidia-noise-removal-room-echo-removal-filter /tips/obs/obs-nvidia-broadcast-filter-crash 301
+/2023/04/23/solution-to-obs-crashing-when-setting-the-nvidia-noise-removal-room-echo-removal-filter/ /tips/obs/obs-nvidia-broadcast-filter-crash 301
 /blog/2023/04/23/solution-to-obs-crashing-when-setting-the-nvidia-noise-removal-room-echo-removal-filter /tips/obs/obs-nvidia-broadcast-filter-crash 301
+/blog/2023/04/23/solution-to-obs-crashing-when-setting-the-nvidia-noise-removal-room-echo-removal-filter/ /tips/obs/obs-nvidia-broadcast-filter-crash 301
+/solution-to-obs-crashing-when-setting-the-nvidia-noise-removal-room-echo-removal-filter /tips/obs/obs-nvidia-broadcast-filter-crash 301
 /solution-to-obs-crashing-when-setting-the-nvidia-noise-removal-room-echo-removal-filter/ /tips/obs/obs-nvidia-broadcast-filter-crash 301
 
 /2021/03/02/vlang-fizzbuzz /programs/Vlang/fizzbuzz 301
+/2021/03/02/vlang-fizzbuzz/ /programs/Vlang/fizzbuzz 301
 /blog/2021/03/02/vlang-fizzbuzz /programs/Vlang/fizzbuzz 301
+/blog/2021/03/02/vlang-fizzbuzz/ /programs/Vlang/fizzbuzz 301
+/vlang-fizzbuzz /programs/Vlang/fizzbuzz 301
 /vlang-fizzbuzz/ /programs/Vlang/fizzbuzz 301
 
 /2021/03/02/clang-fizzbuzz /programs/Clang/fizzbuzz 301
+/2021/03/02/clang-fizzbuzz/ /programs/Clang/fizzbuzz 301
 /blog/2021/03/02/clang-fizzbuzz /programs/Clang/fizzbuzz 301
+/blog/2021/03/02/clang-fizzbuzz/ /programs/Clang/fizzbuzz 301
+/clang-fizzbuzz /programs/Clang/fizzbuzz 301
 /clang-fizzbuzz/ /programs/Clang/fizzbuzz 301
 
 /2021/03/02/python-fizzbuzz /programs/Python/fizzbuzz 301
+/2021/03/02/python-fizzbuzz/ /programs/Python/fizzbuzz 301
 /blog/2021/03/02/python-fizzbuzz /programs/Python/fizzbuzz 301
+/blog/2021/03/02/python-fizzbuzz/ /programs/Python/fizzbuzz 301
+/python-fizzbuzz /programs/Python/fizzbuzz 301
 /python-fizzbuzz/ /programs/Python/fizzbuzz 301
 
 /2022/02/26/cheat-sheet-of-basic-python-grammar /programs/Python/basic-grammar 301
+/2022/02/26/cheat-sheet-of-basic-python-grammar/ /programs/Python/basic-grammar 301
 /blog/2022/02/26/cheat-sheet-of-basic-python-grammar /programs/Python/basic-grammar 301
+/blog/2022/02/26/cheat-sheet-of-basic-python-grammar/ /programs/Python/basic-grammar 301
+/cheat-sheet-of-basic-python-grammar /programs/Python/basic-grammar 301
 /cheat-sheet-of-basic-python-grammar/ /programs/Python/basic-grammar 301
 
 /2022/05/11/how-many-manager-nodes-are-good-for-docker-swarm /tips/docker/how-many-manager-nodes-are-good 301
+/2022/05/11/how-many-manager-nodes-are-good-for-docker-swarm/ /tips/docker/how-many-manager-nodes-are-good 301
 /blog/2022/05/11/how-many-manager-nodes-are-good-for-docker-swarm /tips/docker/how-many-manager-nodes-are-good 301
+/blog/2022/05/11/how-many-manager-nodes-are-good-for-docker-swarm/ /tips/docker/how-many-manager-nodes-are-good 301
+/how-many-manager-nodes-are-good-for-docker-swarm /tips/docker/how-many-manager-nodes-are-good 301
 /how-many-manager-nodes-are-good-for-docker-swarm/ /tips/docker/how-many-manager-nodes-are-good 301
 
+/2022/10/25/a-program-to-find-the-area-of-a-triangle-and-the-radius-of-the-inscribed-inscribed-circle-from-the-lengths-of-three-line-segments /programs/Clang/triangle-calculator 301
 /2022/10/25/a-program-to-find-the-area-of-a-triangle-and-the-radius-of-the-inscribed-inscribed-circle-from-the-lengths-of-three-line-segments/ /programs/Clang/triangle-calculator 301
+/blog/2022/10/25/a-program-to-find-the-area-of-a-triangle-and-the-radius-of-the-inscribed-inscribed-circle-from-the-lengths-of-three-line-segments /programs/Clang/triangle-calculator 301
 /blog/2022/10/25/a-program-to-find-the-area-of-a-triangle-and-the-radius-of-the-inscribed-inscribed-circle-from-the-lengths-of-three-line-segments/ /programs/Clang/triangle-calculator 301
+/a-program-to-find-the-area-of-a-triangle-and-the-radius-of-the-inscribed-inscribed-circle-from-the-lengths-of-three-line-segments /programs/Clang/triangle-calculator 301
 /a-program-to-find-the-area-of-a-triangle-and-the-radius-of-the-inscribed-inscribed-circle-from-the-lengths-of-three-line-segments/ /programs/Clang/triangle-calculator 301
 
+/2020/04/10/minecraft-java-edition-server-software-summary /tips/minecraft/history-of-server-softwares 301
 /2020/04/10/minecraft-java-edition-server-software-summary/ /tips/minecraft/history-of-server-softwares 301
+/blog/2020/04/10/minecraft-java-edition-server-software-summary /tips/minecraft/history-of-server-softwares 301
 /blog/2020/04/10/minecraft-java-edition-server-software-summary/ /tips/minecraft/history-of-server-softwares 301
+/minecraft-java-edition-server-software-summary /tips/minecraft/history-of-server-softwares 301
 /minecraft-java-edition-server-software-summary/ /tips/minecraft/history-of-server-softwares 301
 
+/2021/10/26/117-minecraft-server-optimization-guide /tips/minecraft/optimization-guide 301
 /2021/10/26/117-minecraft-server-optimization-guide/ /tips/minecraft/optimization-guide 301
+/blog/2021/10/26/117-minecraft-server-optimization-guide /tips/minecraft/optimization-guide 301
 /blog/2021/10/26/117-minecraft-server-optimization-guide/ /tips/minecraft/optimization-guide 301
+/117-minecraft-server-optimization-guide /tips/minecraft/optimization-guide 301
 /117-minecraft-server-optimization-guide/ /tips/minecraft/optimization-guide 301
 
-/2021/10/26/117-minecraft-server-optimization-guide/ /tips/minecraft/optimization-guide 301
-/blog/2021/10/26/117-minecraft-server-optimization-guide/ /tips/minecraft/optimization-guide 301
-/117-minecraft-server-optimization-guide/ /tips/minecraft/optimization-guide 301
-
+/2022/02/28/easy-home-cloud-with-raspberry-pi-and-nextcloud /tips/linux/raspberry-pi-nextcloud 301
 /2022/02/28/easy-home-cloud-with-raspberry-pi-and-nextcloud/ /tips/linux/raspberry-pi-nextcloud 301
+/blog/2022/02/28/easy-home-cloud-with-raspberry-pi-and-nextcloud /tips/linux/raspberry-pi-nextcloud 301
 /blog/2022/02/28/easy-home-cloud-with-raspberry-pi-and-nextcloud/ /tips/linux/raspberry-pi-nextcloud 301
+/easy-home-cloud-with-raspberry-pi-and-nextcloud /tips/linux/raspberry-pi-nextcloud 301
 /easy-home-cloud-with-raspberry-pi-and-nextcloud/ /tips/linux/raspberry-pi-nextcloud 301
 
+/2022/06/10/wi-fi-and-bluetooth-not-enabled-on-arch-linux-on-surface /tips/linux/surface-arch-linux-wifi-bluetooth 301
 /2022/06/10/wi-fi-and-bluetooth-not-enabled-on-arch-linux-on-surface/ /tips/linux/surface-arch-linux-wifi-bluetooth 301
+/blog/2022/06/10/wi-fi-and-bluetooth-not-enabled-on-arch-linux-on-surface /tips/linux/surface-arch-linux-wifi-bluetooth 301
 /blog/2022/06/10/wi-fi-and-bluetooth-not-enabled-on-arch-linux-on-surface/ /tips/linux/surface-arch-linux-wifi-bluetooth 301
+/wi-fi-and-bluetooth-not-enabled-on-arch-linux-on-surface /tips/linux/surface-arch-linux-wifi-bluetooth 301
 /wi-fi-and-bluetooth-not-enabled-on-arch-linux-on-surface/ /tips/linux/surface-arch-linux-wifi-bluetooth 301
 
 /2021/05/08/spigot-installation-japanese-translation /tips/minecraft/about-spigotmc 301
+/2021/05/08/spigot-installation-japanese-translation/ /tips/minecraft/about-spigotmc 301
 /blog/2021/05/08/spigot-installation-japanese-translation /tips/minecraft/about-spigotmc 301
+/blog/2021/05/08/spigot-installation-japanese-translation/ /tips/minecraft/about-spigotmc 301
+/spigot-installation-japanese-translation /tips/minecraft/about-spigotmc 301
 /spigot-installation-japanese-translation/ /tips/minecraft/about-spigotmc 301
 
+/2020/05/23/blueprotocol-character-makeup-information /games/blueprotocol/cbt-character-makeup 301
 /2020/05/23/blueprotocol-character-makeup-information/ /games/blueprotocol/cbt-character-makeup 301
+/blog/2020/05/23/blueprotocol-character-makeup-information /games/blueprotocol/cbt-character-makeup 301
 /blog/2020/05/23/blueprotocol-character-makeup-information/ /games/blueprotocol/cbt-character-makeup 301
+/blueprotocol-character-makeup-information /games/blueprotocol/cbt-character-makeup 301
 /blueprotocol-character-makeup-information/ /games/blueprotocol/cbt-character-makeup 301
 
+/2020/05/23/blueprotocol-closed-beta-test-configuration-setting-information /games/blueprotocol/cbt-config 301
 /2020/05/23/blueprotocol-closed-beta-test-configuration-setting-information/ /games/blueprotocol/cbt-config 301
+/blog/2020/05/23/blueprotocol-closed-beta-test-configuration-setting-information /games/blueprotocol/cbt-config 301
 /blog/2020/05/23/blueprotocol-closed-beta-test-configuration-setting-information/ /games/blueprotocol/cbt-config 301
+/blueprotocol-closed-beta-test-configuration-setting-information /games/blueprotocol/cbt-config 301
 /blueprotocol-closed-beta-test-configuration-setting-information/ /games/blueprotocol/cbt-config 301
 
+/2020/04/28/blueprotocol-closed-beta-test-map-information /games/blueprotocol/cbt-map 301
 /2020/04/28/blueprotocol-closed-beta-test-map-information/ /games/blueprotocol/cbt-map 301
+/blog/2020/04/28/blueprotocol-closed-beta-test-map-information /games/blueprotocol/cbt-map 301
 /blog/2020/04/28/blueprotocol-closed-beta-test-map-information/ /games/blueprotocol/cbt-map 301
+/blueprotocol-closed-beta-test-map-information /games/blueprotocol/cbt-map 301
 /blueprotocol-closed-beta-test-map-information/ /games/blueprotocol/cbt-map 301
 
+/2022/09/26/issue-with-docker-swarm-cannot-getting-users-ip-address /tips/docker/cannot-get-user-ip-address 301
 /2022/09/26/issue-with-docker-swarm-cannot-getting-users-ip-address/ /tips/docker/cannot-get-user-ip-address 301
+/blog/2022/09/26/issue-with-docker-swarm-cannot-getting-users-ip-address /tips/docker/cannot-get-user-ip-address 301
 /blog/2022/09/26/issue-with-docker-swarm-cannot-getting-users-ip-address/ /tips/docker/cannot-get-user-ip-address 301
+/issue-with-docker-swarm-cannot-getting-users-ip-address /tips/docker/cannot-get-user-ip-address 301
 /issue-with-docker-swarm-cannot-getting-users-ip-address/ /tips/docker/cannot-get-user-ip-address 301
+
+# Dynamic rules
+
+/tag/steam* /tags/game 301
+/tag/software* /tags/program 301
+/tag/* /tags/:splat 301
+/docs/* /:splat 301
