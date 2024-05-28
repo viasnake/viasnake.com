@@ -3,6 +3,58 @@
 /tag/* /tags/:splat 301
 /docs/* /:splat 301
 
+# AIPress
+
+/blog/2023/04/01/what-i-thought-when-i-let-ai-write-all-my-blog-posts /aipress/ 301
+
+/2023/03/29/explanation-of-commonly-used-commands-in-git/ /aipress/explanation-of-commonly-used-commands-in-git 301
+/blog/2023/03/29/explanation-of-commonly-used-commands-in-git/ /aipress/explanation-of-commonly-used-commands-in-git 301
+/explanation-of-commonly-used-commands-in-git/ /aipress/explanation-of-commonly-used-commands-in-git 301
+
+/2023/03/29/what-is-git-and-what-is-github-what-is-github/ /aipress/what-is-git-and-what-is-github-what-is-github 301
+/blog/2023/03/29/what-is-git-and-what-is-github-what-is-github/ /aipress/what-is-git-and-what-is-github-what-is-github 301
+/what-is-git-and-what-is-github-what-is-github/ /aipress/what-is-git-and-what-is-github-what-is-github 301
+
+/2023/03/29/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand/ /aipress/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand 301
+/blog/2023/03/29/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand/ /aipress/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand 301
+/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand/ /aipress/what-is-the-difference-between-usb-memory-and-hdd-that-even-a-beginner-can-understand 301
+
+/2023/03/29/what-is-the-python-programming-language-why-you-should-study-it/ /aipress/what-is-the-python-programming-language-why-you-should-study-it 301
+/blog/2023/03/29/what-is-the-python-programming-language-why-you-should-study-it/ /aipress/what-is-the-python-programming-language-why-you-should-study-it 301
+/what-is-the-python-programming-language-why-you-should-study-it/ /aipress/what-is-the-python-programming-language-why-you-should-study-it 301
+
+/2023/03/29/why-you-should-read-the-developer-documentation/ /aipress/why-you-should-read-the-developer-documentation 301
+/blog/2023/03/29/why-you-should-read-the-developer-documentation/ /aipress/why-you-should-read-the-developer-documentation 301
+/why-you-should-read-the-developer-documentation/ /aipress/why-you-should-read-the-develop-documentation 301
+
+/2023/03/25/what-is-the-best-programming-language-to-learn-programming/ /aipress/what-is-the-best-programming-language-to-learn-programming 301
+/blog/2023/03/25/what-is-the-best-programming-language-to-learn-programming/ /aipress/what-is-the-best-programming-language-to-learn-programming 301
+/what-is-the-best-programming-language-to-learn-programming/ /aipress/what-is-the-best-programming-language-to-learn-programming 301
+
+/2023/03/25/what-is-udp-getting-to-know-the-network/ /aipress/what-is-udp-getting-to-know-the-network 301
+/blog/2023/03/25/what-is-udp-getting-to-know-the-network/ /aipress/what-is-udp-getting-to-know-the-network 301
+/what-is-udp-getting-to-know-the-network/ /aipress/what-is-udp-getting-to-know-the-network 301
+
+/2023/03/25/what-role-do-routers-have/ /aipress/what-role-do-routers-have 301
+/blog/2023/03/25/what-role-do-routers-have/ /aipress/what-role-do-routers-have 301
+/what-role-do-routers-have/ /aipress/what-role-do-routers-have 301
+
+/2023/03/23/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet/ /aipress/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet 301
+/blog/2023/03/23/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet/ /aipress/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet 301
+/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet/ /aipress/from-the-birth-of-the-web-to-the-present-day-a-history-of-the-internet 301
+
+/2023/03/23/what-is-tcp-ip-find-out-about-networks/ /aipress/what-is-tcp-ip-find-out-about-networks 301
+/blog/2023/03/23/what-is-tcp-ip-find-out-about-networks/ /aipress/what-is-tcp-ip-find-out-about-networks 301
+/what-is-tcp-ip-find-out-about-networks/ /aipress/what-is-tcp-ip-find-out-about-networks 301
+
+/2023/03/22/what-is-ai-a-quick-explanation-for-beginners/ /aipress/what-is-ai-a-quick-explanation-for-beginners 301
+/blog/2023/03/22/what-is-ai-a-quick-explanation-for-beginners/ /aipress/what-is-ai-a-quick-explanation-for-beginners 301
+/what-is-ai-a-quick-explanation-for-beginners/ /aipress/what-is-ai-a-quick-explanation-for-beginners 301
+
+/2023/03/11/i-bought-the-keychron-k8-pro-jis/ /aipress/i-bought-the-keychron-k8-pro-jis 301
+/blog/2023/03/11/i-bought-the-keychron-k8-pro-jis/ /aipress/i-bought-the-keychron-k8-pro-jis 301
+/i-bought-the-keychron-k8-pro-jis/ /aipress/i-bought-the-keychron-k8-pro-jis 301
+
 # Redirects for the projects
 
 /blog/2022/10/30/services/ /projects/ 301
