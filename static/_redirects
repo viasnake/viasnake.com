@@ -544,6 +544,14 @@
 /how-to-install-pip-on-raspberry-pi-os /tips/linux/raspberry-pi-os-pip-install 301
 /how-to-install-pip-on-raspberry-pi-os/ /tips/linux/raspberry-pi-os-pip-install 301
 
+/2021/06/03/websocket-proxy-with-nginx /tips/nginx/websocket-proxy 301
+/2021/06/03/websocket-proxy-with-nginx/ /tips/nginx/websocket-proxy 301
+/blog/2021/06/03/websocket-proxy-with-nginx /tips/nginx/websocket-proxy 301
+/blog/2021/06/03/websocket-proxy-with-nginx/ /tips/nginx/websocket-proxy 301
+/websocket-proxy-with-nginx /tips/nginx/websocket-proxy 301
+/websocket-proxy-with-nginx/ /tips/nginx/websocket-proxy 301
+
+
 # Dynamic rules
 
 /tag/steam* /tags/game 301
