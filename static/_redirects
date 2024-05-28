@@ -3,11 +3,17 @@
 /tag/* /tags/:splat 301
 /docs/* /:splat 301
 
+/projects/*/ /projects/:splat/intro 301
+
 # Redirects for the projects
 
 /2022/10/30/koriyama-city-open-data-unofficial-webapi /projects/koriyama-webapi/intro 301
 /blog/2022/10/30/koriyama-city-open-data-unofficial-webapi /projects/koriyama-webapi/intro 301
 /koriyama-city-open-data-unofficial-webapi/ /projects/koriyama-webapi/intro 301
+
+/2022/11/17/betterkeepinventory/ /projects/betterkeepinventory/intro 301
+/blog/2022/11/17/betterkeepinventory/ /projects/betterkeepinventory/intro 301
+/betterkeepinventory/ /projects/betterkeepinventory/intro 301
 
 # Redirects for the blog
 
@@ -77,4 +83,3 @@
 /2022/10/25/a-program-to-find-the-area-of-a-triangle-and-the-radius-of-the-inscribed-inscribed-circle-from-the-lengths-of-three-line-segments/ /programs/Clang/triangle-calculator 301
 /blog/2022/10/25/a-program-to-find-the-area-of-a-triangle-and-the-radius-of-the-inscribed-inscribed-circle-from-the-lengths-of-three-line-segments/ /programs/Clang/triangle-calculator 301
 /a-program-to-find-the-area-of-a-triangle-and-the-radius-of-the-inscribed-inscribed-circle-from-the-lengths-of-three-line-segments/ /programs/Clang/triangle-calculator 301
-
