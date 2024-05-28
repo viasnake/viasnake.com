@@ -1,15 +1,12 @@
 ---
-title: "Windows Updateでエラー0x80080005"
-authors:
-  - snake
-date_published: 2021-04-28T16:59:56.000Z
-date_updated: 2021-04-28T16:59:56.000Z
-tags: [Windows]
+id: windows-update-0x80080005
+sidebar_label: "Windows update 時の 0x80080005 エラーについて"
+sidebar_position: 10
 ---
 
-先日Windows Updateをしようとしたら、エラー「0x80080005」が発生してアップデートできなかった為、なんかこれしたら直ったよ的なことを書いておこうと思います。
+# Windows update 時の 0x80080005 エラーについて
 
-※一ヶ月前に書ききったのに公開するのすっかり忘れてた。ごめん。
+先日 Windows Update をしようとしたら、エラー `0x80080005` が発生してアップデートできなかった為、なんかこれしたら直ったよ的なことを書いておこうと思います。
 
 ## インターネット接続を確認
 
@@ -25,9 +22,11 @@ VPNとか使っている場合は、無効にしてみて下さい。
 
 ## sfcスキャンしてみる
 
-システムがぶっ壊れてるんじゃないの？とりあえず診断してみよう！というわけでコマンド使います。Windows コマンドプロンプトから下記のコマンドを実行します。
+システムがぶっ壊れてる疑惑があったので、コマンド使って修正を試みます。Windows コマンドプロンプトから下記のコマンドを実行します。
 
-    # sfc /scannow
+```shell
+sfc /scannow
+```
 
 実行すると壊れている箇所は勝手に直してくれます。
 
@@ -35,6 +34,8 @@ VPNとか使っている場合は、無効にしてみて下さい。
 
 sfcスキャン同様にエラー直そうねってやつです。Windows コマンドプロンプトから下記のコマンドを実行してみます。
 
-    DISM /Online /Cleanup-Image /RestoreHealth
+```shell
+DISM /Online /Cleanup-Image /RestoreHealth
+```
 
 実行すると勝手に修復されます。

@@ -495,9 +495,70 @@
 /issue-with-docker-swarm-cannot-getting-users-ip-address /tips/docker/cannot-get-user-ip-address 301
 /issue-with-docker-swarm-cannot-getting-users-ip-address/ /tips/docker/cannot-get-user-ip-address 301
 
+/2021/01/29/how-to-fix-the-remote-fatal-pack-exceeds-maximum-allowed-size-problem-when-pushing-to-github /tips/git/github-pack-exceeds-maximum-allowed-size 301
+/2021/01/29/how-to-fix-the-remote-fatal-pack-exceeds-maximum-allowed-size-problem-when-pushing-to-github/ /tips/git/github-pack-exceeds-maximum-allowed-size 301
+/blog/2021/01/29/how-to-fix-the-remote-fatal-pack-exceeds-maximum-allowed-size-problem-when-pushing-to-github /tips/git/github-pack-exceeds-maximum-allowed-size 301
+/blog/2021/01/29/how-to-fix-the-remote-fatal-pack-exceeds-maximum-allowed-size-problem-when-pushing-to-github/ /tips/git/github-pack-exceeds-maximum-allowed-size 301
+/how-to-fix-the-remote-fatal-pack-exceeds-maximum-allowed-size-problem-when-pushing-to-github /tips/git/github-pack-exceeds-maximum-allowed-size 301
+/how-to-fix-the-remote-fatal-pack-exceeds-maximum-allowed-size-problem-when-pushing-to-github/ /tips/git/github-pack-exceeds-maximum-allowed-size 301
+
+/2021/06/04/git-for-windows-update /tips/git/git-for-windows-update-cli 301
+/2021/06/04/git-for-windows-update/ /tips/git/git-for-windows-update-cli 301
+/blog/2021/06/04/git-for-windows-update /tips/git/git-for-windows-update-cli 301
+/blog/2021/06/04/git-for-windows-update/ /tips/git/git-for-windows-update-cli 301
+/git-for-windows-update /tips/git/git-for-windows-update-cli 301
+/git-for-windows-update/ /tips/git/git-for-windows-update-cli 301
+
+/2021/02/18/how-to-convert-database-from-mysql-to-sqlite /tips/mysql/mysql-to-sqlite 301
+/2021/02/18/how-to-convert-database-from-mysql-to-sqlite/ /tips/mysql/mysql-to-sqlite 301
+/blog/2021/02/18/how-to-convert-database-from-mysql-to-sqlite /tips/mysql/mysql-to-sqlite 301
+/blog/2021/02/18/how-to-convert-database-from-mysql-to-sqlite/ /tips/mysql/mysql-to-sqlite 301
+/how-to-convert-database-from-mysql-to-sqlite /tips/mysql/mysql-to-sqlite 301
+/how-to-convert-database-from-mysql-to-sqlite/ /tips/mysql/mysql-to-sqlite 301
+
+/2021/04/29/how-tofix-windows-update-error-0x80080005 /tips/windows/windows-update-0x80080005 301
+/2021/04/29/how-tofix-windows-update-error-0x80080005/ /tips/windows/windows-update-0x80080005 301
+/blog/2021/04/29/how-tofix-windows-update-error-0x80080005 /tips/windows/windows-update-0x80080005 301
+/blog/2021/04/29/how-tofix-windows-update-error-0x80080005/ /tips/windows/windows-update-0x80080005 301
+/how-tofix-windows-update-error-0x80080005 /tips/windows/windows-update-0x80080005 301
+/how-tofix-windows-update-error-0x80080005/ /tips/windows/windows-update-0x80080005 301
+
+/2021/05/01/how-to-get-a-wildcard-ssl-certificate-for-cloudflare-registered-domain-with-certbot /tips/cloudflare/certbot-cloudflare-wildcard-ssl 301
+/2021/05/01/how-to-get-a-wildcard-ssl-certificate-for-cloudflare-registered-domain-with-certbot/ /tips/cloudflare/certbot-cloudflare-wildcard-ssl 301
+/blog/2021/05/01/how-to-get-a-wildcard-ssl-certificate-for-cloudflare-registered-domain-with-certbot /tips/cloudflare/certbot-cloudflare-wildcard-ssl 301
+/blog/2021/05/01/how-to-get-a-wildcard-ssl-certificate-for-cloudflare-registered-domain-with-certbot/ /tips/cloudflare/certbot-cloudflare-wildcard-ssl 301
+/how-to-get-a-wildcard-ssl-certificate-for-cloudflare-registered-domain-with-certbot /tips/cloudflare/certbot-cloudflare-wildcard-ssl 301
+/how-to-get-a-wildcard-ssl-certificate-for-cloudflare-registered-domain-with-certbot/ /tips/cloudflare/certbot-cloudflare-wildcard-ssl 301
+
+/2021/05/02/how-to-change-the-character-size-of-the-console /tips/linux/debian-console-font-size 301
+/2021/05/02/how-to-change-the-character-size-of-the-console/ /tips/linux/debian-console-font-size 301
+/blog/2021/05/02/how-to-change-the-character-size-of-the-console /tips/linux/debian-console-font-size 301
+/blog/2021/05/02/how-to-change-the-character-size-of-the-console/ /tips/linux/debian-console-font-size 301
+/how-to-change-the-character-size-of-the-console /tips/linux/debian-console-font-size 301
+/how-to-change-the-character-size-of-the-console/ /tips/linux/debian-console-font-size 301
+
+/2021/05/18/how-to-install-pip-on-raspberry-pi-os /tips/linux/raspberry-pi-os-pip-install 301
+/2021/05/18/how-to-install-pip-on-raspberry-pi-os/ /tips/linux/raspberry-pi-os-pip-install 301
+/blog/2021/05/18/how-to-install-pip-on-raspberry-pi-os /tips/linux/raspberry-pi-os-pip-install 301
+/blog/2021/05/18/how-to-install-pip-on-raspberry-pi-os/ /tips/linux/raspberry-pi-os-pip-install 301
+/how-to-install-pip-on-raspberry-pi-os /tips/linux/raspberry-pi-os-pip-install 301
+/how-to-install-pip-on-raspberry-pi-os/ /tips/linux/raspberry-pi-os-pip-install 301
+
+/2021/06/03/websocket-proxy-with-nginx /tips/nginx/websocket-proxy 301
+/2021/06/03/websocket-proxy-with-nginx/ /tips/nginx/websocket-proxy 301
+/blog/2021/06/03/websocket-proxy-with-nginx /tips/nginx/websocket-proxy 301
+/blog/2021/06/03/websocket-proxy-with-nginx/ /tips/nginx/websocket-proxy 301
+/websocket-proxy-with-nginx /tips/nginx/websocket-proxy 301
+/websocket-proxy-with-nginx/ /tips/nginx/websocket-proxy 301
+
+/2022/11/08/how-to-run-stable-diffusion-web-ui-on-windows /tips/stable-diffusion/stable-diffusion-webui-windows 301
+/2022/11/08/how-to-run-stable-diffusion-web-ui-on-windows/ /tips/stable-diffusion/stable-diffusion-webui-windows 301
+/blog/2022/11/08/how-to-run-stable-diffusion-web-ui-on-windows /tips/stable-diffusion/stable-diffusion-webui-windows 301
+/blog/2022/11/08/how-to-run-stable-diffusion-web-ui-on-windows/ /tips/stable-diffusion/stable-diffusion-webui-windows 301
+/how-to-run-stable-diffusion-web-ui-on-windows /tips/stable-diffusion/stable-diffusion-webui-windows 301
+/how-to-run-stable-diffusion-web-ui-on-windows/ /tips/stable-diffusion/stable-diffusion-webui-windows 301
+
 # Dynamic rules
 
-/tag/steam* /tags/game 301
-/tag/software* /tags/program 301
-/tag/* /tags/:splat 301
+/tags/* /blog/tags/:splat 301
 /docs/* /:splat 301
