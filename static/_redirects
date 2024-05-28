@@ -7,6 +7,10 @@
 
 # Redirects for the projects
 
+/blog/2022/10/30/services/ /projects/ 301
+/2022/10/30/services/ /projects/ 301
+/services/ /projects/ 301
+
 /2022/10/30/koriyama-city-open-data-unofficial-webapi /projects/koriyama-webapi/intro 301
 /blog/2022/10/30/koriyama-city-open-data-unofficial-webapi /projects/koriyama-webapi/intro 301
 /koriyama-city-open-data-unofficial-webapi/ /projects/koriyama-webapi/intro 301
