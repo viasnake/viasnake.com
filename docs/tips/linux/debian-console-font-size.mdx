@@ -1,0 +1,46 @@
+---
+id: debian-console-font-size
+sidebar_label: "Debian 系でコンソールの文字サイスを変更する方法"
+sidebar_position: 10
+---
+
+# Debian 系でコンソールの文字サイスを変更する方法
+
+Debian の コンソール上で文字サイズを大きくする方法についてまとめておきます。
+
+## 環境
+
+- **ハードウェア**: Raspberry pi 3 model B+
+- **OS**: Raspberry Pi OS Lite 10 Buster
+
+本投稿で添付されている画像は全て Ubuntu 20.04.2 LTS GNU/Linux 4.4.0-19041-Microsoft x86_64 です。
+
+## 文字サイズの変更
+
+下記のコマンドを実行して TUI を表示します。
+
+```shell
+sudo dpkg-reconfigure console-setup
+```
+
+TUI が表示されると下記のようになります。
+
+![](https://i.imgur.com/5R42MNa.png)
+
+最初にコンソールで使うエンコードを選択します。殆どの場合、UTF-8 で問題ないです。
+
+![](https://i.imgur.com/4QYvoZG.png)
+
+次の画面ではサポートさせる文字セットを選択するのですが、一番下の `Guess optimal character set` にしておきます。ここは自分の環境に合わせてください。
+
+![](https://i.imgur.com/CHnkSBB.png)
+
+ここでコンソールのフォントを選択します。とりあえずここでは `Terminus` を選択します。別に自分で使いやすいのに変更していいと思います。
+
+シンプルさで行くなら `Fixed` が一番です。
+
+![](https://i.imgur.com/dqjTNIF.png)
+
+フォントを選択すると、次にフォントサイズを選択できます。画像はフォントで `Terminus` を選択した場合です。
+
+3.5 インチディスプレイだと `16x32` が一番見やすかったので、`16x32` を選択します。

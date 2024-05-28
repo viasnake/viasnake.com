@@ -530,6 +530,13 @@
 /how-to-get-a-wildcard-ssl-certificate-for-cloudflare-registered-domain-with-certbot /tips/cloudflare/certbot-cloudflare-wildcard-ssl 301
 /how-to-get-a-wildcard-ssl-certificate-for-cloudflare-registered-domain-with-certbot/ /tips/cloudflare/certbot-cloudflare-wildcard-ssl 301
 
+/2021/05/02/how-to-change-the-character-size-of-the-console /tips/linux/debian-console-font-size 301
+/2021/05/02/how-to-change-the-character-size-of-the-console/ /tips/linux/debian-console-font-size 301
+/blog/2021/05/02/how-to-change-the-character-size-of-the-console /tips/linux/debian-console-font-size 301
+/blog/2021/05/02/how-to-change-the-character-size-of-the-console/ /tips/linux/debian-console-font-size 301
+/how-to-change-the-character-size-of-the-console /tips/linux/debian-console-font-size 301
+/how-to-change-the-character-size-of-the-console/ /tips/linux/debian-console-font-size 301
+
 # Dynamic rules
 
 /tag/steam* /tags/game 301
