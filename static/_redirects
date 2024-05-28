@@ -523,6 +523,13 @@
 /how-tofix-windows-update-error-0x80080005 /tips/windows/windows-update-0x80080005 301
 /how-tofix-windows-update-error-0x80080005/ /tips/windows/windows-update-0x80080005 301
 
+/2021/05/01/how-to-get-a-wildcard-ssl-certificate-for-cloudflare-registered-domain-with-certbot /tips/cloudflare/certbot-cloudflare-wildcard-ssl 301
+/2021/05/01/how-to-get-a-wildcard-ssl-certificate-for-cloudflare-registered-domain-with-certbot/ /tips/cloudflare/certbot-cloudflare-wildcard-ssl 301
+/blog/2021/05/01/how-to-get-a-wildcard-ssl-certificate-for-cloudflare-registered-domain-with-certbot /tips/cloudflare/certbot-cloudflare-wildcard-ssl 301
+/blog/2021/05/01/how-to-get-a-wildcard-ssl-certificate-for-cloudflare-registered-domain-with-certbot/ /tips/cloudflare/certbot-cloudflare-wildcard-ssl 301
+/how-to-get-a-wildcard-ssl-certificate-for-cloudflare-registered-domain-with-certbot /tips/cloudflare/certbot-cloudflare-wildcard-ssl 301
+/how-to-get-a-wildcard-ssl-certificate-for-cloudflare-registered-domain-with-certbot/ /tips/cloudflare/certbot-cloudflare-wildcard-ssl 301
+
 # Dynamic rules
 
 /tag/steam* /tags/game 301

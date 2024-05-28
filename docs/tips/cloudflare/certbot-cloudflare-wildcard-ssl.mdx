@@ -1,0 +1,104 @@
+---
+id: certbot-cloudflare-wildcard-ssl
+sidebar_label: "Certbot で Cloudflare 登録ドメインのワイルドカード SSL 証明書を取得する方法"
+sidebar_position: 10
+---
+
+# Certbot で Cloudflare 登録ドメインのワイルドカード SSL 証明書を取得する方法
+
+Certbot と Certbot の DNS プラグイン `certbot-dns-cloudflare` を使用してワイルドカード SSL 証明書を取得する方法についてまとめておきます。
+
+環境は Ubuntu 20.04 LTS です。
+
+## Certbot のインストール
+
+Certbot の公式ウェブサイトで丁寧に説明されているので、公式サイト通りにインストールしていただくのが良いと思います。下記では、Ubuntu 20.04 にインストールする例を示します。
+
+下記のコマンドで Certbot をインストールしてください。
+
+```shell
+sudo apt update && sudo apt install -y certbot
+```
+
+## certbot-dns-cloudflare のインストール及び設定
+
+Cloudflare で登録されており、プロキシを有効にしているドメインでSSL証明書を取得する場合、`certbot-dns-cloudflare` が必要となります。
+
+下記のコマンドで `certbot-dns-cloudflare` をインストールしてください。
+
+```shell
+sudo apt install python3-certbot-dns-cloudflare
+```
+
+インストール後、Cloudflare API の設定が必要です。
+
+下記のコマンドで設定ファイルを作成します。
+
+*このファイルは非常に重要なファイルとなりますので、パーミッション設定に注意してください。*
+
+```shell
+mkdir -p ~/.secrets && vi ~/.secrets/cloudflare.ini
+```
+
+ファイルを開いたら、下記を記述してください。
+
+```shell
+dns_cloudflare_email = {Cloudflare アカウントのメールアドレス}
+dns_cloudflare_api_key = {Cloudflare API の Global API Key}
+```
+
+`dns_cloudflare_email` には自分の Cloudflare アカウントに紐付けられているメールアドレスを記述してください。
+
+`dns_cloudflare_api_key` には Cloudflare API の Global API Key を記述してください。
+
+Global API Key は下記の URL から取得可能です。
+
+[https://dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens)
+
+ページへアクセス後、Global API Key の右側の View をクリックすることで確認可能です。
+
+![](https://i.imgur.com/1YbXveM.png)
+
+*Global API Key は絶対に漏らさないでください。*
+
+もしも API トークンを使用する場合は、下記のように記述してください。
+
+```shell
+dns_cloudflare_api_token = {Cloudflare API の API token}
+```
+
+APIトークンについての説明は割愛します。
+
+## SSL証明書の取得
+
+下記のコマンドでSSL証明書の取得をしてください。
+
+```shell
+sudo certbot certonly --dns-cloudflare \
+  --dns-cloudflare-credentials \
+  ~/.secrets/cloudflare.ini \
+  -d "{ドメイン名}" -d "*.{ドメイン名}"
+```
+
+ドメイン名が `example.com` である場合、以下のようになります。
+
+```shell
+sudo certbot certonly --dns-cloudflare \
+  --dns-cloudflare-credentials \
+  ~/.secrets/cloudflare.ini \
+  -d "example.com" -d "*.example.com"
+```
+
+`-d example.com` で `example.com` の SSL 証明書も取得している理由は、 `*.example.com` だけだと `example.com` の SSL 証明書が発行されないからです。もしも `example.com` の SSL 証明証が必要ではない場合、`-d example.com` に当たる箇所を削除してください。
+
+## SSL 証明書の保存先
+
+SSL 証明書を取得後、下記のディレクトリに保存されます。
+
+```shell
+/etc/letsencrypt/live/{ドメイン名}/fullchain.pem
+/etc/letsencrypt/live/{ドメイン名}/privkey.pem
+```
+
+* `fullchain.pem` はチェーンファイルです。
+* `privkey.pem` は秘密鍵です。
