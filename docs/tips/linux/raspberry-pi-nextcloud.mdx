@@ -1,0 +1,177 @@
+---
+id: raspberry-pi-nextcloud
+sidebar_label: "Raspberry Pi + Nextcloud で簡単お家クラウド"
+sidebar_position: 10
+---
+
+# Raspberry Pi + Nextcloud で簡単お家クラウド
+
+Amazon のブラックフライデーセールで安く売られていた 6TB の外付け HDD を購入したので、それにラズパイをくっつけて簡単お家クラウドを作りました。
+
+この組み合わせの話、擦られすぎて書く意味がよく分かりませんが、こんな事やったよという報告程度に見て頂ければと思います。特別なにか尖ったことをするわけではないので、別にこのサイト以外の内容を見ながら、やっても同じ結果を得られるかと思います。
+
+## 環境
+
+- **基盤**: Raspberry Pi 3 Model B+（以下、ラズパイ）
+- **ストレージ**: 32GB
+  - [Team microSDHCカード 32GB UHS-1 U1 Switch動作確認済み 読込み最大100MB/s 日本国内10年保証 SD変換アダプター付属 正規品 ](https://www.amazon.co.jp/dp/B09HMJ48HT/)
+- **ストレージ**: 外付け 6TB HDD
+  - [【Amazon.co.jp限定】バッファロー 外付けハードディスク 6TB テレビ録画/PC/PS4/4K対応 バッファロー製nasne™対応 静音&コンパクト 日本製 故障予測 みまもり合図 HD-AD6U3 ](https://www.amazon.co.jp/dp/B07QPNK96T/)
+- **OS**: Ubuntu Server 20.04 LTS
+- **必要なもの**:
+  - Docker
+  - Docker-compose
+  - やる気
+  - モチベーション
+
+## 前提
+
+外部からサーバーへアクセスできる環境は整っているという前提で話をしています。例えばポート開放やリバースプロキシ、サーバーの IP アドレスなどは全て設定されているものとみなしています。
+
+## OS のインストール
+
+ラズパイで動かすので、まずは OS をインストールします。OS さえインストールされればやり方はお好みですが、今回は Raspberry Pi 公式が出している Raspberry Pi Imager を利用します。
+
+ダウンロードは下記 URL からできます。
+
+[Raspberry Pi OS – Raspberry Pi](https://www.raspberrypi.com/software/)
+
+下記画像の「Download for Windows」をクリックすることでWindows版をダウンロードできます。macOSやUbuntuをお使いの場合は、下に表示されているリンクをクリックしてください。
+
+![](https://i.imgur.com/e83znZ2.png)
+
+インストール後起動すると、下記画像のようなウィンドウが立ち上がります。
+
+![](https://i.imgur.com/o50yja6.png)
+
+ここまで来たら後は簡単です。「CHOOSE OS」で OS を選択してください。今回は Ubuntu Server を選択しますが、もしもこだわりがあれば他の OS を選択してもらっても構いません。ただしその場合、この投稿の手順ではできないかも知れないです。
+
+![](https://i.imgur.com/Fchgc89.png)
+
+OS 選択後「CHOOSE STORAGE」で PC に刺したマイクロ SD カードを選択して「WRITE」で OS を書き込みます。
+
+ここも HDD からブートしたり、ネットワークからごちゃごちゃやったりできたりできなかったりするらしいのですが、今回は面倒なのでやらないというのと、個人的に別用途でも利用するのでSDに書き込んでおきます。
+
+書き込みが終わったら、後はラズパイにマイクロ SD カードを挿して、起動させるだけです。
+
+起動後 Raspberry Pi にモニターとキーボードが接続されている場合は、画面に表示されます。そうでない場合、かつ、 Raspberry Pi Imager の「CHOOSE OS」でカスタム .img などを使用していない限り、初期段階から SSH が有効になっているので、ローカル IP を探し接続してください。
+
+接続後パスワードの設定や必要に応じてユーザーの作成などを行ってください。パスワードの設定は必要ですが、ユーザー作成などの環境面はお好みです。
+
+環境が整ったら、アップデートを行ってください。
+
+Ubuntu の場合、以下の通りです。
+
+```bash
+sudo apt -y update
+sudo apt -y upgrade
+```
+
+時間がかかるのでお茶でも飲みながらゆっくり待ちましょう。
+
+アップデートが完了したら OS の準備が整いました。
+
+## Docker、Docker Compose のインストール
+
+初めに Docker インストールしていきます。これは公式ドキュメントに沿ってインストールしていけばいいです。下記は実行するコマンドです。
+
+```bash
+sudo apt install \
+  ca-certificates \
+  curl \
+  gnupg \
+  lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io
+```
+
+[Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+
+次に Docker Compose をインストールしていきます。こちらについても公式ドキュメントに沿ってインストールしていけばいいです。下記は実行するコマンドです。
+
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+[Install Docker Compose](https://docs.docker.com/compose/install/#alternative-install-options)
+
+インストール完了後、必要に応じてインストールの確認をしてください。
+
+## Nextcloud のインストール
+
+インストールとは言っても Docker で動かすので、 `docker-compose.yml` を作成して記述するだけです。
+
+`docker-compose.yml`の例は以下の通りです。
+
+```yaml
+version: '3'
+    
+services:
+  db:
+    image: mariadb:10.5
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+    restart: always
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=ChangeMe
+    env_file:
+      - db.env
+
+  redis:
+    image: redis:alpine
+    restart: always
+
+  app:
+    image: nextcloud:apache
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - nextcloud:/var/www/html
+    environment:
+      - MYSQL_HOST=db
+      - REDIS_HOST=redis
+    env_file:
+      - db.env
+    depends_on:
+      - db
+      - redis
+
+  cron:
+    image: nextcloud:apache
+    restart: always
+    volumes:
+      - nextcloud:/var/www/html
+    entrypoint: /cron.sh
+    depends_on:
+      - db
+      - redis
+
+  volumes:
+    db:
+    nextcloud:
+```
+
+記述後、ファイルを保存してください。
+
+ディレクトリで以下のコマンドを実行することで、Nextcloud が立ち上がります。
+
+```bash
+sudo docker-compose up -d
+```
+
+起動後、IP やドメインを使ってウェブサイトへアクセスし、指示に従ってインストールしてください。
+
+これで完了です。自分で使いたいように他の設定をいじったりしてください。
+
+## NextCloud を Raspberry Pi 3 B+ で運用してみて
+
+結論だけ言います。動作が遅い、たまに完全に固まる。だけど、基本的にほっておけば処理は終わってるので、個人宅のファイルサーバー程度使うのであれば、何ら問題ないです。
+
+快適に複数ユーザーであれこれ色々使いたいのであれば、Raspberry Pi 4 を使うか、もっとスペックを持ったPCに入れるのが良い気がしますね。
