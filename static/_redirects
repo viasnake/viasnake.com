@@ -3,7 +3,7 @@
 /tag/* /tags/:splat 301
 /docs/* /:splat 301
 
-/projects/*/ /projects/:splat/intro 301
+/projects/* /projects/:splat/intro 301
 
 # Redirects for the projects
 
