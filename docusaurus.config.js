@@ -163,6 +163,20 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      algolia: {
+        appId: 'WVM8NRAGNB',
+        apiKey: '47f561de7d7e6d3949aa4a5a26514a56',
+        indexName: 'viasnake',
+        contextualSearch: true,
+        externalUrlRegex: 'viasnake\\.com|www.viasnake\\.com|www.mcplay\\.biz|www.alflag\\.org',
+        // replaceSearchResultPathname: {
+        //   from: '/docs/', // or as RegExp: /\/docs\//
+        //   to: '/',
+        // },
+        searchParameters: {},
+        searchPagePath: 'search',
+        insights: false,
+      },
     }),
 };
 
