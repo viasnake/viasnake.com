@@ -1,0 +1,21 @@
+---
+id: microsoft-compatibility-appraiser
+sidebar_label: Microsoft カスタマー エクスペリエンス向上プログラムの無効化
+sidebar_position: 10
+---
+
+# Microsoft カスタマー エクスペリエンス向上プログラムの無効化
+
+`Microsoft カスタマー エクスペリエンス向上プログラム` という windows 利用者にとって、全く必要のないプログラムがある。
+これのせいで起動直後に Windows が HDD を読み込みまくり、使用率 100% 張り付きになることがある。
+利用者によっては百害あって一利無し。
+
+## 無効化方法
+
+`コンピュータの管理` > `システムツール` > `タスクスケジューラ` > `タスクスケジューラ ライブラリ` > `Microsoft` > `Windows` > `Application Experience`
+
+この中にある `Microsoft Compatibility Appraiser` を右クリックして `無効化` する。
+
+## 参考
+
+- [hard drive - Windows Disk I/O 100% at boot for 20 Minutes - Super User](https://superuser.com/questions/944067/windows-disk-i-o-100-at-boot-for-20-minutes)
