@@ -6,23 +6,41 @@ sidebar_position: 1
 
 # infra-core とは
 
-Alflag で使っているインフラをコードで管理するためのプロジェクトです。
-
-## プロジェクトの構成
-
-以下のような構成になっています。
-
-- **ansible**
-    - Ansible の Playbook などを管理するディレクトリ
-- **cloud-init**
-    - Cloud-init の設定ファイルを管理するディレクトリ
-- **scripts**
-    - スクリプトを管理するディレクトリ
-- **secrets**
-    - シークレット情報を管理するディレクトリ
-- **terraform**
-    - Terraform の設定ファイルを管理するディレクトリ
-
-## 参考
+インフラに関するコード類を一括管理するリポジトリ。
+infra-core は各ホストに clone されていることが前提となっている。
 
 - [GitHub リポジトリ](https://github.com/alflag-team/infra-core)
+
+## ディレクトリ構造
+
+以下のような構造となっている。
+
+```
+$ tree -L 2 -d
+.
+├── ansible
+│   ├── ansible-common
+│   ├── ansible-proxmox
+│   ├── group_vars
+│   └── secrets
+├── terraform
+│   ├── secrets
+│   ├── terraform-cloudflare-access
+│   ├── terraform-cloudflare-tunnel
+│   ├── terraform-dns
+│   ├── terraform-oraclecloud
+│   └── terraform-proxmox
+└── tools
+    ├── cloud-init
+    ├── docker
+    └── scripts
+```
+
+- **ansible**
+  - Ansible で使う設定ファイルなどを管理するディレクトリ
+- **terraform**
+  - Terraform で使う設定ファイルなどを管理するディレクトリ
+- **tools**
+  - その他のツールを管理するディレクトリ
+
+ansible と terraform 配下のディレクトリは git submodule として管理されている。
