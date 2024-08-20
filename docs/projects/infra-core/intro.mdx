@@ -8,20 +8,28 @@ sidebar_position: 1
 
 Alflag で使っているインフラをコードで管理するためのプロジェクトです。
 
-## プロジェクトの構成
+## ディレクトリ構造
 
-以下のような構成になっています。
-
-- **ansible**
-    - Ansible の Playbook などを管理するディレクトリ
-- **cloud-init**
-    - Cloud-init の設定ファイルを管理するディレクトリ
-- **scripts**
-    - スクリプトを管理するディレクトリ
-- **secrets**
-    - シークレット情報を管理するディレクトリ
-- **terraform**
-    - Terraform の設定ファイルを管理するディレクトリ
+```
+$ tree -L 2 -d
+.
+├── ansible
+│   ├── ansible-common
+│   ├── ansible-proxmox
+│   ├── group_vars
+│   └── secrets
+├── terraform
+│   ├── secrets
+│   ├── terraform-cloudflare-access
+│   ├── terraform-cloudflare-tunnel
+│   ├── terraform-dns
+│   ├── terraform-oraclecloud
+│   └── terraform-proxmox
+└── tools
+    ├── cloud-init
+    ├── docker
+    └── scripts
+```
 
 ## 参考
 
