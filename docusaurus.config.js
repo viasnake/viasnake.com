@@ -125,6 +125,11 @@ const config = {
             label: "ゲーム関係",
           },
           {
+            href: "https://wiki.viasnake.com/",
+            label: "wiki",
+            position: "right",
+          },
+          {
             href: "https://github.com/viasnake/viasnake.com",
             label: "GitHub",
             position: "right",
