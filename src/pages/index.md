@@ -4,6 +4,14 @@ import Posts from '@site/src/components/Posts'
 
 このウェブサイトは [@viasnake](https://twitter.com/viasnake) が色々なことを記録・公開しておくための場所です。
 
+:::warning
+
+このウェブサイトはポートフォリオとかだけ置いとく場所になる予定。
+ドキュメントとかは新設した [wiki](https://wiki.viasnake.com) に移動します。
+理由: markdown 編集して git に push するのがクソめんどいから。
+
+:::
+
 ## プロジェクト
 
 - [infra-core](https://viasnake.com/projects/infra-core/intro)
@@ -22,7 +30,7 @@ import Posts from '@site/src/components/Posts'
 
 :::warning
 
-ブログは整理中です。整理が終わるまでは更新される予定はありません。  
+ブログは整理中です。整理が終わるまでは更新される予定はありません。
 現状、過去のシステムから移動した内容を雑多においてるだけなので、参照する価値はないです。
 
 :::
