@@ -564,6 +564,13 @@
 /projects/infra-core/ansible https://wiki.viasnake.com/infra/ansible/start 301
 /projects/infra-core/terraform https://wiki.viasnake.com/infra/terraform/start 301
 /projects/kitsunebi/intro https://wiki.viasnake.com/infra/kitsunebi 301
+/projects/viasnake.com/intro https://wiki.viasnake.com/project/viasnake.com 301
+/projects/viasnake.com/develop https://wiki.viasnake.com/project/viasnake.com 301
+/projects/viasnake.com/update https://wiki.viasnake.com/project/viasnake.com 301
+/projects/mcplay.biz/intro https://wiki.viasnake.com/project/www.mcplay.biz 301
+/projects/mcplay.biz/develop https://wiki.viasnake.com/project/www.mcplay.biz 301
+/projects/mcplay.biz/update https://wiki.viasnake.com/project/www.mcplay.biz 301
+
 
 # Dynamic rules
 
