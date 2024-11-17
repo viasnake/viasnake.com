@@ -558,6 +558,13 @@
 /how-to-run-stable-diffusion-web-ui-on-windows /tips/stable-diffusion/stable-diffusion-webui-windows 301
 /how-to-run-stable-diffusion-web-ui-on-windows/ /tips/stable-diffusion/stable-diffusion-webui-windows 301
 
+# wiki
+
+/projects/infra-core/intro https://wiki.viasnake.com/infra/infra-core 301
+/projects/infra-core/ansible https://wiki.viasnake.com/infra/ansible/start 301
+/projects/infra-core/terraform https://wiki.viasnake.com/infra/terraform/start 301
+/projects/kitsunebi/intro https://wiki.viasnake.com/infra/kitsunebi 301
+
 # Dynamic rules
 
 /tags/* /blog/tags/:splat 301
