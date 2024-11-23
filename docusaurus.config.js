@@ -113,12 +113,6 @@ const config = {
             label: "Tips",
           },
           {
-            type: "docSidebar",
-            sidebarId: "gameSidebar",
-            position: "left",
-            label: "ゲーム関係",
-          },
-          {
             href: "https://wiki.viasnake.com/",
             label: "wiki",
             position: "right",
