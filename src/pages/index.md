@@ -6,9 +6,10 @@ import Posts from '@site/src/components/Posts'
 
 :::warning
 
-このウェブサイトはポートフォリオとかだけ置いとく場所になる予定。
-ドキュメントとかは新設した [wiki](https://wiki.viasnake.com) に移動します。
-理由: markdown 編集して git に push するのがクソめんどいから。
+このウェブサイトは今大幅なリニューアル作業中です。
+大半のページは新設した [wiki](https://wiki.viasnake.com) に移動されます。
+ほとんどのケースでよしなにリダイレクトされるように設定していますが、リンク切れが発生する可能性があります。
+その際は [wiki](https://wiki.viasnake.com) で検索してみてください。
 
 :::
 
