@@ -123,7 +123,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://viasnake.com/viasnake",
+            href: "https://twitter.com/viasnake",
             label: "Twitter",
             position: "right",
           },
