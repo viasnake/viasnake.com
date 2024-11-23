@@ -102,12 +102,6 @@ const config = {
           },
           {
             type: "docSidebar",
-            sidebarId: "programSidebar",
-            position: "left",
-            label: "プログラム置き場",
-          },
-          {
-            type: "docSidebar",
             sidebarId: "projectSidebar",
             position: "left",
             label: "プロジェクト一覧",
