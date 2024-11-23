@@ -604,7 +604,16 @@
 /programs/python/square-root https://wiki.viasnake.com/programming/python/start 301
 /programs/python/basic-grammar https://wiki.viasnake.com/programming/python/start 301
 
+# Games
+
+## BlueProtocol
+
+/games/blueprotocol/cbt-character-makeup https://wiki.viasnake.com/game/blueprotocol/character 301
+/games/blueprotocol/cbt-config https://wiki.viasnake.com/game/blueprotocol/config 301
+/games/blueprotocol/cbt-map https://wiki.viasnake.com/game/blueprotocol/map 301
+
 # Dynamic rules
 
+/games/* https://wiki.viasnake.com/game/start 301
 /tags/* /blog/tags/:splat 301
 /docs/* /:splat 301
