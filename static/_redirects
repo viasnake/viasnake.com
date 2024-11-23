@@ -561,7 +561,7 @@
 # wiki
 
 #
-/projects/ https://wiki.viasnake.com/project/start 301
+#/projects/ https://wiki.viasnake.com/project/start 301
 /projects/infra-core/intro https://wiki.viasnake.com/infra/infra-core 301
 /projects/infra-core/ansible https://wiki.viasnake.com/infra/ansible/start 301
 /projects/infra-core/terraform https://wiki.viasnake.com/infra/terraform/start 301
