@@ -266,19 +266,19 @@
 /downtimeproxy /projects/downtimeproxy/intro 301
 /downtimeproxy/ /projects/downtimeproxy/intro 301
 
-/2021/03/01/pyxel-tilemap-viewer https://wiki.viasnake.com/project/pyxel-tilemap-viewer/start 301
-/2021/03/01/pyxel-tilemap-viewer/ https://wiki.viasnake.com/project/pyxel-tilemap-viewer/start 301
-/blog/2021/03/01/pyxel-tilemap-viewer https://wiki.viasnake.com/project/pyxel-tilemap-viewer/start 301
-/blog/2021/03/01/pyxel-tilemap-viewer/ https://wiki.viasnake.com/project/pyxel-tilemap-viewer/start 301
-/pyxel-tilemap-viewer https://wiki.viasnake.com/project/pyxel-tilemap-viewer/start 301
-/pyxel-tilemap-viewer/ https://wiki.viasnake.com/project/pyxel-tilemap-viewer/start 301
+/2021/03/01/pyxel-tilemap-viewer https://wiki.viasnake.com/document/pyxel-tilemap-viewer 301
+/2021/03/01/pyxel-tilemap-viewer/ https://wiki.viasnake.com/document/pyxel-tilemap-viewer 301
+/blog/2021/03/01/pyxel-tilemap-viewer https://wiki.viasnake.com/document/pyxel-tilemap-viewer 301
+/blog/2021/03/01/pyxel-tilemap-viewer/ https://wiki.viasnake.com/document/pyxel-tilemap-viewer 301
+/pyxel-tilemap-viewer https://wiki.viasnake.com/document/pyxel-tilemap-viewer 301
+/pyxel-tilemap-viewer/ https://wiki.viasnake.com/document/pyxel-tilemap-viewer 301
 
-/2021/03/01/pyxel-tilemap-viewer-release-1-0 https://wiki.viasnake.com/project/pyxel-tilemap-viewer/start 301
-/2021/03/01/pyxel-tilemap-viewer-release-1-0/ https://wiki.viasnake.com/project/pyxel-tilemap-viewer/start 301
-/blog/2021/03/01/pyxel-tilemap-viewer-release-1-0 https://wiki.viasnake.com/project/pyxel-tilemap-viewer/start 301
-/blog/2021/03/01/pyxel-tilemap-viewer-release-1-0/ https://wiki.viasnake.com/project/pyxel-tilemap-viewer/start 301
-/pyxel-tilemap-viewer-release-1-0 https://wiki.viasnake.com/project/pyxel-tilemap-viewer/start 301
-/pyxel-tilemap-viewer-release-1-0/ https://wiki.viasnake.com/project/pyxel-tilemap-viewer/start 301
+/2021/03/01/pyxel-tilemap-viewer-release-1-0 https://wiki.viasnake.com/document/pyxel-tilemap-viewer 301
+/2021/03/01/pyxel-tilemap-viewer-release-1-0/ https://wiki.viasnake.com/document/pyxel-tilemap-viewer 301
+/blog/2021/03/01/pyxel-tilemap-viewer-release-1-0 https://wiki.viasnake.com/document/pyxel-tilemap-viewer 301
+/blog/2021/03/01/pyxel-tilemap-viewer-release-1-0/ https://wiki.viasnake.com/document/pyxel-tilemap-viewer 301
+/pyxel-tilemap-viewer-release-1-0 https://wiki.viasnake.com/document/pyxel-tilemap-viewer 301
+/pyxel-tilemap-viewer-release-1-0/ https://wiki.viasnake.com/document/pyxel-tilemap-viewer 301
 
 # 旧紹介記事系のリダイレクト
 # FIXME: 紹介記事系のリンク切れは困るので一旦リダイレクトしておく。
@@ -390,33 +390,33 @@
 /solution-to-obs-crashing-when-setting-the-nvidia-noise-removal-room-echo-removal-filter /tips/obs/obs-nvidia-broadcast-filter-crash 301
 /solution-to-obs-crashing-when-setting-the-nvidia-noise-removal-room-echo-removal-filter/ /tips/obs/obs-nvidia-broadcast-filter-crash 301
 
-/2021/03/02/vlang-fizzbuzz https://wiki.viasnake.com/programming/v/start 301
-/2021/03/02/vlang-fizzbuzz/ https://wiki.viasnake.com/programming/v/start 301
-/blog/2021/03/02/vlang-fizzbuzz https://wiki.viasnake.com/programming/v/start 301
-/blog/2021/03/02/vlang-fizzbuzz/ https://wiki.viasnake.com/programming/v/start 301
-/vlang-fizzbuzz https://wiki.viasnake.com/programming/v/start 301
-/vlang-fizzbuzz/ https://wiki.viasnake.com/programming/v/start 301
+/2021/03/02/vlang-fizzbuzz https://wiki.viasnake.com/information_technology/programming_language/v/start 301
+/2021/03/02/vlang-fizzbuzz/ https://wiki.viasnake.com/information_technology/programming_language/v/start 301
+/blog/2021/03/02/vlang-fizzbuzz https://wiki.viasnake.com/information_technology/programming_language/v/start 301
+/blog/2021/03/02/vlang-fizzbuzz/ https://wiki.viasnake.com/information_technology/programming_language/v/start 301
+/vlang-fizzbuzz https://wiki.viasnake.com/information_technology/programming_language/v/start 301
+/vlang-fizzbuzz/ https://wiki.viasnake.com/information_technology/programming_language/v/start 301
 
-/2021/03/02/clang-fizzbuzz https://wiki.viasnake.com/programming/c/start 301
-/2021/03/02/clang-fizzbuzz/ https://wiki.viasnake.com/programming/c/start 301
-/blog/2021/03/02/clang-fizzbuzz https://wiki.viasnake.com/programming/c/start 301
-/blog/2021/03/02/clang-fizzbuzz/ https://wiki.viasnake.com/programming/c/start 301
-/clang-fizzbuzz https://wiki.viasnake.com/programming/c/start 301
-/clang-fizzbuzz/ https://wiki.viasnake.com/programming/c/start 301
+/2021/03/02/clang-fizzbuzz https://wiki.viasnake.com/information_technology/programming_language/c/start 301
+/2021/03/02/clang-fizzbuzz/ https://wiki.viasnake.com/information_technology/programming_language/c/start 301
+/blog/2021/03/02/clang-fizzbuzz https://wiki.viasnake.com/information_technology/programming_language/c/start 301
+/blog/2021/03/02/clang-fizzbuzz/ https://wiki.viasnake.com/information_technology/programming_language/c/start 301
+/clang-fizzbuzz https://wiki.viasnake.com/information_technology/programming_language/c/start 301
+/clang-fizzbuzz/ https://wiki.viasnake.com/information_technology/programming_language/c/start 301
 
-/2021/03/02/python-fizzbuzz https://wiki.viasnake.com/programming/python/start 301
-/2021/03/02/python-fizzbuzz/ https://wiki.viasnake.com/programming/python/start 301
-/blog/2021/03/02/python-fizzbuzz https://wiki.viasnake.com/programming/python/start 301
-/blog/2021/03/02/python-fizzbuzz/ https://wiki.viasnake.com/programming/python/start 301
-/python-fizzbuzz https://wiki.viasnake.com/programming/python/start 301
-/python-fizzbuzz/ https://wiki.viasnake.com/programming/python/start 301
+/2021/03/02/python-fizzbuzz https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/2021/03/02/python-fizzbuzz/ https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/blog/2021/03/02/python-fizzbuzz https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/blog/2021/03/02/python-fizzbuzz/ https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/python-fizzbuzz https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/python-fizzbuzz/ https://wiki.viasnake.com/information_technology/programming_language/python/start 301
 
-/2022/02/26/cheat-sheet-of-basic-python-grammar https://wiki.viasnake.com/programming/python/start 301
-/2022/02/26/cheat-sheet-of-basic-python-grammar/ https://wiki.viasnake.com/programming/python/start 301
-/blog/2022/02/26/cheat-sheet-of-basic-python-grammar https://wiki.viasnake.com/programming/python/start 301
-/blog/2022/02/26/cheat-sheet-of-basic-python-grammar/ https://wiki.viasnake.com/programming/python/start 301
-/cheat-sheet-of-basic-python-grammar https://wiki.viasnake.com/programming/python/start 301
-/cheat-sheet-of-basic-python-grammar/ https://wiki.viasnake.com/programming/python/start 301
+/2022/02/26/cheat-sheet-of-basic-python-grammar https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/2022/02/26/cheat-sheet-of-basic-python-grammar/ https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/blog/2022/02/26/cheat-sheet-of-basic-python-grammar https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/blog/2022/02/26/cheat-sheet-of-basic-python-grammar/ https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/cheat-sheet-of-basic-python-grammar https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/cheat-sheet-of-basic-python-grammar/ https://wiki.viasnake.com/information_technology/programming_language/python/start 301
 
 /2022/05/11/how-many-manager-nodes-are-good-for-docker-swarm /tips/docker/how-many-manager-nodes-are-good 301
 /2022/05/11/how-many-manager-nodes-are-good-for-docker-swarm/ /tips/docker/how-many-manager-nodes-are-good 301
@@ -561,48 +561,48 @@
 # wiki
 
 #
-#/projects/ https://wiki.viasnake.com/project/start 301
-/projects/infra-core/intro https://wiki.viasnake.com/infra/infra-core 301
-/projects/infra-core/ansible https://wiki.viasnake.com/infra/ansible/start 301
-/projects/infra-core/terraform https://wiki.viasnake.com/infra/terraform/start 301
-/projects/kitsunebi/intro https://wiki.viasnake.com/infra/kitsunebi 301
-/projects/viasnake.com/intro https://wiki.viasnake.com/project/viasnake.com 301
-/projects/viasnake.com/develop https://wiki.viasnake.com/project/viasnake.com 301
-/projects/viasnake.com/update https://wiki.viasnake.com/project/viasnake.com 301
-/projects/mcplay.biz/intro https://wiki.viasnake.com/project/www.mcplay.biz 301
-/projects/mcplay.biz/develop https://wiki.viasnake.com/project/www.mcplay.biz 301
-/projects/mcplay.biz/update https://wiki.viasnake.com/project/www.mcplay.biz 301
-/projects/pyxel-tilemap-viewer/intro https://wiki.viasnake.com/project/pyxel-tilemap-viewer/start 301
+#/projects/ https://wiki.viasnake.com/document/start 301
+/projects/infra-core/intro https://wiki.viasnake.com/information_technology/infra/infra-core 301
+/projects/infra-core/ansible https://wiki.viasnake.com/information_technology/infra/ansible/start 301
+/projects/infra-core/terraform https://wiki.viasnake.com/information_technology/infra/terraform/start 301
+/projects/kitsunebi/intro https://wiki.viasnake.com/information_technology/infra/kitsunebi 301
+/projects/viasnake.com/intro https://wiki.viasnake.com/document/viasnake.com 301
+/projects/viasnake.com/develop https://wiki.viasnake.com/document/viasnake.com 301
+/projects/viasnake.com/update https://wiki.viasnake.com/document/viasnake.com 301
+/projects/mcplay.biz/intro https://wiki.viasnake.com/document/www.mcplay.biz 301
+/projects/mcplay.biz/develop https://wiki.viasnake.com/document/www.mcplay.biz 301
+/projects/mcplay.biz/update https://wiki.viasnake.com/document/www.mcplay.biz 301
+/projects/pyxel-tilemap-viewer/intro https://wiki.viasnake.com/document/pyxel-tilemap-viewer 301
 
 #
-/programs/ https://wiki.viasnake.com/programming/start 301
+/programs/ https://wiki.viasnake.com/information_technology/programming_language/start 301
 
 ## C
-/category/c%E8%A8%80%E8%AA%9E https://wiki.viasnake.com/programming/c/start 301
-/programs/Clang/fizzbuzz https://wiki.viasnake.com/programming/c/start 301
-/programs/Clang/triangle-calculator https://wiki.viasnake.com/programming/c/start 301
+/category/c%E8%A8%80%E8%AA%9E https://wiki.viasnake.com/information_technology/programming_language/c/start 301
+/programs/Clang/fizzbuzz https://wiki.viasnake.com/information_technology/programming_language/c/start 301
+/programs/Clang/triangle-calculator https://wiki.viasnake.com/information_technology/programming_language/c/start 301
 
 ## V
-/category/v%E8%A8%80%E8%AA%9E https://wiki.viasnake.com/programming/v/start 301
-/programs/Vlang/fizzbuzz https://wiki.viasnake.com/programming/v/start 301
+/category/v%E8%A8%80%E8%AA%9E https://wiki.viasnake.com/information_technology/programming_language/v/start 301
+/programs/Vlang/fizzbuzz https://wiki.viasnake.com/information_technology/programming_language/v/start 301
 
 ## PHP
-/category/php https://wiki.viasnake.com/programming/php/start 301
-/programs/php/engineers-and-programmers-sns https://wiki.viasnake.com/programming/php/engineers-and-programmers-sns 301
+/category/php https://wiki.viasnake.com/information_technology/programming_language/php/start 301
+/programs/php/engineers-and-programmers-sns https://wiki.viasnake.com/information_technology/programming_language/php/engineers-and-programmers-sns 301
 
 ## Python
-/category/python https://wiki.viasnake.com/programming/python/start 301
-/programs/python/bfs-shortest-path https://wiki.viasnake.com/programming/python/bfs-shortest-path 301
-/programs/python/pyxel-tilemap-viewer https://wiki.viasnake.com/project/pyxel-tilemap-viewer/start 301
-/programs/python/bulk-twitter-likes https://wiki.viasnake.com/programming/python/bulk-twitter-likes 301
-/programs/python/convert-decimal-numbers https://wiki.viasnake.com/programming/python/start 301
-/programs/python/even-or-odd-number https://wiki.viasnake.com/programming/python/start 301
-/programs/python/extraction-from-specified-digits https://wiki.viasnake.com/programming/python/start 301
-/programs/python/fizzbuzz https://wiki.viasnake.com/programming/python/start 301
-/programs/python/floor-function https://wiki.viasnake.com/programming/python/start 301
-/programs/python/leap-year https://wiki.viasnake.com/programming/python/start 301
-/programs/python/square-root https://wiki.viasnake.com/programming/python/start 301
-/programs/python/basic-grammar https://wiki.viasnake.com/programming/python/start 301
+/category/python https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/programs/python/bfs-shortest-path https://wiki.viasnake.com/information_technology/programming_language/python/bfs-shortest-path 301
+/programs/python/pyxel-tilemap-viewer https://wiki.viasnake.com/document/pyxel-tilemap-viewer 301
+/programs/python/bulk-twitter-likes https://wiki.viasnake.com/information_technology/programming_language/python/bulk-twitter-likes 301
+/programs/python/convert-decimal-numbers https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/programs/python/even-or-odd-number https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/programs/python/extraction-from-specified-digits https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/programs/python/fizzbuzz https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/programs/python/floor-function https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/programs/python/leap-year https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/programs/python/square-root https://wiki.viasnake.com/information_technology/programming_language/python/start 301
+/programs/python/basic-grammar https://wiki.viasnake.com/information_technology/programming_language/python/start 301
 
 # Games
 
