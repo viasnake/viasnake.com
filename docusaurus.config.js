@@ -113,11 +113,6 @@ const config = {
             label: "Tips",
           },
           {
-            href: "https://wiki.viasnake.com/",
-            label: "wiki",
-            position: "right",
-          },
-          {
             href: "https://github.com/viasnake/viasnake.com",
             label: "GitHub",
             position: "right",
@@ -142,10 +137,6 @@ const config = {
               {
                 label: "GitHub",
                 href: "https://github.com/viasnake",
-              },
-              {
-                label: "Facebook",
-                href: "https://www.facebook.com/viasnake",
               },
             ],
           },
