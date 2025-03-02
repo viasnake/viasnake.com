@@ -138,10 +138,6 @@ const config = {
                 label: "GitHub",
                 href: "https://github.com/viasnake",
               },
-              {
-                label: "Facebook",
-                href: "https://www.facebook.com/viasnake",
-              },
             ],
           },
         ],
