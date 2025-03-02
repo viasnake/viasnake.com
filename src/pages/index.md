@@ -9,3 +9,7 @@ import Posts from '@site/src/components/Posts'
 - [Twitter](https://twitter.com/viasnake)
 - [GitHub](https://github.com/viasnake)
 - [Facebook](https://www.facebook.com/viasnake)
+
+## 最新の投稿
+
+<Posts num="5" />
