@@ -6,7 +6,7 @@ sidebar_position: 20
 
 # API
 
-郡山市役所ウェブサイトの「[オープンデータの公共施設等情報](https://www.city.koriyama.lg.jp/soshiki/22/1154.html)」「[オープンデータのその他の情報](https://www.city.koriyama.lg.jp/soshiki/22/1142.html)」で公開されているファイルの内容を json 形式で取得できます。  
+郡山市役所ウェブサイトの「[オープンデータの公共施設等情報](https://www.city.koriyama.lg.jp/soshiki/22/1154.html)」「[オープンデータのその他の情報](https://www.city.koriyama.lg.jp/soshiki/22/1142.html)」で公開されているファイルの内容を json 形式で取得できます。
 `v1/{id}` で全てを取得できます。 `{id}` には「[オープンデータの公共施設等情報](https://www.city.koriyama.lg.jp/soshiki/22/1154.html)」「[オープンデータのその他の情報](https://www.city.koriyama.lg.jp/soshiki/22/1142.html)」上で公開されているファイル名が入ります。
 
 以下は id の早見表です。
@@ -58,6 +58,6 @@ API から返される全ての json は、以下のフォーマットに基づ�
 
 - `last_updated` には内容が最後に更新された日時が入っています。
 - `name` には「[オープンデータの公共施設等情報](https://www.city.koriyama.lg.jp/soshiki/22/1154.html)」上の分類名が入っています。
-- `id` には「[オープンデータの公共施設等情報](https://www.city.koriyama.lg.jp/soshiki/22/1154.html)」で公開されているcsvのファイル名が入っています。
-- `original_url` には元データの取得元URLが入っています。
-- `data` には、取得されたcsvに基づいて生成された配列が入っています。元データが整形されている場合、`data` は返されません。
+- `id` には「[オープンデータの公共施設等情報](https://www.city.koriyama.lg.jp/soshiki/22/1154.html)」で公開されている csv のファイル名が入っています。
+- `original_url` には元データの取得元 URL が入っています。
+- `data` には、取得された csv に基づいて生成された配列が入っています。元データが整形されている場合、`data` は返されません。
